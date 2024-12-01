@@ -5,14 +5,14 @@ import InterestCard from "../ui/InterestCard";
 const HomePage = () => {
   const researchInterests = [
     "Machine Learning & Deep Learning",
+    "Natural Language Processing",
     "Computer Vision",
-    "Quantum Computing",
   ];
 
   const technicalFocus = [
-    "Reinforcement Learning",
     "Neural Networks",
     "Robotics Systems",
+    "Reinforcement Learning",
   ];
 
   return (

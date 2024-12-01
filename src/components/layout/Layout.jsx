@@ -10,14 +10,16 @@ const Layout = ({
   setIsMenuOpen,
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col">
       <Navigation
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
       />
-      <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">{children}</main>
+      <main className="max-w-6xl mx-auto px-4 pt-24 pb-12 flex-grow w-full">
+        {children}
+      </main>
       <Footer />
     </div>
   );

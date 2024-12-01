@@ -1,4 +1,6 @@
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import resumePDF from "../../assets/Mathys-Loiselle-Resume-Public.pdf";
+import { calculateDuration } from "../../data/projectsData";
 
 const ResumePage = () => {
   const sections = [
@@ -6,11 +8,12 @@ const ResumePage = () => {
       title: "Education",
       items: [
         {
-          title: "Bachelor of Science – Computer Science",
+          title: "Bachelor of Science - Computer Science",
           location: "Concordia University - Montreal, QC",
           duration: "2022 - 2026 (Expected)",
           details: [
-            "Relevant Courses: Data Structures & Algorithms (A+), Theoretical CS (A+)",
+            "Dean's List: Fall 2023 - Summer 2024",
+            "Relevant Courses: Data Structures & Algorithms (A+), Theoretical CS (A+), Computer Graphics (A), Operating Systems (A-)",
           ],
         },
         {
@@ -18,8 +21,14 @@ const ResumePage = () => {
           location: "Concordia University - Montreal, QC",
           duration: "2022 - 2026 (Expected)",
           details: [
-            "Relevant Courses: Linear Algebra (A), Multivariable Calculus (A+), Probability & Statistics (A)",
+            "Relevant Courses: Multivariable Calculus (A+), Linear Algebra (A), Probability & Statistics (A)",
           ],
+        },
+        {
+          title: "High School Diploma",
+          location: "Mission Vista High School - Oceanside, California",
+          duration: "2018 - 2022",
+          details: ["GPA: 3.84"],
         },
       ],
     },
@@ -28,25 +37,83 @@ const ResumePage = () => {
       items: [
         {
           title: "AI Software Developer - Internship",
-          location: "TaylorMade Golf – Carlsbad, California, USA",
-          duration: "Sep 2024 – Dec 2024",
+          location: "TaylorMade Golf - Carlsbad, California, USA",
+          duration: "Sep 2024 - Dec 2024",
           details: [
             "Built voice mode system using Angular/C#/Azure cloud services",
             "Developed ML anomaly detection for order processing",
             "Build image processing model with Python/React",
           ],
+          keywords: [
+            "Artifical Intelligence",
+            "Statistical Modeling",
+            "Angular",
+            "C#",
+            "Azure",
+            "React",
+          ],
+        },
+        {
+          title: "Dataset Annotator",
+          location: "Concordia Applied AI Institute - Montreal, QC",
+          duration: "Nov 2023",
+          details: [
+            "Dataset annotation for ML model training/testing",
+            "Collaborative team input for data optimization",
+          ],
+          keywords: ["Data Annotation", "Time Efficiency"],
+        },
+      ],
+    },
+    {
+      title: "Interests",
+      items: [
+        {
+          title: "Academic & Research",
+          details: [
+            "Computer Science: Machine Learning, Deep Learning, Computational Neuroscience",
+            "Mathematics & Statistics",
+            "Physics: Quantum Physics, Astrophysics",
+          ],
+          keywords: ["AI/ML", "Mathematics", "Physics", "Research"],
+        },
+        {
+          title: "Sports & Athletics",
+          details: [
+            "Winter Sports: Ice Hockey, Snowboarding",
+            "Racket Sports: Table Tennis, Badminton, Pickleball, Tennis",
+            "Outdoor Activities: Rock Climbing, Biking, Soccer",
+          ],
+          keywords: ["Team Sports", "Outdoor Recreation"],
+        },
+        {
+          title: "Travelling",
+          details: [
+            "Europe: France, Italy, Spain, United Kingdom",
+            "Americas: Canada, United States, Mexico, Costa Rica",
+            "Africa: Morocco",
+            "Asia: Vietnam",
+          ],
+          keywords: ["International Travel", "Cultural Exchange"],
         },
       ],
     },
   ];
 
+  const handleDownload = () => {
+    window.open(resumePDF, "_blank");
+  };
+
   return (
     <div className="space-y-8">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Resume</h1>
-        <button className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-          <Download className="w-4 h-4" />
-          <span>Download PDF</span>
+        <button
+          onClick={handleDownload}
+          className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          <span>Open File</span>
+          <ExternalLink className="w-4 h-4" />
         </button>
       </div>
 
@@ -61,7 +128,11 @@ const ResumePage = () => {
               >
                 <h3 className="text-xl font-semibold">{item.title}</h3>
                 <p className="text-gray-600">{item.location}</p>
-                <p className="text-sm text-gray-500">{item.duration}</p>
+                <p className="text-sm text-gray-500">
+                  {item.duration}
+                  {section.title === "Experience" &&
+                    " " + calculateDuration(item.duration)}
+                </p>
                 <ul className="mt-2 space-y-1">
                   {item.details.map((detail, d) => (
                     <li key={d} className="text-gray-700">
@@ -69,6 +140,18 @@ const ResumePage = () => {
                     </li>
                   ))}
                 </ul>
+                {item.keywords && (
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {item.keywords.map((keywords, t) => (
+                      <span
+                        key={t}
+                        className="px-2 py-1 text-sm bg-blue-100 text-blue-800 rounded-md"
+                      >
+                        {keywords}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Layout from "./components/layout/Layout";
 import HomePage from "./components/pages/HomePage";
+import ResumePage from "./components/pages/ResumePage";
+import ProjectsPage from "./components/pages/ProjectsPage";
+import ContactPage from "./components/pages/ContactPage";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -10,6 +13,12 @@ const App = () => {
     switch (currentPage) {
       case "home":
         return <HomePage />;
+      case "resume":
+        return <ResumePage />;
+      case "projects":
+        return <ProjectsPage />;
+      case "contact":
+        return <ContactPage />;
       default:
         return (
           <div className="flex items-center justify-center h-64">
