@@ -94,6 +94,27 @@ export const projects = [
         ],
     },
     {
+      title: "Personal Portfolio Website",
+      description:
+      "Portfolio website showcasing my projects, skills, and experience.",
+      longDescription: `
+        I designed and developed a personal portfolio website to showcase my projects, skills, and experience. The site features a clean, modern design with a focus on user experience. I used React for the frontend and Tailwind CSS for styling, ensuring a responsive and visually appealing layout. The site includes a project gallery with detailed descriptions, a skills section highlighting my technical expertise, and an about page with information about my background and interests. I also integrated a contact form to make it easy for visitors to reach out to me.
+      `,
+      keywords: ["React", "Tailwind CSS"],
+      duration: "December 2024",
+      challenges: [
+        ""
+        ],
+      images: [
+        "/images/projects/personal-portfolio-1.png",
+        "/images/projects/personal-portfolio-2.png",
+      ],
+      links: {
+        github: "https://github.com/matlois75/Mathys-Loiselle-Portfolio",
+        website: ""
+      }
+  },
+    {
       title: "Board Game Catalog",
       description:
       "Full-stack web application for my family to browse, track, and add to our 400+ board game collection.",

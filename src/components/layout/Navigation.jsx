@@ -13,7 +13,7 @@ const Navigation = ({
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="text-xl font-semibold">ML</span>
+            <img src="/favicon.svg" alt="ML Logo" className="h-8 w-8" />
           </div>
 
           {/* Desktop Navigation */}
