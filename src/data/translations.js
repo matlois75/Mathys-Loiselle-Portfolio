@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    // Home page translations (already implemented)
+    // Home page translations
     profile: {
       role: "Computer Science Student & AI Enthusiast",
     },
@@ -95,16 +95,16 @@ export const translations = {
   },
 
   fr: {
-    // Home page translations (already implemented)
+    // Home page translations
     profile: {
       role: "Étudiant en Informatique & Passionné d'IA",
     },
     about: {
       title: "À Propos",
       paragraphs: [
-        "Je suis Mathys Loiselle, étudiant en troisième année d'informatique à l'Université Concordia avec une mineure en mathématiques et statistiques. Je suis passionné par l'intersection entre l'intelligence artificielle, la théorie mathématique et les applications pratiques qui repoussent les limites du possible.",
-        "Ma passion pour la résolution de problèmes complexes m'a amené à explorer les applications théoriques et pratiques de l'IA. Que ce soit en approfondissant les articles de recherche sur les architectures avancées de ML ou en développant des solutions innovantes d'IA au siège de TaylorMade Golf à Carlsbad, je suis constamment attiré par des projets qui défient la pensée conventionnelle. Cette double perspective - comprendre à la fois les fondements théoriques et leurs implémentations réelles - a façonné ma vision à long terme de contribuer au domaine par la recherche avancée tout en maintenant des liens solides avec les applications pratiques.",
-        "Au-delà de l'expertise technique, ce qui me motive vraiment est le désir de repousser les limites de la technologie IA tout en assurant son implémentation responsable et significative. Je crois que ma formation combinée en informatique et en mathématiques me positionne de manière unique pour contribuer à la fois à la recherche innovante et à ses applications pratiques, alors que ces domaines continuent d'évoluer et de façonner notre avenir.",
+        "Je suis Mathys Loiselle, étudiant en troisième année de Sciences Informatiques à l'Université Concordia, avec une mineure en Mathématiques et Statistiques. Je suis passionné par la convergence entre l'intelligence artificielle, la théorie mathématique et les applications pratiques qui repoussent les limites du possible.",
+        "Ma passion pour la résolution de problèmes complexes m'a amené à explorer l'IA tant sur le plan théorique que pratique. Que je sois plongé dans des articles de recherche sur des architectures avancées d'apprentissage automatique ou en train de développer des solutions d'IA innovantes au siège de TaylorMade Golf à Carlsbad, je suis constamment attiré par des projets qui remettent en question les approches conventionnelles. Cette double perspective - comprendre à la fois les fondements théoriques et leurs applications concrètes - a façonné ma vision à long terme de contribuer au domaine par la recherche avancée tout en maintenant des liens étroits avec les applications pratiques.",
+        "Au-delà de l'expertise technique, ce qui me motive vraiment, c'est le désir de repousser les limites de la technologie de l'IA tout en assurant une mise en œuvre responsable et significative. Je crois que ma formation combinée en Informatique et en Mathématiques me place dans une position unique pour contribuer à la fois à la recherche innovante et à ses applications pratiques, alors que ces domaines continuent d'évoluer et de façonner notre avenir.",
       ],
     },
     interests: {
@@ -112,7 +112,7 @@ export const translations = {
         title: "Intérêts de Recherche",
         items: [
           "Apprentissage Automatique & Profond",
-          "Traitement du Langage Naturel",
+          "Traitement Automatique du Langage Naturel",
           "Vision par Ordinateur",
         ],
       },
@@ -142,7 +142,7 @@ export const translations = {
       title: "CV",
       openFile: "Ouvrir le Fichier",
       sections: {
-        education: "Formation",
+        education: "Éducation",
         experience: "Expérience",
         interests: "Intérêts",
       },
@@ -156,8 +156,9 @@ export const translations = {
 
     // Contact page translations
     contact: {
-      title: "Contact",
-      subtitle: "N'hésitez pas à me contacter via l'une de ces plateformes.",
+      title: "Contactez-Moi",
+      subtitle:
+        "N'hésitez pas à me contacter sur l'une de ces plateformes. Je suis toujours ouvert à discuter d'opportunités, de collaborations, de projets de recherche, ou simplement à échanger sur la tech et la recherche.",
       email: "Courriel",
       linkedin: "LinkedIn",
       github: "GitHub",
@@ -174,7 +175,7 @@ export const translations = {
       projects: "Projets",
       resume: "CV",
       contact: "Contact",
-      darkMode: "Basculer le mode sombre",
+      darkMode: "Changer la mode sombre",
       language: "Changer la langue",
     },
 

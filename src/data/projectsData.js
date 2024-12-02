@@ -101,19 +101,18 @@ export const projects = [
         duration: "Nov 2024 - Present",
       },
       fr: {
-        title: "Bot Rocket League par Apprentissage par Renforcement",
+        title: "Bot Rocket League avec Apprentissage par Renforcement",
         description:
-          "Agent d'apprentissage par renforcement basé sur DQN avec fonctions de récompense personnalisées.",
-        longDescription: `Construction d'un agent d'apprentissage par renforcement qui apprend à jouer à Rocket League en utilisant le Deep Q-Learning.
-      Implémentation de fonctions de récompense personnalisées pour encourager le jeu stratégique et le contrôle de balle.
-      Conception d'une représentation d'état complète capturant la physique du jeu et le positionnement.`,
+          "Agent d'apprentissage par renforcement basé sur DQN avec des fonctions de récompense personnalisées et modélisation de l'état du jeu.",
+        longDescription:
+          "Création d'un agent d'apprentissage par renforcement qui apprend à jouer à Rocket League en utilisant le Deep Q-Learning. Implémentation de fonctions de récompense personnalisées pour encourager un gameplay stratégique et le contrôle de la balle. Conception d'une représentation complète de l'état capturant la physique du jeu et le positionnement.",
         challenges: [
           "Conception de fonctions de récompense efficaces pour des scénarios de jeu complexes",
-          "Optimisation de la représentation d'état pour un apprentissage efficient",
+          "Optimisation de la représentation d'état pour un apprentissage efficace",
           "Équilibrage entre exploration et exploitation pendant l'entraînement",
         ],
         keywords: [
-          "Apprentissage Par Renforcement",
+          "Apprentissage par Renforcement",
           "DQN",
           "Python",
           "TensorFlow",
@@ -135,7 +134,7 @@ export const projects = [
       en: {
         title: "IEEE Smart and Radio Controlled Marshmallow Cannon",
         description:
-          "A smart, radio-controlled mobile platform featuring a marshmallow cannon powered by AI-driven auto-tracking and RF communication.",
+          "A smart, RC car featuring a marshmallow cannon powered by AI-driven auto-tracking and RF communication.",
         longDescription: `
           As part of a cross-functional team of engineering students, I contributed to an innovative RC car project built from scratch. The vehicle featured an automated marshmallow launcher controlled by an AI-powered targeting system.
 
@@ -152,22 +151,20 @@ export const projects = [
         ],
       },
       fr: {
-        title: "Canon à Guimauves Intelligent Radiocommandé IEEE",
+        title: "Canon à Guimauves Intelligent et Radiocommandé IEEE",
         description:
-          "Une plateforme mobile radiocommandée intelligente équipée d'un canon à guimauves utilisant le suivi automatique par IA et la communication RF.",
-        longDescription: `
-          En tant que membre d'une équipe pluridisciplinaire d'étudiants en ingénierie, j'ai contribué à un projet innovant de voiture RC construit de zéro. Le véhicule comportait un lanceur de guimauves automatisé contrôlé par un système de ciblage alimenté par l'IA.
-
-          Je me suis concentré spécifiquement sur le développement des composants de reconnaissance faciale et de suivi qui guidaient le système de ciblage du lanceur. En utilisant les bibliothèques Python, OpenCV et Dlib, j'ai implémenté un système de détection en temps réel qui contrôlait le mécanisme de visée.
-
-          La solution combinait des classificateurs Haar Cascade pour la détection initiale des visages avec des algorithmes de suivi KCF (Kernelized Correlation Filters), choisis pour leur efficacité et leur faible charge de calcul. Cette implémentation a permis un ciblage précis tout en maintenant des performances réactives.
-        `,
+          "Une voiture RC intelligente équipée d'un canon à guimauves utilisant le suivi automatique par IA et la communication RF.",
+        longDescription: [
+          "Dans le cadre d'une équipe pluridisciplinaire d'étudiants en ingénierie, j'ai contribué à un projet innovant de voiture RC construite de zéro. Le véhicule comportait un lanceur de guimauves automatisé contrôlé par un système de ciblage basé sur l'IA.",
+          "Je me suis particulièrement concentré sur le développement des composants de reconnaissance faciale et de suivi qui guidaient le système de ciblage du lanceur. En utilisant Python, OpenCV et les bibliothèques Dlib, j'ai implémenté un système de détection en temps réel qui contrôlait le mécanisme de visée.",
+          "La solution combinait des classificateurs Haar Cascade pour la détection initiale des visages avec des algorithmes de suivi KCF (Kernelized Correlation Filters), choisis pour leur efficacité et leur faible coût en calcul. Cette implémentation a permis un ciblage précis tout en maintenant des performances réactives.",
+        ].join("\n\n"),
         keywords: ["Vision par Ordinateur", "Python", "OpenCV"],
         duration: "Juin 2024 - Août 2024",
         challenges: [
-          "Trouver un modèle équilibrant précision et vitesse pour le suivi en temps réel sur un Raspberry Pi",
-          "Mapper les données de suivi au mouvement de la tourelle pour un ciblage précis",
-          "Intégrer le système de suivi avec les contrôles existants de la voiture RC",
+          "Optimiser l'équilibre précision-vitesse pour le suivi sur Raspberry Pi",
+          "Adapter les données de suivi au mouvement de la tourelle pour un ciblage précis",
+          "Intégrer le système de suivi aux commandes existantes de la voiture RC",
         ],
       },
     },
@@ -188,11 +185,11 @@ export const projects = [
         description:
           "Service robot with facial recognition and tracking capabilities for human-robot interaction.",
         longDescription: `
-            As a member of Nano Stride, Concordia University's premier AI and Robotics Club, I contributed to the development of Cody - an advanced service robot. Though the club later disbanded, we had nearly completed Cody's development. The robot was designed to serve as an interactive guide in Concordia's main Hall building, where it would help students and visitors with directions and information.
+            As a member of Nano Stride, Concordia's AI and Robotics Club, I worked on developing Cody, our service robot. Though the club doesn't exist anymore, we nearly finished Cody. Our goal was to create an interactive guide for Concordia's main Hall building to help students and visitors find their way around.
 
-            As the lead developer of Cody's facial recognition and tracking system, I built the entire solution using Python and OpenCV. This was my first large-scale project, and it presented significant technical challenges - particularly in achieving real-time performance and maintaining reliable tracking across varying conditions and crowd sizes. One of our biggest hurdles was enabling Cody to identify who was speaking to it in group situations. I developed an innovative solution combining a Timing Delay of Arrival (TDOA) system with semantic speech analysis. This allowed Cody to pinpoint sound direction and match it with lip movements in that specific area, accurately identifying the speaking person.
+            I led the development of Cody's facial recognition and tracking system using Python and OpenCV. Being my first big project, it came with its challenges - especially getting everything to work in real-time and maintaining reliable tracking regardless of how many people were around. My biggest challenge? Getting Cody to figure out who was talking to it in group situations. I came up with a solution that combined a Timing Delay Of Arrival (TDOA) system with speech analysis. Basically, Cody could pinpoint where sound was coming from and match it with lip movements in that area, letting it identify who was speaking.
 
-            This project dramatically improved my expertise in computer vision and AI development. More importantly, it revealed the fascinating complexities of building AI systems that interact naturally with humans. The experience solidified my passion for AI and robotics, setting the foundation for my subsequent work in the field.
+            This project really leveled up my expertise in computer vision and AI. But what struck me most was discovering how fascinating and complex it is to build AI systems that interact naturally with humans. The experience solidified my passion for AI and robotics, giving me a strong foundation for everything that followed.
         `,
         keywords: ["Computer Vision", "Python", "OpenCV", "NumPy"],
         duration: "Oct 2023 - Jan 2024",
@@ -203,22 +200,22 @@ export const projects = [
         ],
       },
       fr: {
-        title: "Robot de Service IA Cody",
+        title: "Cody - Robot de Service IA",
         description:
           "Robot de service avec capacités de reconnaissance faciale et de suivi pour l'interaction homme-robot.",
         longDescription: `
-            En tant que membre de Nano Stride, le principal club d'IA et de robotique de l'Université Concordia, j'ai contribué au développement de Cody - un robot de service avancé. Bien que le club se soit dissous plus tard, nous avions presque terminé le développement de Cody. Le robot était conçu pour servir de guide interactif dans le bâtiment principal Hall de Concordia, où il aiderait les étudiants et les visiteurs avec des directions et des informations.
+            En tant que membre de Nano Stride, le club d'IA et de Robotique de Concordia, j'ai participé au développement de Cody - notre robot de service. Même si le club n'existe plus aujourd'hui, on avait presque terminé Cody. Notre but était d'en faire un guide interactif dans le pavillon principal de Concordia pour aider les étudiants et visiteurs à s'orienter.
 
-            En tant que développeur principal du système de reconnaissance faciale et de suivi de Cody, j'ai construit la solution complète en utilisant Python et OpenCV. C'était mon premier projet à grande échelle, et il présentait des défis techniques importants - particulièrement pour atteindre des performances en temps réel et maintenir un suivi fiable dans diverses conditions et tailles de foule. L'un de nos plus grands obstacles était de permettre à Cody d'identifier qui lui parlait dans des situations de groupe. J'ai développé une solution innovante combinant un système de délai d'arrivée temporel (TDOA) avec une analyse sémantique de la parole. Cela permettait à Cody de localiser la direction du son et de la faire correspondre avec les mouvements des lèvres dans cette zone spécifique, identifiant avec précision la personne qui parle.
+            J'étais responsable du système de reconnaissance faciale et de suivi de Cody, que j'ai développé avec Python et OpenCV. C'était mon premier gros projet, et ça n'a pas été simple - surtout pour faire fonctionner le tout en temps réel et garder un suivi stable peu importe le nombre de personnes autour. Mon plus gros défi? Faire comprendre à Cody qui lui parlait quand il y avait plusieurs personnes. J'ai trouvé une solution en combinant un système TDOA (Timing Delay Of Arrival) avec une analyse de la parole. En gros, Cody pouvait repérer d'où venait le son et le connecter aux mouvements des lèvres qu'il voyait, ce qui lui permettait de savoir qui parlait.
 
-            Ce projet a considérablement amélioré mon expertise en vision par ordinateur et en développement d'IA. Plus important encore, il a révélé les fascinantes complexités de la construction de systèmes d'IA qui interagissent naturellement avec les humains. Cette expérience a solidifié ma passion pour l'IA et la robotique, jetant les bases de mon travail ultérieur dans le domaine.
+            Ce projet m'a vraiment fait progresser en vision par ordinateur et en IA. Mais ce qui m'a le plus marqué, c'est de découvrir à quel point c'est complexe et fascinant de créer des systèmes d'IA qui interagissent naturellement avec les humains. Cette expérience a confirmé ma passion pour l'IA et la robotique, et ça m'a donné une super base pour la suite.
         `,
         keywords: ["Vision par Ordinateur", "Python", "OpenCV", "NumPy"],
         duration: "Oct 2023 - Jan 2024",
         challenges: [
-          "Développement d'un système pour identifier l'interlocuteur principal parmi plusieurs personnes",
-          "Optimisation des algorithmes de suivi facial pour le budget et le matériel disponibles",
-          "Gestion de la collaboration sur le code au sein d'une équipe de développement de taille moyenne pour la première fois",
+          "Développer un système d'identification du locuteur principal parmi plusieurs personnes",
+          "Optimiser les algorithmes de suivi facial selon le budget et le matériel disponible",
+          "Gérer la collaboration de code dans une équipe de taille moyenne pour la première fois",
         ],
       },
     },
@@ -235,8 +232,8 @@ export const projects = [
         description:
           "Portfolio website showcasing my projects, skills, and experience.",
         longDescription: `
-        I designed and developed a personal portfolio website to showcase my projects, skills, and experience. The site features a clean, modern design with a focus on user experience. I used React for the frontend and Tailwind CSS for styling, ensuring a responsive and visually appealing layout. The site includes a project gallery with detailed descriptions, a skills section highlighting my technical expertise, and an about page with information about my background and interests. I also integrated a contact form to make it easy for visitors to reach out to me.
-      `,
+          I built my portfolio website from scratch to display my work and skills in a simple way. I went with React and Tailwind CSS to make it look clean and modern while working smoothly on all devices. The site has all the essentials - a projects section where I break down what I've worked on, a skills page, and a bit about who I am. I made sure to add a contact form too, keeping things straightforward for anyone who wants to reach out.
+        `,
         keywords: ["React", "Tailwind CSS"],
         duration: "Dec 2024",
         challenges: [
@@ -249,13 +246,13 @@ export const projects = [
         description:
           "Site web portfolio présentant mes projets, compétences et expérience.",
         longDescription: `
-        J'ai conçu et développé un site web portfolio personnel pour présenter mes projets, compétences et expérience. Le site propose un design épuré et moderne axé sur l'expérience utilisateur. J'ai utilisé React pour le frontend et Tailwind CSS pour le style, assurant une mise en page responsive et visuellement attrayante. Le site comprend une galerie de projets avec des descriptions détaillées, une section compétences mettant en valeur mon expertise technique, et une page à propos contenant des informations sur mon parcours et mes centres d'intérêt. J'ai également intégré un formulaire de contact pour permettre aux visiteurs de me contacter facilement.
-      `,
+          J'ai créé mon site portfolio pour présenter mon travail et mes compétences de façon simple. J'ai choisi React et Tailwind CSS pour avoir un design épuré et moderne qui s'adapte bien à tous les écrans. Le site contient l'essentiel - une section projets où j'explique ce que j'ai fait, une page de compétences, et une partie qui parle un peu de moi. J'ai aussi ajouté un formulaire de contact pour que les gens puissent facilement me joindre.
+        `,
         keywords: ["React", "Tailwind CSS"],
         duration: "Déc 2024",
         challenges: [
-          "Implémentation d'une mise en page responsive qui s'affiche bien sur tous les appareils",
-          "Prise en charge des langues anglaise et française sur le site",
+          "Créer une mise en page responsive adaptée à tous les appareils",
+          "Supporter l'anglais et le français sur le site",
         ],
       },
     },
@@ -275,7 +272,7 @@ export const projects = [
         description:
           "Full-stack web application for my family to browse, track, and add to our 400+ board game collection.",
         longDescription: `
-        I developed a web application to manage and organize my family's large board game collection (400+ games). The app streamlines game selection by filtering through player count, game style, and play duration. Using the BoardGameGeek API, it automates game data entry with an autocomplete feature that populates game details, minimizing manual input. I integrated Firebase for the backend and incorporated the DeepL API to provide seamless bilingual support (English/French) for family members. A key feature is the smart filtering system that displays games as interactive cards with relevant tags, making it easy to find games that match specific group preferences.
+        I built this app to help my family manage our huge board game collection (over 400 games!). Finding the right game used to be a hassle, so I made it easy to filter games by player count, style, and how long they take to play. To make adding new games simpler, I connected to the BoardGameGeek API which allows you to just start typing the name and it fills in all the details automatically. I used Firebase for the backend data storage and added the DeepL API so everything works in both English and French for the whole family. My favorite part is how the games show up as cards with tags, making it super easy to find the perfect game for game night.
       `,
         keywords: ["JavaScript", "HTML/CSS", "Firebase"],
         duration: "Aug 2024",
@@ -287,15 +284,15 @@ export const projects = [
       fr: {
         title: "Catalogue de Jeux de Société",
         description:
-          "Application web full-stack permettant à ma famille de parcourir, suivre et ajouter à notre collection de plus de 400 jeux de société.",
+          "Application web full-stack permettant à ma famille de parcourir, suivre et ajouter à notre collection de 400+ jeux de société.",
         longDescription: `
-          J'ai développé une application web pour gérer et organiser la vaste collection de jeux de société de ma famille (plus de 400 jeux). L'application simplifie la sélection des jeux en filtrant par nombre de joueurs, style de jeu et durée de partie. En utilisant l'API BoardGameGeek, elle automatise la saisie des données des jeux avec une fonction d'auto-complétion qui remplit les détails des jeux, minimisant la saisie manuelle. J'ai intégré Firebase pour le backend et incorporé l'API DeepL pour fournir un support bilingue fluide (anglais/français) pour les membres de la famille. Une fonctionnalité clé est le système de filtrage intelligent qui affiche les jeux sous forme de cartes interactives avec des tags pertinents, facilitant la recherche de jeux correspondant aux préférences spécifiques du groupe.
+          J'ai créé cette app pour aider ma famille à gérer notre énorme collection de jeux de société (400 jeux et plus!). Comme ça prenait toujours beaucoup de temps à trouver le bon jeu, j'ai mis en place des filtres par nombre de joueurs, style de jeu et durée de partie. Pour faciliter l'ajout de nouveaux jeux, j'ai utilisé l'API de BoardGameGeek qui nous permet de commencer à taper le nom d'un jeux et tous les détails s'ajoutent automatiquement. J'ai choisi Firebase pour le backend stockage des données et ajouté l'API DeepL pour que tout soit disponible en anglais et en français pour toute la famille. Ce que j'aime bien, c'est comment les jeux s'affichent en cartes avec des tags, ce qui rend super facile de trouver le jeu parfait pour nos soirées.
         `,
         keywords: ["JavaScript", "HTML/CSS", "Firebase"],
         duration: "Août 2024",
         challenges: [
           "S'assurer que les bons jeux étaient ajoutés à la base de données",
-          "Créer une interface utilisateur intuitive qui fonctionnait bien pour tous les membres de ma famille",
+          "Créer une interface intuitive adaptée à tous les membres de ma famille",
         ],
       },
     },

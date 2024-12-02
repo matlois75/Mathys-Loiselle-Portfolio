@@ -106,7 +106,7 @@ const ResumePage = ({ language }) => {
     ],
     fr: [
       {
-        title: "Formation",
+        title: "Éducation",
         items: [
           {
             title: "Baccalauréat en Sciences - Informatique",
@@ -141,9 +141,9 @@ const ResumePage = ({ language }) => {
             location: "TaylorMade Golf - Carlsbad, Californie, États-Unis",
             duration: "Sept 2024 - Déc 2024",
             details: [
-              "Construction d'un système de mode vocal utilisant Angular/C#/services cloud Azure",
-              "Développement de la détection d'anomalies par ML pour le traitement des commandes",
-              "Construction d'un modèle de traitement d'image avec Python/React",
+              "Implémentation vocale du chatbot TaylorMade (Angular/C#/Azure)",
+              "Modèle Mahalanobis pour détection d'anomalies dans le traitement des commandes (Python)",
+              "Algorithme d'ajustement automatique des couleurs (Python/React)",
             ],
             keywords: [
               "Intelligence Artificielle",
@@ -183,14 +183,14 @@ const ResumePage = ({ language }) => {
             details: [
               "Sports d'hiver : Hockey sur glace, Planche à neige",
               "Sports de raquette : Tennis de table, Badminton, Pickleball, Tennis",
-              "Activités de plein air : Escalade, Vélo, Football",
+              "Activités de plein air : Escalade, Vélo, Soccer",
             ],
             keywords: ["Sports d'équipe", "Activités de plein air"],
           },
           {
             title: "Voyages",
             details: [
-              "Europe : France, Italie, Espagne, Royaume-Uni",
+              "Europe : France, Italie, Espagne, Angleterre",
               "Amériques : Canada, États-Unis, Mexique, Costa Rica",
               "Afrique : Maroc",
               "Asie : Vietnam",
