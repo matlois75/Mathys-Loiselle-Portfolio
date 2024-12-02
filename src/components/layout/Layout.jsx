@@ -8,14 +8,27 @@ const Layout = ({
   setCurrentPage,
   isMenuOpen,
   setIsMenuOpen,
+  isDarkMode,
+  setIsDarkMode,
+  language,
+  setLanguage,
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex flex-col">
+    // Layout.jsx
+    <div
+      className={`min-h-screen flex flex-col ${isDarkMode ? "dark" : ""}
+      bg-gradient-to-br from-blue-50 to-purple-50 
+      dark:from-gray-900 dark:to-gray-800`}
+    >
       <Navigation
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
+        isDarkMode={isDarkMode}
+        setIsDarkMode={setIsDarkMode}
+        language={language}
+        setLanguage={setLanguage}
       />
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12 flex-grow w-full">
         {children}
@@ -31,6 +44,10 @@ Layout.propTypes = {
   setCurrentPage: PropTypes.func.isRequired,
   isMenuOpen: PropTypes.bool.isRequired,
   setIsMenuOpen: PropTypes.func.isRequired,
+  isDarkMode: PropTypes.bool.isRequired,
+  setIsDarkMode: PropTypes.func.isRequired,
+  language: PropTypes.oneOf(["en", "fr"]).isRequired,
+  setLanguage: PropTypes.func.isRequired,
 };
 
 export default Layout;

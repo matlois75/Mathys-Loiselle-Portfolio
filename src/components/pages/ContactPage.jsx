@@ -36,10 +36,10 @@ const ContactPage = () => {
 
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-bold">Contact Me</h1>
+      <h1 className="text-3xl font-bold dark:text-white">Contact Me</h1>
       <div className="grid md:grid-cols-2 gap-6">
         <div className="space-y-6">
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-300">
             Feel free to reach out to me through any of these platforms.
             I&apos;m always interested in discussing new opportunities,
             collaborations, research projects, or just having a chat about
@@ -53,12 +53,16 @@ const ContactPage = () => {
                 onClick={method.isEmail ? method.onClick : undefined}
                 target={method.isEmail ? undefined : "_blank"}
                 rel={method.isEmail ? undefined : "noopener noreferrer"}
-                className="relative group flex items-center space-x-4 bg-white/50 backdrop-blur-sm rounded-xl p-6 hover:bg-white/70 transition-colors"
+                className="relative group flex items-center space-x-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-white/70 dark:hover:bg-gray-700/50 transition-colors"
               >
-                <method.icon className="w-6 h-6 text-blue-600" />
+                <method.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 <div>
-                  <h2 className="font-semibold">{method.title}</h2>
-                  <p className="text-gray-600">{method.value}</p>
+                  <h2 className="font-semibold dark:text-white">
+                    {method.title}
+                  </h2>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {method.value}
+                  </p>
                 </div>
                 {method.isEmail && emailTooltip && (
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full mt-[-8px] px-2 py-1 text-sm text-white bg-gray-800 rounded transition-opacity duration-200 whitespace-nowrap">
@@ -70,24 +74,26 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6">
-          <h2 className="text-2xl font-bold mb-6">Research Interests</h2>
+        <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6">
+          <h2 className="text-2xl font-bold mb-6 dark:text-white">
+            Research Interests
+          </h2>
 
           <div className="mb-6">
-            <h3 className="text-base font-medium text-gray-600 mb-2">
+            <h3 className="text-base font-medium text-gray-600 dark:text-gray-300 mb-2">
               Core Machine Learning
             </h3>
-            <div className="space-y-2 text-gray-700">
+            <div className="space-y-2 text-gray-700 dark:text-gray-200">
               <li>Machine Learning & Deep Learning</li>
               <li>Reinforcement Learning</li>
             </div>
           </div>
 
           <div className="mb-6">
-            <h3 className="text-base font-medium text-gray-600 mb-2">
+            <h3 className="text-base font-medium text-gray-600 dark:text-gray-300 mb-2">
               Applications & Systems
             </h3>
-            <div className="space-y-2 text-gray-700">
+            <div className="space-y-2 text-gray-700 dark:text-gray-200">
               <li>Multimodal Learning & AI Systems</li>
               <li>Natural Language Processing</li>
               <li>Robotics and Computer Vision</li>
@@ -95,10 +101,10 @@ const ContactPage = () => {
           </div>
 
           <div>
-            <h3 className="text-base font-medium text-gray-600 mb-2">
+            <h3 className="text-base font-medium text-gray-600 dark:text-gray-300 mb-2">
               Interdisciplinary Research
             </h3>
-            <div className="space-y-2 text-gray-700">
+            <div className="space-y-2 text-gray-700 dark:text-gray-200">
               <li>Mathematics/Physics oriented research</li>
               <li>Neuroscience oriented research</li>
             </div>

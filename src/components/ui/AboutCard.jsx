@@ -1,8 +1,10 @@
 const AboutCard = () => {
   return (
-    <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 space-y-4">
-      <h2 className="text-2xl font-semibold">About Me</h2>
-      <div className="space-y-4 text-gray-700">
+    <div className="bg-white/80 dark:bg-gray-800/40 backdrop-blur-md rounded-xl p-6 space-y-4 shadow-xl border border-gray-200/20 dark:border-gray-700/30">
+      <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        About Me
+      </h2>
+      <div className="space-y-4 text-gray-700 dark:text-gray-300">
         <p>
           I&apos;m Mathys Loiselle, a third-year Computer Science student at
           Concordia University pursuing a minor in Mathematics & Statistics.

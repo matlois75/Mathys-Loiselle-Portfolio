@@ -6,18 +6,20 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center p-4 z-50"
+      className="fixed inset-0 bg-black/50 dark:bg-black/70 backdrop-blur-sm flex justify-center items-center p-4 z-50"
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-6 animate-[slideUp_0.3s_ease-out]"
+        className="bg-white dark:bg-gray-800 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-6 animate-[slideUp_0.3s_ease-out]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-start">
-          <h2 className="text-2xl font-bold">{project.title}</h2>
+          <h2 className="text-2xl font-bold dark:text-white">
+            {project.title}
+          </h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors dark:text-gray-300"
           >
             ✕
           </button>
@@ -72,8 +74,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         )}
 
         <div className="space-y-4">
-          <h3 className="font-semibold">Overview</h3>
-          <div className="text-gray-600 space-y-4">
+          <h3 className="font-semibold dark:text-white">Overview</h3>
+          <div className="text-gray-600 dark:text-gray-300 space-y-4">
             {project.longDescription.split("\n\n").map((paragraph, i) => (
               <p key={i} className="leading-relaxed">
                 {paragraph.trim()}
@@ -84,8 +86,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
         {project.challenges && (
           <div className="space-y-4">
-            <h3 className="font-semibold">Challenges</h3>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
+            <h3 className="font-semibold dark:text-white">Challenges</h3>
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
               {project.challenges.map((challenge, i) => (
                 <li key={i}>{challenge}</li>
               ))}
@@ -94,13 +96,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         )}
 
         <div className="space-y-4">
-          <h3 className="font-semibold">Keywords</h3>
+          <h3 className="font-semibold dark:text-white">Keywords</h3>
           <div className="space-y-2">
             <div className="flex flex-wrap gap-2">
               {project.keywords.map((keywords, i) => (
                 <span
                   key={i}
-                  className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                  className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
                 >
                   {keywords}
                 </span>
@@ -116,7 +118,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 href={project.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
               >
                 GitHub Repository
                 <svg
@@ -130,33 +132,14 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </svg>
               </a>
             )}
-            {project.links.demo && (
+            {(project.links.demo || project.links.website) && (
               <a
-                href={project.links.demo}
+                href={project.links.demo || project.links.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
               >
-                Live Demo
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                </svg>
-              </a>
-            )}
-            {project.links.website && (
-              <a
-                href={project.links.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors"
-              >
-                Website
+                {project.links.demo ? "Live Demo" : "Website"}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"

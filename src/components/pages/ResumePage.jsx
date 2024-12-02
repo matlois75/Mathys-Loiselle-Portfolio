@@ -105,12 +105,12 @@ const ResumePage = () => {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 dark:text-white">
       <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold">Resume</h1>
+        <h1 className="text-3xl font-bold dark:text-white">Resume</h1>
         <button
           onClick={handleDownload}
-          className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
         >
           <span>Open File</span>
           <ExternalLink className="w-4 h-4" />
@@ -119,23 +119,29 @@ const ResumePage = () => {
 
       {sections.map((section, index) => (
         <div key={index} className="space-y-4">
-          <h2 className="text-2xl font-semibold">{section.title}</h2>
+          <h2 className="text-2xl font-semibold dark:text-white">
+            {section.title}
+          </h2>
           <div className="space-y-6">
             {section.items.map((item, i) => (
               <div
                 key={i}
-                className="bg-white/50 backdrop-blur-sm rounded-xl p-6"
+                className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6"
               >
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="text-gray-600">{item.location}</p>
-                <p className="text-sm text-gray-500">
+                <h3 className="text-xl font-semibold dark:text-white">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {item.location}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   {item.duration}
                   {section.title === "Experience" &&
                     " " + calculateDuration(item.duration)}
                 </p>
                 <ul className="mt-2 space-y-1">
                   {item.details.map((detail, d) => (
-                    <li key={d} className="text-gray-700">
+                    <li key={d} className="text-gray-700 dark:text-gray-200">
                       {detail}
                     </li>
                   ))}
@@ -145,7 +151,7 @@ const ResumePage = () => {
                     {item.keywords.map((keywords, t) => (
                       <span
                         key={t}
-                        className="px-2 py-1 text-sm bg-blue-100 text-blue-800 rounded-md"
+                        className="px-2 py-1 text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-md"
                       >
                         {keywords}
                       </span>

@@ -8,7 +8,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-bold">Projects</h1>
+      <h1 className="text-3xl font-bold dark:text-white">Projects</h1>
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <ProjectCard

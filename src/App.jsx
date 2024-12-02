@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "./components/layout/Layout";
 import HomePage from "./components/pages/HomePage";
 import ResumePage from "./components/pages/ResumePage";
@@ -6,8 +6,21 @@ import ProjectsPage from "./components/pages/ProjectsPage";
 import ContactPage from "./components/pages/ContactPage";
 
 const App = () => {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem("darkMode");
+    return saved ? JSON.parse(saved) : false;
+  });
   const [currentPage, setCurrentPage] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -22,7 +35,7 @@ const App = () => {
       default:
         return (
           <div className="flex items-center justify-center h-64">
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Content for {currentPage} page coming soon...
             </p>
           </div>
@@ -36,6 +49,8 @@ const App = () => {
       setCurrentPage={setCurrentPage}
       isMenuOpen={isMenuOpen}
       setIsMenuOpen={setIsMenuOpen}
+      isDarkMode={isDarkMode}
+      setIsDarkMode={setIsDarkMode}
     >
       {renderPage()}
     </Layout>

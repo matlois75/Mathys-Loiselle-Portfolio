@@ -5,25 +5,26 @@ const ProjectCard = ({ project, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="bg-white/50 backdrop-blur-sm rounded-xl p-6 space-y-4
-          transition-all duration-300 ease-out cursor-pointer
-          hover:transform hover:scale-[1.02] hover:-translate-y-1
-          hover:bg-white/60 hover:shadow-lg hover:shadow-blue-100/50
-          hover:backdrop-blur-none"
+      className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 space-y-4
+      transition-all duration-300 ease-out cursor-pointer
+      hover:transform hover:scale-[1.02] hover:-translate-y-1
+      hover:bg-white/60 dark:hover:bg-gray-700/60 hover:shadow-lg 
+      hover:shadow-blue-100/50 dark:hover:shadow-blue-900/50
+      hover:backdrop-blur-none"
     >
-      <h2 className="text-xl font-semibold">{project.title}</h2>
-      <p className="text-gray-600">{project.description}</p>
+      <h2 className="text-xl font-semibold dark:text-white">{project.title}</h2>
+      <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
       <div className="flex flex-wrap gap-2">
         {project.keywords.map((keywords, i) => (
           <span
             key={i}
-            className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+            className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
           >
             {keywords}
           </span>
         ))}
       </div>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-400">
         {project.duration} <span>{calculateDuration(project.duration)}</span>
       </p>
     </div>

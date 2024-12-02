@@ -16,7 +16,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 dark:text-white">
       <ProfileSection />
       <AboutCard />
       <div className="grid md:grid-cols-2 gap-4">
