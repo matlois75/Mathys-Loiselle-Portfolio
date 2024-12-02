@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { translations } from "../../data/translations";
 import PropTypes from "prop-types";
@@ -140,7 +140,10 @@ const ContactPage = ({ language }) => {
               </h3>
               <div className="space-y-2 text-gray-700 dark:text-gray-200">
                 {section.items.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <div key={i} className="flex items-center">
+                    <ChevronRight className="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
                 ))}
               </div>
             </div>

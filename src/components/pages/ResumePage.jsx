@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronRight } from "lucide-react";
 import resumePDF from "../../assets/Mathys-Loiselle-Resume-Public.pdf";
 import { calculateDuration } from "../../data/projectsData";
 import { translations } from "../../data/translations";
@@ -244,7 +244,11 @@ const ResumePage = ({ language }) => {
                 </p>
                 <ul className="mt-2 space-y-1">
                   {item.details.map((detail, d) => (
-                    <li key={d} className="text-gray-700 dark:text-gray-200">
+                    <li
+                      key={d}
+                      className="text-gray-700 dark:text-gray-200 flex items-center" // Change items-start to items-center
+                    >
+                      <ChevronRight className="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0" />
                       {detail}
                     </li>
                   ))}

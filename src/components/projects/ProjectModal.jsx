@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import ImageCard from "../ui/ImageCard";
+import { ChevronRight } from "lucide-react";
 
 const ProjectModal = ({ project, isOpen, onClose, language }) => {
   if (!isOpen || !project) return null;
@@ -12,7 +13,7 @@ const ProjectModal = ({ project, isOpen, onClose, language }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white dark:bg-gray-800 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-6 animate-[slideUp_0.3s_ease-out]"
+        className="bg-white dark:bg-gray-800 rounded-2xl max-w-3xl w-full max-h-[86vh] overflow-y-auto p-6 space-y-6 animate-[slideUp_0.3s_ease-out]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-start">
@@ -29,9 +30,7 @@ const ProjectModal = ({ project, isOpen, onClose, language }) => {
 
         {project.images && (
           <div className="space-y-4 overflow-visible">
-            <h3 className="font-semibold">
-              {language === "en" ? "Images" : "Images"}
-            </h3>
+            <h3 className="font-semibold dark:text-white">Images</h3>
             {project.images.length === 1 ? (
               <div className="mx-auto w-4/5">
                 <ImageCard
@@ -95,11 +94,14 @@ const ProjectModal = ({ project, isOpen, onClose, language }) => {
             <h3 className="font-semibold dark:text-white">
               {language === "en" ? "Challenges" : "Défis"}
             </h3>
-            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+            <div className="space-y-2 text-gray-600 dark:text-gray-300">
               {translation.challenges.map((challenge, i) => (
-                <li key={i}>{challenge}</li>
+                <div key={i} className="flex items-center">
+                  <ChevronRight className="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0" />
+                  <span>{challenge}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         )}
 
