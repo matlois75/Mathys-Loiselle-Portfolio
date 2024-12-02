@@ -1,20 +1,23 @@
 import { Mail, Linkedin, Github } from "lucide-react";
 import { useState } from "react";
+import { translations } from "../../data/translations";
+import PropTypes from "prop-types";
 
-const ContactPage = () => {
+const ContactPage = ({ language }) => {
+  const t = translations[language];
   const [emailTooltip, setEmailTooltip] = useState("");
 
   const copyEmail = (e) => {
     e.preventDefault();
     navigator.clipboard.writeText("mathys.loiselle@gmail.com");
-    setEmailTooltip("Copied!");
+    setEmailTooltip(language === "en" ? "Copied!" : "Copié !");
     setTimeout(() => setEmailTooltip(""), 2000);
   };
 
   const contactMethods = [
     {
       icon: Mail,
-      title: "Email",
+      title: t.contact.email,
       value: "mathys.loiselle@gmail.com",
       link: "#",
       onClick: copyEmail,
@@ -22,28 +25,79 @@ const ContactPage = () => {
     },
     {
       icon: Linkedin,
-      title: "LinkedIn",
+      title: t.contact.linkedin,
       value: "linkedin.com/in/mathysloiselle/",
       link: "https://www.linkedin.com/in/mathysloiselle/",
     },
     {
       icon: Github,
-      title: "GitHub",
+      title: t.contact.github,
       value: "github.com/matlois75",
       link: "https://github.com/matlois75",
     },
   ];
 
+  const researchSections = {
+    en: {
+      title: "Research Interests",
+      sections: [
+        {
+          title: "Core Machine Learning",
+          items: ["Machine Learning & Deep Learning", "Reinforcement Learning"],
+        },
+        {
+          title: "Applications & Systems",
+          items: [
+            "Multimodal Learning & AI Systems",
+            "Natural Language Processing",
+            "Robotics and Computer Vision",
+          ],
+        },
+        {
+          title: "Interdisciplinary Research",
+          items: [
+            "Mathematics/Physics oriented research",
+            "Neuroscience oriented research",
+          ],
+        },
+      ],
+    },
+    fr: {
+      title: "Intérêts de Recherche",
+      sections: [
+        {
+          title: "Apprentissage Automatique Fondamental",
+          items: [
+            "Apprentissage automatique et apprentissage profond",
+            "Apprentissage par renforcement",
+          ],
+        },
+        {
+          title: "Applications et Systèmes",
+          items: [
+            "Apprentissage multimodal et systèmes d'IA",
+            "Traitement du langage naturel",
+            "Robotique et vision par ordinateur",
+          ],
+        },
+        {
+          title: "Recherche Interdisciplinaire",
+          items: [
+            "Recherche orientée mathématiques/physique",
+            "Recherche orientée neurosciences",
+          ],
+        },
+      ],
+    },
+  };
+
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-bold dark:text-white">Contact Me</h1>
+      <h1 className="text-3xl font-bold dark:text-white">{t.contact.title}</h1>
       <div className="grid md:grid-cols-2 gap-6">
         <div className="space-y-6">
           <p className="text-gray-600 dark:text-gray-300">
-            Feel free to reach out to me through any of these platforms.
-            I&apos;m always interested in discussing new opportunities,
-            collaborations, research projects, or just having a chat about
-            technology and research.
+            {t.contact.subtitle}
           </p>
           <div className="space-y-4">
             {contactMethods.map((method, index) => (
@@ -76,43 +130,29 @@ const ContactPage = () => {
 
         <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-6 dark:text-white">
-            Research Interests
+            {researchSections[language].title}
           </h2>
 
-          <div className="mb-6">
-            <h3 className="text-base font-medium text-gray-600 dark:text-gray-300 mb-2">
-              Core Machine Learning
-            </h3>
-            <div className="space-y-2 text-gray-700 dark:text-gray-200">
-              <li>Machine Learning & Deep Learning</li>
-              <li>Reinforcement Learning</li>
+          {researchSections[language].sections.map((section, index) => (
+            <div key={index} className="mb-6 last:mb-0">
+              <h3 className="text-base font-medium text-gray-600 dark:text-gray-300 mb-2">
+                {section.title}
+              </h3>
+              <div className="space-y-2 text-gray-700 dark:text-gray-200">
+                {section.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div className="mb-6">
-            <h3 className="text-base font-medium text-gray-600 dark:text-gray-300 mb-2">
-              Applications & Systems
-            </h3>
-            <div className="space-y-2 text-gray-700 dark:text-gray-200">
-              <li>Multimodal Learning & AI Systems</li>
-              <li>Natural Language Processing</li>
-              <li>Robotics and Computer Vision</li>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-base font-medium text-gray-600 dark:text-gray-300 mb-2">
-              Interdisciplinary Research
-            </h3>
-            <div className="space-y-2 text-gray-700 dark:text-gray-200">
-              <li>Mathematics/Physics oriented research</li>
-              <li>Neuroscience oriented research</li>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
+};
+
+ContactPage.propTypes = {
+  language: PropTypes.oneOf(["en", "fr"]).isRequired,
 };
 
 export default ContactPage;

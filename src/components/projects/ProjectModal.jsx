@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import ImageCard from "../ui/ImageCard";
 
-const ProjectModal = ({ project, isOpen, onClose }) => {
-  if (!isOpen) return null;
+const ProjectModal = ({ project, isOpen, onClose, language }) => {
+  if (!isOpen || !project) return null;
+
+  const translation = project.translations[language];
 
   return (
     <div
@@ -15,7 +17,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       >
         <div className="flex justify-between items-start">
           <h2 className="text-2xl font-bold dark:text-white">
-            {project.title}
+            {translation.title}
           </h2>
           <button
             onClick={onClose}
@@ -27,12 +29,14 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
         {project.images && (
           <div className="space-y-4 overflow-visible">
-            <h3 className="font-semibold">Images</h3>
+            <h3 className="font-semibold">
+              {language === "en" ? "Images" : "Images"}
+            </h3>
             {project.images.length === 1 ? (
               <div className="mx-auto w-4/5">
                 <ImageCard
                   src={project.images[0]}
-                  alt={`${project.title} screenshot 1`}
+                  alt={`${translation.title} screenshot 1`}
                   className="h-96"
                 />
               </div>
@@ -42,7 +46,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <ImageCard
                     key={i}
                     src={img}
-                    alt={`${project.title} screenshot ${i + 1}`}
+                    alt={`${translation.title} screenshot ${i + 1}`}
                     className="flex-1 h-64"
                   />
                 ))}
@@ -53,7 +57,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <ImageCard
                     key={i}
                     src={img}
-                    alt={`${project.title} screenshot ${i + 1}`}
+                    alt={`${translation.title} screenshot ${i + 1}`}
                     className="aspect-square"
                   />
                 ))}
@@ -64,7 +68,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   <ImageCard
                     key={i}
                     src={img}
-                    alt={`${project.title} screenshot ${i + 1}`}
+                    alt={`${translation.title} screenshot ${i + 1}`}
                     className="h-64"
                   />
                 ))}
@@ -74,9 +78,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         )}
 
         <div className="space-y-4">
-          <h3 className="font-semibold dark:text-white">Overview</h3>
+          <h3 className="font-semibold dark:text-white">
+            {language === "en" ? "Overview" : "Aperçu"}
+          </h3>
           <div className="text-gray-600 dark:text-gray-300 space-y-4">
-            {project.longDescription.split("\n\n").map((paragraph, i) => (
+            {translation.longDescription.split("\n\n").map((paragraph, i) => (
               <p key={i} className="leading-relaxed">
                 {paragraph.trim()}
               </p>
@@ -84,11 +90,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           </div>
         </div>
 
-        {project.challenges && (
+        {translation.challenges && (
           <div className="space-y-4">
-            <h3 className="font-semibold dark:text-white">Challenges</h3>
+            <h3 className="font-semibold dark:text-white">
+              {language === "en" ? "Challenges" : "Défis"}
+            </h3>
             <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-              {project.challenges.map((challenge, i) => (
+              {translation.challenges.map((challenge, i) => (
                 <li key={i}>{challenge}</li>
               ))}
             </ul>
@@ -96,15 +104,17 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
         )}
 
         <div className="space-y-4">
-          <h3 className="font-semibold dark:text-white">Keywords</h3>
+          <h3 className="font-semibold dark:text-white">
+            {language === "en" ? "Keywords" : "Mots-clés"}
+          </h3>
           <div className="space-y-2">
             <div className="flex flex-wrap gap-2">
-              {project.keywords.map((keywords, i) => (
+              {translation.keywords.map((keyword, i) => (
                 <span
                   key={i}
                   className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
                 >
-                  {keywords}
+                  {keyword}
                 </span>
               ))}
             </div>
@@ -120,7 +130,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
               >
-                GitHub Repository
+                {language === "en" ? "GitHub Repository" : "Dépôt GitHub"}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"
@@ -139,7 +149,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
               >
-                {project.links.demo ? "Live Demo" : "Website"}
+                {project.links.demo
+                  ? language === "en"
+                    ? "Live Demo"
+                    : "Démo en direct"
+                  : language === "en"
+                  ? "Website"
+                  : "Site Web"}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"
@@ -160,21 +176,34 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
 ProjectModal.propTypes = {
   project: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    longDescription: PropTypes.string,
-    keywords: PropTypes.arrayOf(PropTypes.string).isRequired,
-    duration: PropTypes.string.isRequired,
-    challenges: PropTypes.arrayOf(PropTypes.string),
+    translations: PropTypes.shape({
+      en: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        longDescription: PropTypes.string.isRequired,
+        keywords: PropTypes.arrayOf(PropTypes.string).isRequired,
+        duration: PropTypes.string.isRequired,
+        challenges: PropTypes.arrayOf(PropTypes.string),
+      }).isRequired,
+      fr: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        longDescription: PropTypes.string.isRequired,
+        keywords: PropTypes.arrayOf(PropTypes.string).isRequired,
+        duration: PropTypes.string.isRequired,
+        challenges: PropTypes.arrayOf(PropTypes.string),
+      }).isRequired,
+    }).isRequired,
     images: PropTypes.arrayOf(PropTypes.string),
     links: PropTypes.shape({
       github: PropTypes.string,
       demo: PropTypes.string,
       website: PropTypes.string,
     }),
-  }), // Not required since it can be null when modal is closed
+  }),
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
+  language: PropTypes.oneOf(["en", "fr"]).isRequired,
 };
 
 export default ProjectModal;

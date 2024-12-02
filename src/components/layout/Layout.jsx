@@ -2,38 +2,16 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 import PropTypes from "prop-types";
 
-const Layout = ({
-  children,
-  currentPage,
-  setCurrentPage,
-  isMenuOpen,
-  setIsMenuOpen,
-  isDarkMode,
-  setIsDarkMode,
-  language,
-  setLanguage,
-}) => {
+const Layout = ({ children, language, ...props }) => {
   return (
-    // Layout.jsx
     <div
-      className={`min-h-screen flex flex-col ${isDarkMode ? "dark" : ""}
-      bg-gradient-to-br from-blue-50 to-purple-50 
-      dark:from-gray-900 dark:to-gray-800`}
+      className={`min-h-screen flex flex-col ${props.isDarkMode ? "dark" : ""}`}
     >
-      <Navigation
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        isDarkMode={isDarkMode}
-        setIsDarkMode={setIsDarkMode}
-        language={language}
-        setLanguage={setLanguage}
-      />
+      <Navigation {...props} language={language} />
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12 flex-grow w-full">
         {children}
       </main>
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 };

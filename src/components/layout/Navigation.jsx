@@ -1,6 +1,7 @@
 import { Menu, X, Sun, Moon, Languages } from "lucide-react";
 import { navigationItems } from "../../data/navigationItems";
 import PropTypes from "prop-types";
+import { translations } from "../../data/translations";
 
 const Navigation = ({
   currentPage,
@@ -12,6 +13,8 @@ const Navigation = ({
   language,
   setLanguage,
 }) => {
+  const t = translations[language];
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm z-50">
       <div className="max-w-6xl mx-auto px-4">
@@ -38,7 +41,7 @@ const Navigation = ({
                   }`}
               >
                 <item.icon className="w-4 h-4" />
-                <span>{item.label}</span>
+                <span>{t.navigation[item.id]}</span>
               </button>
             ))}
           </div>
@@ -48,7 +51,6 @@ const Navigation = ({
             <button
               onClick={() => {
                 setIsDarkMode(!isDarkMode);
-                // Optional: Save preference to localStorage
                 localStorage.setItem("darkMode", (!isDarkMode).toString());
               }}
               className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-blue-600 
@@ -67,13 +69,11 @@ const Navigation = ({
 
             <button
               onClick={() => setLanguage(language === "en" ? "fr" : "en")}
-              className="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-              aria-label={`Switch to ${
-                language === "en" ? "French" : "English"
-              }`}
+              className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-blue-600 
+              dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors"
+              aria-label={t.navigation.language}
             >
-              <Languages className="w-5 h-5" />
-              <span className="ml-1 text-sm font-medium">
+              <span className="w-5 h-5 inline-flex items-center justify-center font-medium">
                 {language === "en" ? "FR" : "EN"}
               </span>
             </button>

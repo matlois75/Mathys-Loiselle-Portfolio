@@ -1,14 +1,21 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { translations } from "../../data/translations";
+import PropTypes from "prop-types";
 
-const Footer = () => {
-  const [emailTooltip, setEmailTooltip] = useState("Copy Email");
+const Footer = ({ language }) => {
+  const t = translations[language];
+  const [emailTooltip, setEmailTooltip] = useState(t.footer.copyEmail);
 
   const copyEmail = (e) => {
     e.preventDefault();
     navigator.clipboard.writeText("mathys.loiselle@gmail.com");
-    setEmailTooltip("Copied!");
+    setEmailTooltip(t.footer.copied);
   };
+
+  useEffect(() => {
+    setEmailTooltip(t.footer.copyEmail);
+  }, [language, t.footer.copyEmail]);
 
   return (
     <footer className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-t dark:border-gray-700">
@@ -23,13 +30,7 @@ const Footer = () => {
             >
               <Github className="w-6 h-6" />
             </a>
-            <div
-              className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 
-              text-sm text-white bg-gray-800 dark:bg-gray-700 rounded opacity-0 
-              group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap"
-            >
-              GitHub
-            </div>
+            <div className="tooltip">{t.footer.github}</div>
           </div>
 
           <div className="relative group">
@@ -41,18 +42,12 @@ const Footer = () => {
             >
               <Linkedin className="w-6 h-6" />
             </a>
-            <div
-              className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 
-              text-sm text-white bg-gray-800 dark:bg-gray-700 rounded opacity-0 
-              group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap"
-            >
-              LinkedIn
-            </div>
+            <div className="tooltip">{t.footer.linkedin}</div>
           </div>
 
           <div
             className="relative group"
-            onMouseLeave={() => setEmailTooltip("Copy Email")}
+            onMouseLeave={() => setEmailTooltip(t.footer.copyEmail)}
           >
             <a
               href="#"
@@ -61,18 +56,16 @@ const Footer = () => {
             >
               <Mail className="w-6 h-6" />
             </a>
-            <div
-              className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 
-              text-sm text-white bg-gray-800 dark:bg-gray-700 rounded opacity-0 
-              group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap"
-            >
-              {emailTooltip}
-            </div>
+            <div className="tooltip">{emailTooltip}</div>
           </div>
         </div>
       </div>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  language: PropTypes.oneOf(["en", "fr"]).isRequired,
 };
 
 export default Footer;

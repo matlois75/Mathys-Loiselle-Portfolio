@@ -6,6 +6,11 @@ import ProjectsPage from "./components/pages/ProjectsPage";
 import ContactPage from "./components/pages/ContactPage";
 
 const App = () => {
+  const [language, setLanguage] = useState(() => {
+    const saved = localStorage.getItem("language");
+    return saved || "en";
+  });
+
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
     return saved ? JSON.parse(saved) : false;
@@ -22,16 +27,20 @@ const App = () => {
     localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
   }, [isDarkMode]);
 
+  useEffect(() => {
+    localStorage.setItem("language", language);
+  }, [language]);
+
   const renderPage = () => {
     switch (currentPage) {
       case "home":
-        return <HomePage />;
-      case "resume":
-        return <ResumePage />;
+        return <HomePage language={language} />;
       case "projects":
-        return <ProjectsPage />;
+        return <ProjectsPage language={language} />;
+      case "resume":
+        return <ResumePage language={language} />;
       case "contact":
-        return <ContactPage />;
+        return <ContactPage language={language} />;
       default:
         return (
           <div className="flex items-center justify-center h-64">
@@ -51,6 +60,8 @@ const App = () => {
       setIsMenuOpen={setIsMenuOpen}
       isDarkMode={isDarkMode}
       setIsDarkMode={setIsDarkMode}
+      language={language}
+      setLanguage={setLanguage}
     >
       {renderPage()}
     </Layout>

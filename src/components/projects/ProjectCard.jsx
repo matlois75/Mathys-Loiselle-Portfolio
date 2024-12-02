@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 import { calculateDuration } from "../../data/projectsData";
 
-const ProjectCard = ({ project, onClick }) => {
+const ProjectCard = ({ project, onClick, language }) => {
+  const translation = project.translations[language];
+
   return (
     <div
       onClick={onClick}
@@ -12,20 +14,25 @@ const ProjectCard = ({ project, onClick }) => {
       hover:shadow-blue-100/50 dark:hover:shadow-blue-900/50
       hover:backdrop-blur-none"
     >
-      <h2 className="text-xl font-semibold dark:text-white">{project.title}</h2>
-      <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
+      <h2 className="text-xl font-semibold dark:text-white">
+        {translation.title}
+      </h2>
+      <p className="text-gray-600 dark:text-gray-300">
+        {translation.description}
+      </p>
       <div className="flex flex-wrap gap-2">
-        {project.keywords.map((keywords, i) => (
+        {translation.keywords.map((keyword, i) => (
           <span
             key={i}
             className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm"
           >
-            {keywords}
+            {keyword}
           </span>
         ))}
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-400">
-        {project.duration} <span>{calculateDuration(project.duration)}</span>
+        {translation.duration}{" "}
+        <span>{calculateDuration(translation.duration, language)}</span>
       </p>
     </div>
   );
@@ -33,20 +40,29 @@ const ProjectCard = ({ project, onClick }) => {
 
 ProjectCard.propTypes = {
   project: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    keywords: PropTypes.arrayOf(PropTypes.string).isRequired,
-    duration: PropTypes.string.isRequired,
-    // Add other project properties you're using
-    longDescription: PropTypes.string,
-    challenges: PropTypes.arrayOf(PropTypes.string),
+    translations: PropTypes.shape({
+      en: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        keywords: PropTypes.arrayOf(PropTypes.string).isRequired,
+        duration: PropTypes.string.isRequired,
+      }).isRequired,
+      fr: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        keywords: PropTypes.arrayOf(PropTypes.string).isRequired,
+        duration: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
     images: PropTypes.arrayOf(PropTypes.string),
     links: PropTypes.shape({
       github: PropTypes.string,
       demo: PropTypes.string,
+      website: PropTypes.string,
     }),
   }).isRequired,
   onClick: PropTypes.func.isRequired,
+  language: PropTypes.oneOf(["en", "fr"]).isRequired,
 };
 
 export default ProjectCard;
