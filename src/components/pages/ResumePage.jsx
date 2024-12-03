@@ -1,5 +1,6 @@
 import { ExternalLink, ChevronRight } from "lucide-react";
-import resumePDF from "../../assets/Mathys-Loiselle-Resume-Public.pdf";
+import resumeEnglishPDF from "../../assets/Mathys-Loiselle-Resume-Public-EN.pdf";
+import resumeFrenchPDF from "../../assets/Mathys-Loiselle-Resume-Public-FR.pdf";
 import { calculateDuration } from "../../data/projectsData";
 import { translations } from "../../data/translations";
 import PropTypes from "prop-types";
@@ -46,7 +47,7 @@ const ResumePage = ({ language }) => {
             duration: "Sep 2024 - Dec 2024",
             details: [
               "Implemented complete voice features for TaylorMade chatbot (Angular/C#/Azure)",
-              "Built mahalanobis model for order processing anomaly detection (Python)",
+              "Built Mahalanobis model for order processing anomaly detection (Python)",
               "Developed automatic color adjustment algorithm (Python/React)",
               "Research in CV, ML, and prompt engineering for POC development",
             ],
@@ -58,6 +59,17 @@ const ResumePage = ({ language }) => {
               "Azure",
               "React",
             ],
+          },
+          {
+            title: "Computer Vision Engineer",
+            location: "Nano Stride - Montreal, QC",
+            duration: "Oct 2023 - Jan 2024",
+            details: [
+              "Implemented real-time robotics head motion control algorithms",
+              "Built computer vision pipeline using OpenCV/Dlib",
+              "Collaborated with cross-functional engineering team",
+            ],
+            keywords: ["Computer Vision", "AI/ML", "Robotics", "Python"],
           },
           {
             title: "Dataset Annotator",
@@ -142,9 +154,9 @@ const ResumePage = ({ language }) => {
             location: "TaylorMade Golf - Carlsbad, Californie, États-Unis",
             duration: "Sept 2024 - Déc 2024",
             details: [
-              "Implémentation vocale du chatbot TaylorMade (Angular/C#/Azure)",
-              "Modèle Mahalanobis pour détection d'anomalies dans le traitement des commandes (Python)",
-              "Algorithme d'ajustement automatique des couleurs (Python/React)",
+              "Implémentation vocale complète du chatbot TaylorMade (Angular/C#/Azure)",
+              "Création d'un modèle Mahalanobis pour la détection d'anomalies commandes (Python)",
+              "Développement d'un algorithme d'ajustement automatique des couleurs (Python/React)",
               "Recherche en vision, ML et ingénierie de prompts pour POCs",
             ],
             keywords: [
@@ -157,7 +169,18 @@ const ResumePage = ({ language }) => {
             ],
           },
           {
-            title: "Annotateur de données",
+            title: "Ingénieur en Vision par Ordinateur",
+            location: "Nano Stride - Montréal, QC",
+            duration: "Oct 2023 - Jan 2024",
+            details: [
+              "Implémentation d'algorithmes de contrôle en temps réel des mouvements de tête robotique",
+              "Développement d'un pipeline de vision par ordinateur avec OpenCV/Dlib",
+              "Collaboration avec une équipe pluridisciplinaire d'ingénieurs",
+            ],
+            keywords: ["Vision par Ordinateur", "IA/ML", "Robotique", "Python"],
+          },
+          {
+            title: "Annotateur de Données",
             location: "Institut d'IA appliquée Concordia - Montréal, QC",
             duration: "Nov 2023",
             details: [
@@ -205,7 +228,9 @@ const ResumePage = ({ language }) => {
   };
 
   const handleDownload = () => {
-    window.open(resumePDF, "_blank"); // TODO: Add French resume
+    const pdfToDownload =
+      language === "fr" ? resumeFrenchPDF : resumeEnglishPDF;
+    window.open(pdfToDownload, "_blank");
   };
 
   return (
