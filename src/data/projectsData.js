@@ -121,8 +121,9 @@ export const projects = [
       },
     },
     images: [
-      "/images/projects/rocket-league-bot-1.jpg",
-      "/images/projects/rocket-league-bot-2.png",
+      "/images/projects/coming-soon.svg",
+      // "/images/projects/rocket-league-bot-1.",
+      // "/images/projects/rocket-league-bot-2.png",
     ],
     links: {
       github: "https://github.com/yourusername/rocket-league-bot",
