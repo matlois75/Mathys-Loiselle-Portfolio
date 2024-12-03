@@ -126,8 +126,7 @@ export const projects = [
       // "/images/projects/rocket-league-bot-2.png",
     ],
     links: {
-      github: "https://github.com/yourusername/rocket-league-bot",
-      demo: "https://youtube.com/watch?v=demo",
+      // demo: "https://youtube.com/watch?v=demo",
     },
   },
   {
@@ -263,7 +262,7 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/matlois75/Mathys-Loiselle-Portfolio",
-      website: "",
+      website: "https://mathys-loiselle-portfolio.netlify.app",
     },
   },
   {

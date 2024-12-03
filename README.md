@@ -1,8 +1,21 @@
-# React + Vite
+# [Mathys Loiselle Portfolio Website](https://mathys-loiselle-portfolio.netlify.app) 🔗
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! Using React and Tailwind CSS, I built a modern, responsive site featuring bilingual support (English/French) and dark mode. Users can easily see my projects, experience, interests, a bit of who I am, and how to reach me!
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🌐 Bilingual support (English/French)
+- 🌓 Dark/Light mode toggle
+- 📱 Fully responsive design
+- ⚡ Fast and optimized performance
+- 🎨 Modern UI with Tailwind CSS
+- 📄 Dynamic resume/CV section
+- 💼 Project showcase with detailed modals
+- 📧 Contact section with email copy functionality
+
+## Tech Stack
+
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [Lucide React](https://lucide.dev/) for icons
