@@ -32,11 +32,11 @@ const ProjectModal = ({ project, isOpen, onClose, language }) => {
           <div className="space-y-4 overflow-visible">
             <h3 className="font-semibold dark:text-white">Images</h3>
             {project.images.length === 1 ? (
-              <div className="mx-auto w-4/5">
+              <div className="mx-auto w-1/2 max-w-2xl">
                 <ImageCard
                   src={project.images[0]}
                   alt={`${translation.title} screenshot 1`}
-                  className="h-96"
+                  className="h-64 object-contain"
                 />
               </div>
             ) : project.images.length === 3 ? (

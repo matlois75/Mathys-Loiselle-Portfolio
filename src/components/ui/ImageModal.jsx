@@ -60,9 +60,12 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
   };
 
   const handleMouseUp = (e) => {
+    e.preventDefault();
     e.stopPropagation();
     if (Date.now() - startTime < 200 && !isPanning) {
-      onClose();
+      setTimeout(() => {
+        onClose();
+      }, 100);
     }
     setIsPanning(false);
   };
@@ -91,9 +94,13 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
   };
 
   const handleTouchEnd = (e) => {
+    e.preventDefault(); // Add this to prevent any default behavior
     e.stopPropagation();
     if (Date.now() - startTime < 200 && !isPanning) {
-      onClose();
+      // Add small delay before closing to prevent immediate reopening
+      setTimeout(() => {
+        onClose();
+      }, 100);
     }
     setIsPanning(false);
   };
@@ -101,7 +108,11 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
   return (
     <div
       className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center"
-      onClick={onClose}
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onClose();
+      }}
     >
       <div
         className="relative max-w-[90vw] max-h-[90vh] image-modal-container"
