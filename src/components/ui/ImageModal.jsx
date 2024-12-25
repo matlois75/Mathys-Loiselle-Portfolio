@@ -7,6 +7,7 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
   const [startTime, setStartTime] = useState(0);
+  const [initialPinchDistance, setInitialPinchDistance] = useState(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -71,7 +72,12 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
   };
 
   const handleTouchStart = (e) => {
-    e.stopPropagation();
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      e.stopPropagation();
+      const dist = getDistance(e.touches[0], e.touches[1]);
+      setInitialPinchDistance(dist);
+    }
     setStartTime(Date.now());
     if (scale > 1) {
       setIsPanning(true);
@@ -91,6 +97,15 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
       x: touch.clientX - startPos.x,
       y: touch.clientY - startPos.y,
     });
+
+    if (e.touches.length === 2 && initialPinchDistance) {
+      e.preventDefault();
+      const newDist = getDistance(e.touches[0], e.touches[1]);
+      const scaleChange = newDist / initialPinchDistance;
+      const newScale = Math.min(Math.max(1, scale * scaleChange), 3);
+      setScale(newScale);
+      return;
+    }
   };
 
   const handleTouchEnd = (e) => {
@@ -103,6 +118,16 @@ const ImageModal = ({ src, alt, isOpen, onClose }) => {
       }, 100);
     }
     setIsPanning(false);
+
+    if (e.touches.length < 2) {
+      setInitialPinchDistance(null);
+    }
+  };
+
+  const getDistance = (t1, t2) => {
+    const dx = t1.pageX - t2.pageX;
+    const dy = t1.pageY - t2.pageY;
+    return Math.sqrt(dx * dx + dy * dy);
   };
 
   return (

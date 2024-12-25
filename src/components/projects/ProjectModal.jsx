@@ -36,7 +36,7 @@ const ProjectModal = ({ project, isOpen, onClose, language }) => {
                 <ImageCard
                   src={project.images[0]}
                   alt={`${translation.title} screenshot 1`}
-                  className="h-64 object-contain"
+                  className="h-40 sm:h-64 object-contain"
                 />
               </div>
             ) : project.images.length === 3 ? (
@@ -46,7 +46,7 @@ const ProjectModal = ({ project, isOpen, onClose, language }) => {
                     key={i}
                     src={img}
                     alt={`${translation.title} screenshot ${i + 1}`}
-                    className="flex-1 h-64"
+                    className="flex-1 h-40 sm:h-64"
                   />
                 ))}
               </div>
@@ -57,7 +57,7 @@ const ProjectModal = ({ project, isOpen, onClose, language }) => {
                     key={i}
                     src={img}
                     alt={`${translation.title} screenshot ${i + 1}`}
-                    className="aspect-square"
+                    className="aspect-square h-auto w-full"
                   />
                 ))}
               </div>
@@ -68,7 +68,7 @@ const ProjectModal = ({ project, isOpen, onClose, language }) => {
                     key={i}
                     src={img}
                     alt={`${translation.title} screenshot ${i + 1}`}
-                    className="h-64"
+                    className="h-40 sm:h-64"
                   />
                 ))}
               </div>

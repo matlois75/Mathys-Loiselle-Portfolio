@@ -86,45 +86,55 @@ export const projects = [
   {
     translations: {
       en: {
-        title: "Reinforcement Learning Rocket League Bot",
+        title: "Reinforcement Learning Rocket League Agent",
         description:
-          "DQN-based reinforcement learning agent with custom reward functions and game state modeling.",
-        longDescription: `Built a reinforcement learning agent that learns to play Rocket League using Deep Q-Learning.
-      Implemented custom reward functions to encourage strategic gameplay and ball control.
-      Designed comprehensive state representation capturing game physics and positioning.`,
+          "PPO-based reinforcement learning agent using reward shaping and curriculum learning.",
+        longDescription: `A deep reinforcement learning project that trains an agent to play Rocket League, a physics-based vehicular soccer game. The system implements a PPO (Proximal Policy Optimization) architecture to teach the AI agent complex 3D movement, ball control, positioning, and basic-to-intermediate strategy, effectively translating high-dimensional games states into meaningful actions.
+
+        The project uses curriculum learning to teach the agent basic controls and strategies first, and building upon that knowledge to proceed to more advanced game mechanics and tactics. Custom functions were used for reward shaping to direct the agent in certain learning directions. Using RLGym and Stable Baseline 3, the agent was trained over tens of millions of timesteps with checkpoint models, final models, and best models being saved for each new training session.
+
+        The database logging serves as a final visual of the agent's training by defining major changes in the curriculum learning goal to show how the agent maximized its rewards over time, along with various useful statistics of the game such as goals scored, ball touches, average distance from the ball, and others. Once the project is finalized, I plan on accreting my work and displaying the agent's various tracked metrics over time.`,
         challenges: [
-          "Designing effective reward functions for complex game scenarios",
-          "Optimizing state representation for efficient learning",
+          "Implementing curriculum learning transitions without disrupting training stability",
+          "Handling high-dimensional state spaces while maintaining training efficiency",
           "Balancing exploration vs exploitation during training",
         ],
-        keywords: ["Reinforcement Learning", "DQN", "Python", "TensorFlow"],
+        keywords: [
+          "Reinforcement Learning",
+          "PPO",
+          "RLGym",
+          "Stable Baseline 3",
+          "Python",
+        ],
         duration: "Nov 2024 - Present",
       },
       fr: {
-        title: "Bot Rocket League avec Apprentissage par Renforcement",
+        title: "Agent d'Apprentissage par Renforcement pour Rocket League",
         description:
-          "Agent d'apprentissage par renforcement basé sur DQN avec des fonctions de récompense personnalisées et modélisation de l'état du jeu.",
-        longDescription:
-          "Création d'un agent d'apprentissage par renforcement qui apprend à jouer à Rocket League en utilisant le Deep Q-Learning. Implémentation de fonctions de récompense personnalisées pour encourager un gameplay stratégique et le contrôle de la balle. Conception d'une représentation complète de l'état capturant la physique du jeu et le positionnement.",
+          "Agent basé sur PPO qui apprend par renforcement avec récompenses adaptées et apprentissage progressif.",
+        longDescription: `
+          Un projet d'IA qui entraîne un agent à jouer à Rocket League, un jeu de foot avec des voitures. Le système utilise PPO (Proximal Policy Optimization) pour apprendre à l'agent les mouvements 3D, le contrôle de balle, le positionnement et les stratégies de base, en convertissant les états de jeu complexes en actions concrètes.\n
+          
+          Le projet utilise un apprentissage progressif : l'agent maîtrise d'abord les bases avant de passer aux techniques avancées. Des fonctions de récompense personnalisées guident son apprentissage. Avec RLGym et Stable Baseline 3, l'agent s'est entraîné sur des millions d'étapes, avec sauvegarde des meilleurs modèles à chaque session.
+
+          La base de données suit les progrès de l'agent en enregistrant les changements dans ses objectifs d'apprentissage et montre comment il optimise ses récompenses. Elle stocke aussi les stats du jeu : buts marqués, touches de balle, distance moyenne à la balle, etc. Le projet final présentera l'évolution des performances de l'agent dans le temps.
+          `,
         challenges: [
-          "Conception de fonctions de récompense efficaces pour des scénarios de jeu complexes",
-          "Optimisation de la représentation d'état pour un apprentissage efficace",
-          "Équilibrage entre exploration et exploitation pendant l'entraînement",
+          "Gérer les transitions d'apprentissage sans perdre la stabilité",
+          "Traiter un espace d'états complexe tout en gardant l'entraînement efficace",
+          "Équilibrer l'exploration et l'exploitation pendant l'entraînement",
         ],
         keywords: [
           "Apprentissage par Renforcement",
-          "DQN",
+          "PPO",
+          "RLGym",
+          "Stable Baseline 3",
           "Python",
-          "TensorFlow",
         ],
         duration: "Nov 2024 - Présent",
       },
     },
-    images: [
-      "/images/projects/coming-soon.svg",
-      // "/images/projects/rocket-league-bot-1.",
-      // "/images/projects/rocket-league-bot-2.png",
-    ],
+    images: ["/images/projects/Rocket-League-Agent-Demo.mp4"],
     links: {
       // demo: "https://youtube.com/watch?v=demo",
     },

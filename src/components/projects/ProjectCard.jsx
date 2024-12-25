@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { calculateDuration } from "../../data/projectsData";
+import { LuMousePointerClick } from "react-icons/lu";
 
 const ProjectCard = ({ project, onClick, language }) => {
   const translation = project.translations[language];
@@ -34,6 +35,9 @@ const ProjectCard = ({ project, onClick, language }) => {
         {translation.duration}{" "}
         <span>{calculateDuration(translation.duration, language)}</span>
       </p>
+      <div className="absolute bottom-2 right-2 p-1 rounded-full text-black dark:text-white">
+        <LuMousePointerClick className="h-5 w-5" />
+      </div>
     </div>
   );
 };

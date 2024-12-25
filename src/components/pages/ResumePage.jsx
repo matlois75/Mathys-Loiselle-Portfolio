@@ -47,8 +47,8 @@ const ResumePage = ({ language }) => {
             duration: "Sep 2024 - Dec 2024",
             details: [
               "Implemented complete voice features for TaylorMade chatbot (Angular/C#/Azure)",
-              "Built Mahalanobis model for order processing anomaly detection (Python)",
               "Developed automatic color adjustment algorithm (Python/React)",
+              "Built Mahalanobis model for order processing anomaly detection (Python)",
               "Research in CV, ML, and prompt engineering for POC development",
             ],
             keywords: [
@@ -155,8 +155,8 @@ const ResumePage = ({ language }) => {
             duration: "Sept 2024 - Déc 2024",
             details: [
               "Implémentation vocale complète du chatbot TaylorMade (Angular/C#/Azure)",
-              "Création d'un modèle Mahalanobis pour la détection d'anomalies commandes (Python)",
               "Développement d'un algorithme d'ajustement automatique des couleurs (Python/React)",
+              "Création d'un modèle Mahalanobis pour la détection d'anomalies commandes (Python)",
               "Recherche en vision, ML et ingénierie de prompts pour POCs",
             ],
             keywords: [
