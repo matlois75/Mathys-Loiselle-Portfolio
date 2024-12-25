@@ -18,7 +18,7 @@ const ResumePage = ({ language }) => {
             location: "Concordia University - Montreal, QC",
             duration: "2022 - 2026 (Expected)",
             details: [
-              "Dean's List: Fall 2023 - Summer 2024",
+              "Dean's List: Fall 2023 - Fall 2024",
               "Relevant Courses: Data Structures & Algorithms (A+), Theoretical CS (A+), Computer Graphics (A), Operating Systems (A-)",
             ],
           },
@@ -126,7 +126,7 @@ const ResumePage = ({ language }) => {
             location: "Université Concordia - Montréal, QC",
             duration: "2022 - 2026 (Prévu)",
             details: [
-              "Tableau d'honneur : Automne 2023 - Été 2024",
+              "Tableau d'honneur : Automne 2023 - Automne 2024",
               "Cours pertinents : Structures de données et algorithmes (A+), Informatique théorique (A+), Infographie (A), Systèmes d'exploitation (A-)",
             ],
           },

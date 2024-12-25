@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import profilePic from "../../assets/Google-Profile-Pic.jpg";
+import profilePic from "../../assets/LinkedIn-Profile-Pic.jpg";
 
 const ProfileSection = ({ role }) => {
   return (
