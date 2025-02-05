@@ -2,31 +2,30 @@ export const translations = {
   en: {
     // Home page translations
     profile: {
-      role: "Computer Science Student & AI Enthusiast",
+      role: "Computer Science Student | Focus on Machine Learning",
     },
     about: {
       title: "About Me",
       paragraphs: [
-        "I'm Mathys Loiselle, a third-year Computer Science student at Concordia University pursuing a minor in Mathematics & Statistics. I'm passionate about the intersection of artificial intelligence, mathematical theory, and practical applications that push the boundaries of what's possible.",
-        "My passion for solving complex problems has led me to explore both theoretical and practical applications of AI. Whether I'm diving deep into research papers on advanced ML architectures or developing innovative AI solutions at TaylorMade Golf's headquarters in Carlsbad, I find myself consistently drawn to projects that challenge conventional thinking. This dual perspective - understanding both theoretical foundations and their real-world implementations - has shaped my long-term vision of contributing to the field through advanced research while maintaining strong connections to practical applications.",
-        "Beyond technical expertise, what drives me is the methodical pursuit of optimal solutions through deep theoretical understanding. My curiosity about the 'why' behind how things work leads me to explore topics deeply, whether in science, philosophy, or conversations with people. This breadth of interests, combined with my ability to learn quickly and find novel solutions, allows me to approach complex problems from unique angles.",
+        "I am Mathys Loiselle, a Computer Science student at Concordia University in Montreal with a minor in Mathematics & Statistics. My focus lies in Machine Learning and Deep Learning, particularly in understanding the fundamental theory behind how models learn. I am deeply interested in Neuroscience and exploring how advanced brain structures can inspire breakthroughs in machine intelligence. With plans to pursue graduate studies in this field, I am committed to contributing significant research that advances both the academic community and human knowledge.",
+        "My research interests span several interconnected areas: Temporal Graph Neural Networks, Mathematical foundations of Machine Learning, Reinforcement Learning, Robotics, Computer Vision, and Physics (particularly Quantum Physics and Astrophysics). I actively seek collaboration opportunities in these fields and am eager to engage in research projects that push the boundaries of artificial intelligence and its applications.",
       ],
     },
     interests: {
       research: {
         title: "Research Interests",
         items: [
-          "Machine Learning & Deep Learning",
-          "Natural Language Processing",
-          "Computer Vision",
+          "Core Machine Learning & Deep Learning Theory",
+          "Computational Neuroscience & Bio-inspired AI",
+          "Applied AI Systems",
         ],
       },
       technical: {
         title: "Technical Focus",
         items: [
-          "Neural Networks",
-          "Robotics Systems",
-          "Reinforcement Learning",
+          "Advanced Neural Architectures",
+          "ML Systems & Implementation",
+          "Mathematical Modeling & Optimization",
         ],
       },
     },
@@ -97,31 +96,30 @@ export const translations = {
   fr: {
     // Home page translations
     profile: {
-      role: "Étudiant en Informatique & Passionné d'IA",
+      role: "Étudiant en Informatique Spécialisé en Apprentissage Automatique",
     },
     about: {
       title: "À Propos",
       paragraphs: [
-        "Je suis Mathys Loiselle, étudiant en troisième année en informatique à l'Université Concordia avec une mineure en mathématiques et statistiques. Je suis passionné par l'intelligence artificielle, les mathématiques et leurs applications concrètes qui nous permettent de repousser les limites du possible.",
-        "Ma passion pour résoudre des problèmes complexes m'a poussé à explorer l'IA sous tous ses angles. Que ce soit quand je lis des articles de recherche sur les nouvelles architectures de ML ou quand je développe des solutions d'IA chez TaylorMade Golf à Carlsbad, je suis constamment attiré par des projets qui remettent en question les façons habituelles de penser. Cette double approche de comprendre la théorie et son application dans le monde réel guide ma vision de contribuer au domaine par la recherche tout en gardant les pieds sur terre avec des applications pratiques.",
-        "Au-delà du côté technique, ce qui me pousse c'est de chercher les meilleures solutions en comprenant vraiment le fond des choses. Ma curiosité pour comprendre le 'pourquoi' des choses m'amène à creuser en profondeur, que ce soit en science, en philo, ou dans mes discussions avec les gens. C'est ce mélange d'intérêts, avec ma capacité à apprendre vite et à trouver des nouvelles solutions, qui me permet de voir les problèmes complexes sous différents angles.",
+        "Je suis Mathys Loiselle, étudiant en informatique à l'Université Concordia à Montréal avec une mineure en mathématiques et statistiques. Je me concentre sur l'apprentissage automatique et l'apprentissage profond, particulièrement sur la théorie fondamentale de l'apprentissage des modèles. Je suis passionné par les neurosciences et l'exploration de la façon dont les structures cérébrales avancées peuvent inspirer des percées en intelligence artificielle. Avec l'intention de poursuivre des études supérieures dans ce domaine, je m'engage à contribuer des recherches significatives qui font progresser à la fois la communauté académique et la connaissance humaine.",
+        "Mes intérêts de recherche couvrent plusieurs domaines interconnectés: les réseaux de neurones temporels sur graphes, les fondements mathématiques de l'apprentissage automatique, l'apprentissage par renforcement, la robotique, la vision par ordinateur, et la physique (particulièrement la physique quantique et l'astrophysique). Je recherche activement des opportunités de collaboration dans ces domaines et suis enthousiaste à l'idée de m'engager dans des projets de recherche qui repoussent les limites de l'intelligence artificielle et ses applications.",
       ],
     },
     interests: {
       research: {
         title: "Intérêts de Recherche",
         items: [
-          "Apprentissage Automatique & Profond",
-          "Traitement Automatique du Langage Naturel",
-          "Vision par Ordinateur",
+          "Apprentissage Automatique & Apprentissage Profond Fondamental",
+          "Neurosciences Computationnelles & IA Bio-inspirée",
+          "Systèmes d'IA Appliqués",
         ],
       },
       technical: {
         title: "Focus Technique",
         items: [
-          "Réseaux de Neurones",
-          "Systèmes Robotiques",
-          "Apprentissage par Renforcement",
+          "Architectures Neuronales Avancées",
+          "Systèmes d'Apprentissage Automatique & Implémentation",
+          "Modélisation Mathématique & Optimisation",
         ],
       },
     },

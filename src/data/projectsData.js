@@ -86,6 +86,66 @@ export const projects = [
   {
     translations: {
       en: {
+        title: "ConUHacks IX - Concordia Virtual Tour++",
+        description:
+          "Virtual campus tour application using 3D Gaussian Splatting featuring an interactive chatbot tour guide for Concordia University.",
+        longDescription: `At ConUHacks IX, **Quebec's largest hackathon**, our team developed an innovative solution to revolutionize Concordia University's virtual campus tour experience. The project placed in the **top 5 among 180+ submissions**, demonstrating both technical excellence and practical utility. We leveraged 3D Gaussian Splatting, a cutting-edge machine learning technique in computer graphics, to transform traditional static images into a fully immersive 3D environment that visitors can freely explore.
+
+        The application allows users to freely navigate through photorealistic 3D reconstructions of campus spaces, allowing them to form a stronger connection with the university. We enhanced the experience by integrating 'Sting,' an AI chatbot named after Concordia's Stingers mascot, which serves as a virtual tour guide providing dynamic information about Concordia, exam periods, professors, and more.
+
+        Our implementation processes multiple photographs to create a point cloud using COLMAP, which is then converted into Gaussian points - specialized 3D elements with specific characteristics including position, color, orientation, and size. Through iterative optimization, these points are refined to create near-photorealistic representations of campus spaces, achieving high-quality results within the 24-hour hackathon constraint.`,
+        challenges: [
+          "Implementing 3D Gaussian Splatting within the 24-hour hackathon timeframe",
+          "Integrating the chatbot seamlessly with the web app",
+          "Gathering clean data for accurate 3D reconstructions",
+        ],
+        keywords: [
+          "3D Gaussian Splatting",
+          "Computer Graphics",
+          "Machine Learning",
+          "Hugging Face",
+        ],
+        duration: "Feb 2025",
+      },
+      fr: {
+        title: "ConUHacks IX - Visite Virtuelle Concordia++",
+        description:
+          "Application de visite virtuelle du campus utilisant le Gaussian Splatting 3D avec un guide chatbot interactif pour l'Université Concordia.",
+        longDescription: `À ConUHacks IX, **le plus grand hackathon du Québec**, notre équipe a développé une solution innovante pour révolutionner l'expérience de visite virtuelle du campus de l'Université Concordia. Le projet s'est classé dans le **top 5 parmi plus de 180 soumissions**, démontrant à la fois l'excellence technique et l'utilité pratique. Nous avons utilisé le Gaussian Splatting 3D, une technique d'apprentissage automatique de pointe en infographie, pour transformer des images statiques traditionnelles en un environnement 3D immersif que les visiteurs peuvent explorer librement.
+
+        L'application permet aux utilisateurs de naviguer librement dans des reconstitutions 3D photoréalistes des espaces du campus, leur permettant de développer un lien plus fort avec l'université. Nous avons enrichi l'expérience en intégrant 'Sting,' un chatbot IA nommé d'après la mascotte des Stingers de Concordia, qui sert de guide virtuel fournissant des informations dynamiques sur Concordia, les périodes d'examens, les professeurs, et plus encore.
+
+        Notre implémentation traite de multiples photographies pour créer un nuage de points utilisant COLMAP, qui est ensuite converti en points gaussiens - des éléments 3D spécialisés avec des caractéristiques spécifiques incluant position, couleur, orientation et taille. Grâce à une optimisation itérative, ces points sont affinés pour créer des représentations quasi-photoréalistes des espaces du campus, atteignant des résultats de haute qualité dans la contrainte du hackathon de 24 heures.`,
+        challenges: [
+          "Implémentation du Gaussian Splatting 3D dans le délai de 24 heures du hackathon",
+          "Intégration harmonieuse du chatbot avec l'application web",
+          "Collecte de données propres pour des reconstructions 3D précises",
+        ],
+        keywords: [
+          "Gaussian Splatting 3D",
+          "Infographie",
+          "Apprentissage Automatique",
+          "Hugging Face",
+        ],
+        duration: "Fév 2025",
+      },
+    },
+    coverImage: {
+      img: "/images/projects/concordia-virtual-tour-cover.png",
+    },
+    images: [
+      "/images/projects/concordia-virtual-tour-1.gif",
+      "/images/projects/concordia-virtual-tour-2.png",
+    ],
+    links: {
+      github: "https://github.com/matlois75/ConUHacks_2025",
+      website: "https://concordia.design/",
+      demo: "https://youtu.be/A_DX9EN-Qm8?si=9cySosMlBfppZ0zA",
+    },
+  },
+  {
+    translations: {
+      en: {
         title: "Reinforcement Learning Rocket League Agent",
         description:
           "PPO-based reinforcement learning agent using reward shaping and curriculum learning.",
@@ -106,7 +166,7 @@ export const projects = [
           "Stable Baseline 3",
           "Python",
         ],
-        duration: "Nov 2024 - Present",
+        duration: "Nov 2024 - Dec 2024",
       },
       fr: {
         title: "Agent d'Apprentissage par Renforcement pour Rocket League",
@@ -131,13 +191,15 @@ export const projects = [
           "Stable Baseline 3",
           "Python",
         ],
-        duration: "Nov 2024 - Présent",
+        duration: "Nov 2024 - Déc 2024",
       },
     },
-    images: ["/images/projects/Rocket-League-Agent-Demo.mp4"],
-    links: {
-      // demo: "https://youtube.com/watch?v=demo",
+    coverImage: {
+      img: "/images/projects/rocket-league-cover-1.jpg",
+      src: "https://www.rocketleague.com",
     },
+    images: ["/images/projects/Rocket-League-Agent-Demo.mp4"],
+    links: {},
   },
   {
     translations: {
@@ -229,6 +291,7 @@ export const projects = [
         ],
       },
     },
+    coverImage: { img: "/images/projects/cody-robot-cover.png" },
     images: [
       "/images/projects/cody-robot-1.png",
       "/images/projects/cody-robot-3.png",
