@@ -59,6 +59,17 @@ const Footer = ({ language }) => {
             <div className="tooltip">{emailTooltip}</div>
           </div>
         </div>
+        <div className="text-center mt-4 text-sm text-gray-500 dark:text-gray-400">
+          {language === "en" ? "Last updated" : "Dernière mise à jour"}:{" "}
+          {new Date().toLocaleDateString(
+            language === "en" ? "en-US" : "fr-FR",
+            {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            }
+          )}
+        </div>
       </div>
     </footer>
   );

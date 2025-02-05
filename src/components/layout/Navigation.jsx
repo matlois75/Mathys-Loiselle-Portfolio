@@ -20,11 +20,17 @@ const Navigation = ({
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <img
-              src={isDarkMode ? "/favicon-dark.svg" : "/favicon-light.svg"}
-              alt="ML Logo"
-              className="h-8 w-8 transition-opacity duration-200"
-            />
+            <button
+              onClick={() => setCurrentPage("home")}
+              className="hover:opacity-80 transition-opacity duration-200"
+              aria-label="Go to home page"
+            >
+              <img
+                src={isDarkMode ? "/favicon-dark.svg" : "/favicon-light.svg"}
+                alt="ML Logo"
+                className="h-8 w-8 transition-opacity duration-200"
+              />
+            </button>
           </div>
 
           {/* Desktop Navigation */}
