@@ -7,6 +7,9 @@ const Footer = ({ language }) => {
   const t = translations[language];
   const [emailTooltip, setEmailTooltip] = useState(t.footer.copyEmail);
 
+  // Manually set the last updated date
+  const lastUpdated = new Date("02-06-2025"); // MM-DD-YYYY
+
   const copyEmail = (e) => {
     e.preventDefault();
     navigator.clipboard.writeText("mathys.loiselle@gmail.com");
@@ -61,7 +64,7 @@ const Footer = ({ language }) => {
         </div>
         <div className="text-center mt-4 text-sm text-gray-500 dark:text-gray-400">
           {language === "en" ? "Last updated" : "Dernière mise à jour"}:{" "}
-          {new Date().toLocaleDateString(
+          {lastUpdated.toLocaleDateString(
             language === "en" ? "en-US" : "fr-FR",
             {
               month: "long",
