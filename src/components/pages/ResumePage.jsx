@@ -1,6 +1,10 @@
 import { ExternalLink, ChevronRight } from "lucide-react";
 import resumeEnglishPDF from "../../assets/Mathys-Loiselle-Resume-EN.pdf";
 import resumeFrenchPDF from "../../assets/Mathys-Loiselle-Resume-FR.pdf";
+import spaceHealthLogo from "../../assets/experience/space_health_logo.png";
+import taylormadeLogo from "../../assets/experience/taylormade_logo.png";
+import nanoStrideLogo from "../../assets/experience/nano_stride_logo.jpeg";
+import concordiaAppliedAIInstituteLogo from "../../assets/experience/concordia_applied_ai_institute_logo.jpeg";
 import { calculateDuration } from "../../data/projectsData";
 import { translations } from "../../data/translations";
 import PropTypes from "prop-types";
@@ -52,7 +56,7 @@ const ResumePage = ({ language }) => {
               "Team Leadership",
               "Space Health",
             ],
-            image: "src/assets/experience/space_health_logo.png",
+            image: spaceHealthLogo,
             companyUrl: "https://spaceconcordia.ca/space-health",
           },
           {
@@ -74,7 +78,7 @@ const ResumePage = ({ language }) => {
               "C#",
               "Azure",
             ],
-            image: "src/assets/experience/taylormade_logo.png",
+            image: taylormadeLogo,
             companyUrl: "https://www.taylormadegolf.com/",
           },
           {
@@ -87,7 +91,7 @@ const ResumePage = ({ language }) => {
               "Collaborated with cross-functional engineering team",
             ],
             keywords: ["Computer Vision", "AI/ML", "Robotics", "Python"],
-            image: "src/assets/experience/nano_stride_logo.jpeg",
+            image: nanoStrideLogo,
             companyUrl: "https://www.linkedin.com/company/nanostride/",
           },
           {
@@ -99,8 +103,7 @@ const ResumePage = ({ language }) => {
               "Collaborative team input for data optimization",
             ],
             keywords: ["Data Annotation", "Time Efficiency"],
-            image:
-              "src/assets/experience/concordia_applied_ai_institute_logo.jpeg",
+            image: concordiaAppliedAIInstituteLogo,
             companyUrl:
               "https://www.concordia.ca/research/applied-ai-institute.html",
           },
@@ -188,7 +191,7 @@ const ResumePage = ({ language }) => {
               "Leadership",
               "Santé Spatiale",
             ],
-            image: "src/assets/experience/space_health_logo.png",
+            image: spaceHealthLogo,
             companyUrl: "https://spaceconcordia.ca/space-health",
           },
           {
@@ -210,7 +213,7 @@ const ResumePage = ({ language }) => {
               "C#",
               "Azure",
             ],
-            image: "src/assets/experience/taylormade_logo.png",
+            image: taylormadeLogo,
             companyUrl: "https://www.taylormadegolf.com/",
           },
           {
@@ -223,7 +226,7 @@ const ResumePage = ({ language }) => {
               "Collaboration avec une équipe pluridisciplinaire d'ingénieurs",
             ],
             keywords: ["Vision par Ordinateur", "IA/ML", "Robotique", "Python"],
-            image: "src/assets/experience/nano_stride_logo.jpeg",
+            image: nanoStrideLogo,
             companyUrl: "https://www.linkedin.com/company/nanostride/",
           },
           {
@@ -235,8 +238,7 @@ const ResumePage = ({ language }) => {
               "Contribution collaborative pour l'optimisation des données",
             ],
             keywords: ["Annotation de Données", "Efficacité Temporelle"],
-            image:
-              "src/assets/experience/concordia_applied_ai_institute_logo.jpeg",
+            image: concordiaAppliedAIInstituteLogo,
             companyUrl:
               "https://www.concordia.ca/research/applied-ai-institute.html",
           },
