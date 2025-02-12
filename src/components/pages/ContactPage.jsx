@@ -43,7 +43,11 @@ const ContactPage = ({ language }) => {
       sections: [
         {
           title: "Core Machine Learning",
-          items: ["Machine Learning & Deep Learning", "Reinforcement Learning"],
+          items: [
+            "Machine Learning Theory",
+            "Deep Learning",
+            "Reinforcement Learning",
+          ],
         },
         {
           title: "Applications & Systems",
@@ -55,10 +59,7 @@ const ContactPage = ({ language }) => {
         },
         {
           title: "Interdisciplinary Research",
-          items: [
-            "Mathematics/Physics oriented research",
-            "Neuroscience oriented research",
-          ],
+          items: ["Mathematics/Physics", "Neuroscience"],
         },
       ],
     },

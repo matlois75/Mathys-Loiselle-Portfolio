@@ -44,7 +44,7 @@ export const translations = {
     // Resume page translations
     resume: {
       title: "Resume",
-      openFile: "Open File",
+      openFile: "Open PDF",
       sections: {
         education: "Education",
         experience: "Experience",
@@ -138,7 +138,7 @@ export const translations = {
     // Resume page translations
     resume: {
       title: "CV",
-      openFile: "Ouvrir le Fichier",
+      openFile: "Ouvrir le PDF",
       sections: {
         education: "Éducation",
         experience: "Expérience",

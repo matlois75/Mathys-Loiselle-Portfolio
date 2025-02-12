@@ -1,6 +1,6 @@
 import { ExternalLink, ChevronRight } from "lucide-react";
-import resumeEnglishPDF from "../../assets/Mathys-Loiselle-Resume-Public-EN.pdf";
-import resumeFrenchPDF from "../../assets/Mathys-Loiselle-Resume-Public-FR.pdf";
+import resumeEnglishPDF from "../../assets/Mathys-Loiselle-Resume-EN.pdf";
+import resumeFrenchPDF from "../../assets/Mathys-Loiselle-Resume-FR.pdf";
 import { calculateDuration } from "../../data/projectsData";
 import { translations } from "../../data/translations";
 import PropTypes from "prop-types";
@@ -30,35 +30,52 @@ const ResumePage = ({ language }) => {
               "Relevant Courses: Multivariable Calculus (A+), Linear Algebra (A), Probability & Statistics (A)",
             ],
           },
-          {
-            title: "High School Diploma",
-            location: "Mission Vista High School - Oceanside, California",
-            duration: "2018 - 2022",
-            details: ["GPA: 3.84"],
-          },
         ],
       },
       {
         title: "Experience",
         items: [
           {
+            title: "Lead Machine Learning Engineer - Space Health",
+            location: "Space Concordia - Montreal, QC",
+            duration: "Feb 2025 - Present",
+            details: [
+              "Lead team of 4 ML engineers developing models for space-induced neurological changes",
+              "Conduct novel research at intersection of deep learning and neuroscience, focusing on brain structure prediction during long-duration spaceflight",
+              "Drive development of scientific publication investigating ML applications in space neuroscience (publication planned late-Summer 2025)",
+              "Present research findings at conferences focused on space health, machine learning, and computational neuroscience",
+            ],
+            keywords: [
+              "Machine Learning",
+              "Research",
+              "Neuroscience",
+              "Team Leadership",
+              "Space Health",
+            ],
+            image: "src/assets/experience/space_health_logo.png",
+            companyUrl: "https://spaceconcordia.ca/space-health",
+          },
+          {
             title: "AI Software Developer - Internship",
-            location: "TaylorMade Golf - Carlsbad, California, USA",
+            location: "TaylorMade Golf - Carlsbad, California",
             duration: "Sep 2024 - Dec 2024",
             details: [
-              "Implemented complete voice features for TaylorMade chatbot (Angular/C#/Azure)",
+              "Implemented complete voice features for TaylorMade chatbot including STT, TTS, hands-free conversation mode, and real-time waveform visualization (Angular/C#/Azure)",
               "Developed automatic color adjustment algorithm (Python/React)",
-              "Built Mahalanobis model for order processing anomaly detection (Python)",
+              "Researched and implemented order processing anomaly detection using Mahalanobis distance, achieving reliable outlier identification through multivariate statistical analysis (Python)",
               "Research in CV, ML, and prompt engineering for POC development",
             ],
             keywords: [
-              "Statistical Modeling",
               "AI/ML",
+              "Statistical Modeling",
               "Angular",
+              "React",
+              "Python",
               "C#",
               "Azure",
-              "React",
             ],
+            image: "src/assets/experience/taylormade_logo.png",
+            companyUrl: "https://www.taylormadegolf.com/",
           },
           {
             title: "Computer Vision Engineer",
@@ -70,6 +87,8 @@ const ResumePage = ({ language }) => {
               "Collaborated with cross-functional engineering team",
             ],
             keywords: ["Computer Vision", "AI/ML", "Robotics", "Python"],
+            image: "src/assets/experience/nano_stride_logo.jpeg",
+            companyUrl: "https://www.linkedin.com/company/nanostride/",
           },
           {
             title: "Dataset Annotator",
@@ -80,21 +99,31 @@ const ResumePage = ({ language }) => {
               "Collaborative team input for data optimization",
             ],
             keywords: ["Data Annotation", "Time Efficiency"],
+            image:
+              "src/assets/experience/concordia_applied_ai_institute_logo.jpeg",
+            companyUrl:
+              "https://www.concordia.ca/research/applied-ai-institute.html",
+          },
+        ],
+      },
+      {
+        title: "Technical Skills",
+        items: [
+          {
+            title: "Programming Languages & Tools",
+            details: [
+              "Languages: Python, JavaScript, Java, C, C++, C#, TypeScript, Clojure, Erlang",
+              "AI/ML: PyTorch, TensorFlow, Keras, OpenCV, Dlib",
+              "Web & Cloud: React, Angular, Azure, Firebase, HTML/CSS",
+              "Tools: VSCode, Git, JetBrains Products, Jupyter Notebook",
+            ],
+            keywords: ["Programming", "AI/ML", "Web Development", "Tools"],
           },
         ],
       },
       {
         title: "Interests",
         items: [
-          {
-            title: "Academic & Research",
-            details: [
-              "Computer Science: Machine Learning, Deep Learning, Computational Neuroscience",
-              "Mathematics & Statistics",
-              "Physics: Quantum Physics, Astrophysics",
-            ],
-            keywords: ["AI/ML", "Mathematics", "Physics", "Research"],
-          },
           {
             title: "Sports & Athletics",
             details: [
@@ -112,7 +141,6 @@ const ResumePage = ({ language }) => {
               "Africa: Morocco",
               "Asia: Vietnam",
             ],
-            keywords: ["International Travel", "Cultural Exchange"],
           },
         ],
       },
@@ -138,35 +166,52 @@ const ResumePage = ({ language }) => {
               "Cours pertinents : Calcul multivariable (A+), Algèbre linéaire (A), Probabilités et statistiques (A)",
             ],
           },
-          {
-            title: "Diplôme d'études secondaires",
-            location: "Mission Vista High School - Oceanside, Californie",
-            duration: "2018 - 2022",
-            details: ["Moyenne : 3.84"],
-          },
         ],
       },
       {
         title: "Expérience",
         items: [
           {
-            title: "Développeur logiciel IA - Stage",
-            location: "TaylorMade Golf - Carlsbad, Californie, États-Unis",
-            duration: "Sept 2024 - Déc 2024",
+            title: "Ingénieur Principal en Apprentissage Automatique",
+            location: "Space Concordia - Montréal, QC",
+            duration: "Fév 2025 - Présent",
             details: [
-              "Implémentation vocale complète du chatbot TaylorMade (Angular/C#/Azure)",
-              "Développement d'un algorithme d'ajustement automatique des couleurs (Python/React)",
-              "Création d'un modèle Mahalanobis pour la détection d'anomalies commandes (Python)",
-              "Recherche en vision, ML et ingénierie de prompts pour POCs",
+              "Direction d'une équipe de 4 ingénieurs ML développant des modèles pour les changements neurologiques spatiaux",
+              "Recherche à l'intersection de l'apprentissage profond et des neurosciences, focus sur la prédiction cérébrale",
+              "Développement d'une publication scientifique sur le ML en neurosciences spatiales (publication prévue fin-été 2025)",
+              "Présentation des résultats aux conférences de santé spatiale, ML et neuroscience computationnelle",
             ],
             keywords: [
-              "Modélisation Statistique",
+              "Apprentissage Profond",
+              "Recherche",
+              "Neurosciences",
+              "Leadership",
+              "Santé Spatiale",
+            ],
+            image: "src/assets/experience/space_health_logo.png",
+            companyUrl: "https://spaceconcordia.ca/space-health",
+          },
+          {
+            title: "Développeur Logiciel IA - Stage",
+            location: "TaylorMade Golf - Carlsbad, Californie",
+            duration: "Sep 2024 - Déc 2024",
+            details: [
+              "Implémentation complète des fonctionnalités vocales pour le chatbot TaylorMade incluant STT, TTS, mode de conversation mains libres et visualisation des ondes en temps réel (Angular/C#/Azure)",
+              "Développement d'un algorithme d'ajustement automatique des couleurs (Python/React)",
+              "Recherche et implémentation de la détection d'anomalies dans le traitement des commandes utilisant la distance de Mahalanobis, permettant une identification fiable des valeurs aberrantes par analyse statistique multivariée (Python)",
+              "Recherche en vision par ordinateur, ML et ingénierie de prompts pour développement de POCs",
+            ],
+            keywords: [
               "IA/ML",
+              "Modélisation Statistique",
               "Angular",
+              "React",
+              "Python",
               "C#",
               "Azure",
-              "React",
             ],
+            image: "src/assets/experience/taylormade_logo.png",
+            companyUrl: "https://www.taylormadegolf.com/",
           },
           {
             title: "Ingénieur en Vision par Ordinateur",
@@ -178,49 +223,60 @@ const ResumePage = ({ language }) => {
               "Collaboration avec une équipe pluridisciplinaire d'ingénieurs",
             ],
             keywords: ["Vision par Ordinateur", "IA/ML", "Robotique", "Python"],
+            image: "src/assets/experience/nano_stride_logo.jpeg",
+            companyUrl: "https://www.linkedin.com/company/nanostride/",
           },
           {
             title: "Annotateur de Données",
-            location: "Institut d'IA appliquée Concordia - Montréal, QC",
+            location: "Institut d'IA Appliquée Concordia - Montréal, QC",
             duration: "Nov 2023",
             details: [
-              "Annotation de données pour l'entraînement/test de modèles ML",
-              "Contribution collaborative d'équipe pour l'optimisation des données",
+              "Annotation de données pour l'entraînement et les tests de modèles ML",
+              "Contribution collaborative pour l'optimisation des données",
             ],
             keywords: ["Annotation de Données", "Efficacité Temporelle"],
+            image:
+              "src/assets/experience/concordia_applied_ai_institute_logo.jpeg",
+            companyUrl:
+              "https://www.concordia.ca/research/applied-ai-institute.html",
           },
         ],
       },
       {
-        title: "Centres d'intérêt",
+        title: "Compétences Techniques",
         items: [
           {
-            title: "Académique & Recherche",
+            title: "Langages de Programmation & Outils",
             details: [
-              "Informatique : Apprentissage automatique, Apprentissage profond, Neuroscience computationnelle",
-              "Mathématiques & Statistiques",
-              "Physique : Physique quantique, Astrophysique",
+              "Langages : Python, JavaScript, Java, C, C++, C#, TypeScript, Clojure, Erlang",
+              "IA/ML : PyTorch, TensorFlow, Keras, OpenCV, Dlib",
+              "Web & Cloud : React, Angular, Azure, Firebase, HTML/CSS",
+              "Outils : VSCode, Git, Produits JetBrains, Jupyter Notebook",
             ],
-            keywords: ["IA/ML", "Mathématiques", "Physique", "Recherche"],
+            keywords: ["Programmation", "IA/ML", "Développement Web", "Outils"],
           },
+        ],
+      },
+      {
+        title: "Intérêts",
+        items: [
           {
             title: "Sports & Athlétisme",
             details: [
-              "Sports d'hiver : Hockey sur glace, Planche à neige",
+              "Sports d'hiver : Hockey, Planche à neige",
               "Sports de raquette : Tennis de table, Badminton, Pickleball, Tennis",
               "Activités de plein air : Escalade, Vélo, Soccer",
             ],
-            keywords: ["Sports d'équipe", "Activités de plein air"],
+            keywords: ["Sports d'Équipe", "Activités de Plein Air"],
           },
           {
             title: "Voyages",
             details: [
-              "Europe : France, Italie, Espagne, Angleterre",
+              "Europe : France, Italie, Espagne, Royaume-Uni",
               "Amériques : Canada, États-Unis, Mexique, Costa Rica",
               "Afrique : Maroc",
               "Asie : Vietnam",
             ],
-            keywords: ["Voyages Internationaux", "Échange Culturel"],
           },
         ],
       },
@@ -241,7 +297,7 @@ const ResumePage = ({ language }) => {
           onClick={handleDownload}
           className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
         >
-          <span>{language === "en" ? "Open File" : "Ouvrir le fichier"}</span>
+          <span>{t.resume.openFile}</span>
           <ExternalLink className="w-4 h-4" />
         </button>
       </div>
@@ -255,42 +311,68 @@ const ResumePage = ({ language }) => {
             {section.items.map((item, i) => (
               <div
                 key={i}
-                className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6"
+                className={`bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 ${
+                  section.title === "Experience" ||
+                  section.title === "Expérience"
+                    ? "md:grid md:grid-cols-[1fr,200px] md:gap-6 space-y-4 md:space-y-0"
+                    : "space-y-4"
+                }`}
               >
-                <h3 className="text-xl font-semibold dark:text-white">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {item.location}
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {item.duration}
-                  {section.title ===
-                    (language === "en" ? "Experience" : "Expérience") &&
-                    " " + calculateDuration(item.duration, language)}
-                </p>
-                <ul className="mt-2 space-y-1">
-                  {item.details.map((detail, d) => (
-                    <li
-                      key={d}
-                      className="text-gray-700 dark:text-gray-200 flex items-center" // Change items-start to items-center
-                    >
-                      <ChevronRight className="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-                {item.keywords && (
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {item.keywords.map((keyword, t) => (
-                      <span
-                        key={t}
-                        className="px-2 py-1 text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-md"
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold dark:text-white">
+                    {item.title}
+                  </h3>
+                  {item.location && (
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {item.location}
+                    </p>
+                  )}
+                  {item.duration && (
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      {item.duration}
+                      {section.title ===
+                        (language === "en" ? "Experience" : "Expérience") &&
+                        " " + calculateDuration(item.duration, language)}
+                    </p>
+                  )}
+                  <ul className="space-y-1">
+                    {item.details.map((detail, d) => (
+                      <li
+                        key={d}
+                        className="text-gray-700 dark:text-gray-200 flex items-center"
                       >
-                        {keyword}
-                      </span>
+                        <ChevronRight className="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400 flex-shrink-0" />
+                        {detail}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
+                  {item.keywords && (
+                    <div className="flex flex-wrap gap-2">
+                      {item.keywords.map((keyword, k) => (
+                        <span
+                          key={k}
+                          className="px-2 py-1 text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-md"
+                        >
+                          {keyword}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                {(section.title === "Experience" ||
+                  section.title === "Expérience") && (
+                  <a
+                    href={item.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative h-full flex items-center justify-center"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="max-w-full max-h-[160px] w-auto h-auto object-contain rounded-lg"
+                    />
+                  </a>
                 )}
               </div>
             ))}

@@ -20,15 +20,15 @@ const calculateDuration = (duration, language = "en") => {
     dec: 11,
 
     // French abbreviations
-    janv: 0,
-    févr: 1,
-    mars: 2,
+    // jan: 0,
+    fév: 1,
+    // mar: 2,
     avr: 3,
     mai: 4,
     juin: 5,
     juil: 6,
     août: 7,
-    sept: 8,
+    // sep: 8,
     déc: 11,
   };
 
