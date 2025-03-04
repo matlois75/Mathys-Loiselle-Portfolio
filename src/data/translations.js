@@ -138,7 +138,7 @@ export const translations = {
     // Resume page translations
     resume: {
       title: "CV",
-      openFile: "Ouvrir le PDF",
+      openFile: "Ouvrir le PDF (Anglais)",
       sections: {
         education: "Éducation",
         experience: "Expérience",
