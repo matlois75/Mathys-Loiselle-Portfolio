@@ -8,7 +8,7 @@ const Footer = ({ language }) => {
   const [emailTooltip, setEmailTooltip] = useState(t.footer.copyEmail);
 
   // Manually set the last updated date
-  const lastUpdated = new Date("03-31-2025"); // MM-DD-YYYY
+  const lastUpdated = new Date("2025-04-01T11:46:00"); // YYYY-MM-DDTHH:MM:SS
 
   const copyEmail = (e) => {
     e.preventDefault();
@@ -72,6 +72,11 @@ const Footer = ({ language }) => {
               year: "numeric",
             }
           )}
+          <div className="mt-2">
+            {language === "en"
+              ? "© 2025 Mathys Loiselle. All Rights Reserved."
+              : "© 2025 Mathys Loiselle. Tous droits réservés."}
+          </div>
         </div>
       </div>
     </footer>
