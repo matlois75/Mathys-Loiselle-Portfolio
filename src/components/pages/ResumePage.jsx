@@ -41,18 +41,18 @@ const ResumePage = ({ language }) => {
         items: [
           {
             title: "Undergraduate Student Researcher",
-            location: "MILA (Quebec AI Institute) - Montreal, QC",
-            duration: "Feb 2025 - Present",
+            location: "Mila (Quebec AI Institute) - Montreal, QC",
+            duration: "Mar 2025 - Present",
             details: [
-              "Conduct research on State Space Models (SSMs) and transformers for neural decoding applications in Brain-Computer Interfaces (BCIs)",
-              "Implement and evaluate deep learning models using PyTorch for processing and analyzing neural signals",
-              "Collaborate with research team to develop novel neural decoding architectures combining SSMs and attention mechanisms",
+              "Conducting research in Matthew Perich's sinthlab, focusing on improving neural decoding in brain-computer interfaces (BCIs)",
+              "Developing multimodal transformer architectures to enhance BCI performance",
+              "Exploring and implementing modality fusion techniques to improve information integration across modalities",
             ],
             keywords: [
               "Deep Learning",
+              "Transformers",
               "Research",
               "Neuroscience",
-              "Transformers",
             ],
             image: milaLogo,
             companyUrl: "https://mila.quebec/en",
@@ -62,7 +62,7 @@ const ResumePage = ({ language }) => {
             location: "Space Concordia - Montreal, QC",
             duration: "Feb 2025 - Present",
             details: [
-              "Lead team of 7+ ML engineers developing models for space-induced neurological changes",
+              "Lead team of ~9 ML engineers developing models for space-induced neurological changes",
               "Conduct novel research at intersection of deep learning and neuroscience, focusing on brain structure prediction during long-duration spaceflight",
               "Drive development of scientific publication investigating ML applications in space neuroscience",
               "Create weekly tasks for team members and have weekly meetings to discuss progress and challenges",
@@ -194,29 +194,29 @@ const ResumePage = ({ language }) => {
         items: [
           {
             title: "Assistant de Recherche Étudiant",
-            location:
-              "MILA (Institut d'Intelligence Artificielle au Québec) - Montréal, QC",
-            duration: "Fév 2025 - Présent",
+            location: "Mila (Institut d'IA au Québec) - Montréal, QC",
+            duration: "Mar 2025 - Présent",
             details: [
-              "Recherches sur les State Space Models (SSMs) et les transformers pour des applications de décodage neuronal dans les interfaces cerveau-ordinateur (BCI)",
-              "Implémente et évalue des modèles d'apprentissage profond utilisant PyTorch pour traiter et analyser des signaux neuronaux",
-              "Collabore avec l'équipe de recherche pour développer de nouvelles architectures de décodage neuronal combinant les SSMs et les mécanismes d'attention",
+              "Mener des recherches dans le sinthlab de Matthew Perich, en se concentrant sur l'amélioration du décodage neuronal dans les interfaces cerveau-ordinateur (ICO)",
+              "Développer des architectures de transformers multimodales pour améliorer les performances des ICO",
+              "Explorer et mettre en œuvre des techniques de fusion de modalités pour améliorer l'intégration des informations à travers différentes modalités",
             ],
             keywords: [
               "Apprentissage Profond",
+              "Transformers",
               "Recherche",
               "Neurosciences",
-              "Transformers",
             ],
             image: milaLogo,
             companyUrl: "https://mila.quebec/fr",
           },
           {
-            title: "Ingénieur Principal en Apprentissage Automatique",
+            title:
+              "Ingénieur Principal en Apprentissage Automatique - Santé Spatiale",
             location: "Space Concordia - Montréal, QC",
             duration: "Fév 2025 - Présent",
             details: [
-              "Direction d'une équipe de 7+ ingénieurs ML développant des modèles pour les changements neurologiques spatiaux",
+              "Direction d'une équipe de ~9 ingénieurs ML développant des modèles pour les changements neurologiques spatiaux",
               "Recherche à l'intersection de l'apprentissage profond et des neurosciences, focus sur la prédiction cérébrale",
               "Développement d'une publication scientifique sur le ML en neurosciences spatiales",
               "Gestion des tâches d'équipe et des réunions hebdomadaires de suivi",
