@@ -2,12 +2,12 @@ export const translations = {
   en: {
     // Home page translations
     profile: {
-      role: "Computer Science Student | Focus on Machine Learning",
+      role: "Computer Science Honours Student | Focus on Machine Learning",
     },
     about: {
       title: "About Me",
       paragraphs: [
-        "I am Mathys Loiselle, a Computer Science student at Concordia University in Montreal with a minor in Mathematics & Statistics. My focus lies in Machine Learning and Deep Learning, particularly in understanding the fundamental theory behind how models learn. I am deeply interested in Neuroscience and exploring how advanced brain structures can inspire breakthroughs in machine intelligence. With plans to pursue graduate studies in this field, I am committed to contributing significant research that advances both the academic community and human knowledge.",
+        "I am Mathys Loiselle, a Computer Science Honours student at Concordia University in Montreal with a minor in Mathematics & Statistics. My focus lies in Machine Learning and Deep Learning, particularly in understanding the fundamental theory behind how models learn. I am deeply interested in Neuroscience and exploring how advanced brain structures can inspire breakthroughs in machine intelligence. With plans to pursue graduate studies in this field, I am committed to contributing significant research that advances both the academic community and human knowledge.",
         "My research interests span several interconnected areas: Temporal Graph Neural Networks, Mathematical foundations of Machine Learning, Reinforcement Learning, Robotics, Computer Vision, and Physics (particularly Quantum Physics and Astrophysics). I actively seek collaboration opportunities in these fields and am eager to engage in research projects that push the boundaries of artificial intelligence and its applications.",
       ],
     },
@@ -96,12 +96,12 @@ export const translations = {
   fr: {
     // Home page translations
     profile: {
-      role: "Étudiant en Informatique Spécialisé en Apprentissage Automatique",
+      role: "Étudiant en Informatique Honneurs | Spécialisé en Apprentissage Automatique",
     },
     about: {
       title: "À Propos",
       paragraphs: [
-        "Je suis Mathys Loiselle, étudiant en informatique à l'Université Concordia à Montréal avec une mineure en mathématiques et statistiques. Je me concentre sur l'apprentissage automatique et l'apprentissage profond, particulièrement sur la théorie fondamentale de l'apprentissage des modèles. Je suis passionné par les neurosciences et l'exploration de la façon dont les structures cérébrales avancées peuvent inspirer des percées en intelligence artificielle. Avec l'intention de poursuivre des études supérieures dans ce domaine, je m'engage à contribuer des recherches significatives qui font progresser à la fois la communauté académique et la connaissance humaine.",
+        "Je suis Mathys Loiselle, étudiant en informatique honneurs à l'Université Concordia à Montréal avec une mineure en mathématiques et statistiques. Je me concentre sur l'apprentissage automatique et l'apprentissage profond, particulièrement sur la théorie fondamentale de l'apprentissage des modèles. Je suis passionné par les neurosciences et l'exploration de la façon dont les structures cérébrales avancées peuvent inspirer des percées en intelligence artificielle. Avec l'intention de poursuivre des études supérieures dans ce domaine, je m'engage à contribuer des recherches significatives qui font progresser à la fois la communauté académique et la connaissance humaine.",
         "Mes intérêts de recherche couvrent plusieurs domaines interconnectés: les réseaux de neurones temporels sur graphes, les fondements mathématiques de l'apprentissage automatique, l'apprentissage par renforcement, la robotique, la vision par ordinateur, et la physique (particulièrement la physique quantique et l'astrophysique). Je recherche activement des opportunités de collaboration dans ces domaines et suis enthousiaste à l'idée de m'engager dans des projets de recherche qui repoussent les limites de l'intelligence artificielle et ses applications.",
       ],
     },

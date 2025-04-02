@@ -18,7 +18,7 @@ const ResumePage = ({ language }) => {
         title: "Education",
         items: [
           {
-            title: "Bachelor of Science - Computer Science",
+            title: "Bachelor of Computer Science, Honours",
             location: "Concordia University - Montreal, QC",
             duration: "2022 - 2026 (Expected)",
             details: [
@@ -171,7 +171,7 @@ const ResumePage = ({ language }) => {
         title: "Éducation",
         items: [
           {
-            title: "Baccalauréat en Sciences - Informatique",
+            title: "Baccalauréat en Informatique, Honneurs",
             location: "Université Concordia - Montréal, QC",
             duration: "2022 - 2026 (Prévu)",
             details: [

@@ -8,7 +8,7 @@ const Footer = ({ language }) => {
   const [emailTooltip, setEmailTooltip] = useState(t.footer.copyEmail);
 
   // Manually set the last updated date
-  const lastUpdated = new Date("2025-04-01T11:46:00"); // YYYY-MM-DDTHH:MM:SS
+  const lastUpdated = new Date("2025-04-02T11:46:00"); // YYYY-MM-DDTHH:MM:SS
 
   const copyEmail = (e) => {
     e.preventDefault();
