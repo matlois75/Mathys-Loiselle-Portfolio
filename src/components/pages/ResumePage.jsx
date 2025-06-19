@@ -55,7 +55,7 @@ const ResumePage = ({ language }) => {
               "Neuroscience",
             ],
             image: milaLogo,
-            companyUrl: "https://mila.quebec/en",
+            companyUrl: "https://mila.quebec/en/directory/mathys-loiselle",
           },
           {
             title: "Lead Machine Learning Engineer - Space Health",
@@ -207,7 +207,7 @@ const ResumePage = ({ language }) => {
               "Neurosciences",
             ],
             image: milaLogo,
-            companyUrl: "https://mila.quebec/fr",
+            companyUrl: "https://mila.quebec/fr/directory/mathys-loiselle",
           },
           {
             title:
