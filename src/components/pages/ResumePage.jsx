@@ -22,7 +22,7 @@ const ResumePage = ({ language }) => {
             location: "Concordia University - Montreal, QC",
             duration: "2022 - 2026 (Expected)",
             details: [
-              "Dean's List: Fall 2023 - Fall 2024",
+              "Dean's List: Fall 2023 - Winter 2025",
               "Relevant Courses: Data Structures & Algorithms (A+), Theoretical CS (A+), Computer Graphics (A), Operating Systems (A-)",
             ],
           },
@@ -31,7 +31,7 @@ const ResumePage = ({ language }) => {
             location: "Concordia University - Montreal, QC",
             duration: "2022 - 2026 (Expected)",
             details: [
-              "Relevant Courses: Multivariable Calculus (A+), Linear Algebra (A), Probability & Statistics (A)",
+              "Relevant Courses: Multivariable Calculus I & II (A+), Linear Algebra (A), Probability & Statistics (A)",
             ],
           },
         ],
@@ -174,7 +174,7 @@ const ResumePage = ({ language }) => {
             location: "Université Concordia - Montréal, QC",
             duration: "2022 - 2026 (Prévu)",
             details: [
-              "Tableau d'honneur : Automne 2023 - Automne 2024",
+              "Tableau d'honneur : Automne 2023 - Hiver 2025",
               "Cours pertinents : Structures de données et algorithmes (A+), Informatique théorique (A+), Infographie (A), Systèmes d'exploitation (A-)",
             ],
           },
@@ -183,7 +183,7 @@ const ResumePage = ({ language }) => {
             location: "Université Concordia - Montréal, QC",
             duration: "2022 - 2026 (Prévu)",
             details: [
-              "Cours pertinents : Calcul multivariable (A+), Algèbre linéaire (A), Probabilités et statistiques (A)",
+              "Cours pertinents : Calcul multivariable I & II (A+), Algèbre linéaire (A), Probabilités et statistiques (A)",
             ],
           },
         ],
