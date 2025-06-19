@@ -44,9 +44,9 @@ const ResumePage = ({ language }) => {
             location: "Mila (Quebec AI Institute) - Montreal, QC",
             duration: "Mar 2025 - Present",
             details: [
-              "Conducting research in Matthew Perich's sinthlab, focusing on improving neural decoding in brain-computer interfaces (BCIs)",
+              "Supervised by Dr. Guillaume Lajoie and Dr. Matthew Perich",
+              "Conducting research focused on improving neural decoding in brain-computer interfaces (BCIs)",
               "Developing multimodal transformer architectures to enhance BCI performance",
-              "Exploring and implementing modality fusion techniques to improve information integration across modalities",
             ],
             keywords: [
               "Deep Learning",
@@ -85,7 +85,6 @@ const ResumePage = ({ language }) => {
               "Implemented complete voice features for TaylorMade chatbot including STT, TTS, hands-free conversation mode, and real-time waveform visualization (Angular/C#/Azure)",
               "Developed automatic color adjustment algorithm (Python/React)",
               "Researched and implemented order processing anomaly detection using Mahalanobis distance, achieving reliable outlier identification through multivariate statistical analysis (Python)",
-              "Research in CV, ML, and prompt engineering for POC development",
             ],
             keywords: [
               "AI/ML",
@@ -157,7 +156,7 @@ const ResumePage = ({ language }) => {
           {
             title: "Travelling",
             details: [
-              "Europe: France, Italy, Spain, United Kingdom",
+              "Europe: France, Italy, Spain, United Kingdom, Switzerland",
               "Americas: Canada, United States, Mexico, Costa Rica",
               "Africa: Morocco",
               "Asia: Vietnam",
@@ -197,9 +196,9 @@ const ResumePage = ({ language }) => {
             location: "Mila (Institut d'IA au Québec) - Montréal, QC",
             duration: "Mar 2025 - Présent",
             details: [
-              "Mener des recherches dans le sinthlab de Matthew Perich, en se concentrant sur l'amélioration du décodage neuronal dans les interfaces cerveau-ordinateur (ICO)",
+              "Supervision par Dr. Guillaume Lajoie et Dr. Matthew Perich",
+              "Recherches concentrées sur l'amélioration du décodage neuronal dans les interfaces cerveau-ordinateur (ICO)",
               "Développer des architectures de transformers multimodales pour améliorer les performances des ICO",
-              "Explorer et mettre en œuvre des techniques de fusion de modalités pour améliorer l'intégration des informations à travers différentes modalités",
             ],
             keywords: [
               "Apprentissage Profond",
@@ -239,7 +238,6 @@ const ResumePage = ({ language }) => {
               "Implémentation complète des fonctionnalités vocales pour le chatbot TaylorMade incluant STT, TTS, mode de conversation mains libres et visualisation des ondes en temps réel (Angular/C#/Azure)",
               "Développement d'un algorithme d'ajustement automatique des couleurs (Python/React)",
               "Recherche et implémentation de la détection d'anomalies dans le traitement des commandes utilisant la distance de Mahalanobis, permettant une identification fiable des valeurs aberrantes par analyse statistique multivariée (Python)",
-              "Recherche en vision par ordinateur, ML et ingénierie de prompts pour développement de POCs",
             ],
             keywords: [
               "IA/ML",
@@ -311,7 +309,7 @@ const ResumePage = ({ language }) => {
           {
             title: "Voyages",
             details: [
-              "Europe : France, Italie, Espagne, Royaume-Uni",
+              "Europe : France, Italie, Espagne, Royaume-Uni, Suisse",
               "Amériques : Canada, États-Unis, Mexique, Costa Rica",
               "Afrique : Maroc",
               "Asie : Vietnam",
