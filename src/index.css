@@ -16,7 +16,7 @@
 @layer components {
   .tooltip {
     @apply invisible absolute -top-10 left-1/2 -translate-x-1/2 
-    px-2 py-1 rounded bg-gray-900 dark:bg-gray-700 
+    px-2 py-1 rounded bg-gray-900 
     text-white text-sm whitespace-nowrap
     group-hover:visible;
   }
@@ -24,7 +24,32 @@
   .tooltip:after {
     content: "";
     @apply absolute top-full left-1/2 -translate-x-1/2
-    border-4 border-transparent border-t-gray-900 
-    dark:border-t-gray-700;
+    border-4 border-transparent border-t-gray-900;
+  }
+}
+
+body {
+  background-color: #f1ebe2;
+}
+
+body {
+  font-family: "Antic Didone", serif;
+}
+
+@layer utilities {
+  .text-h1 {
+    @apply text-[3em] uppercase tracking-wide;
+  }
+  .text-h2 {
+    @apply text-[2em] uppercase tracking-wide;
+  }
+  .text-h3 {
+    @apply text-[1.5em];
+  }
+  .text-h4 {
+    @apply text-[1em];
+  }
+  .text-p {
+    @apply text-[1.3em] leading-relaxed;
   }
 }
