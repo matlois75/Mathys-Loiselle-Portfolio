@@ -4,13 +4,13 @@ import spaceLogo from "../../assets/experience/space_health_logo.png";
 import taylorMadeLogo from "../../assets/experience/taylormade_logo.png";
 import nanoStrideLogo from "../../assets/experience/nano_stride_logo.jpeg";
 import appliedAiConcordiaLogo from "../../assets/experience/concordia_applied_ai_institute_logo.jpeg";
-const mapSrc = "../../assets/map.png";
+import TravelMap from "./TravelMap";
 
 const CVSection = () => (
   <section id="cv" className="py-20">
     <div className="container mx-auto space-y-20">
       {/* SECTION HEADING */}
-      <h2 className="text-h1 uppercase tracking-wide">2 CV</h2>
+      <h2 className="text-h1 uppercase tracking-wide">2. CV</h2>
 
       {/* 2.1 EDUCATION */}
       <div className="flex flex-col-reverse md:flex-row items-center">
@@ -42,13 +42,17 @@ const CVSection = () => (
           </ul>
         </div>
         <div className="md:w-1/3 flex justify-center md:justify-end">
-          <div>
+          <a
+            href="https://www.concordia.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={concordiaLogo}
               alt="Concordia University logo"
-              className="w-[25em]]"
+              className="w-[30em]"
             />
-          </div>
+          </a>
         </div>
       </div>
 
@@ -82,9 +86,15 @@ const CVSection = () => (
             </ul>
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
-            <div>
-              <img src={milaLogo} alt="Mila logo" className="w-[25em]" />
-            </div>
+            <a
+              href="https://mila.quebec/en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img src={milaLogo} alt="Mila logo" className="w-[25em]" />
+              </div>
+            </a>
           </div>
         </div>
 
@@ -120,13 +130,19 @@ const CVSection = () => (
             </ul>
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
-            <div>
-              <img
-                src={spaceLogo}
-                alt="Space Concordia Space Health logo"
-                className="w-[17em]"
-              />
-            </div>
+            <a
+              href="https://spaceconcordia.ca/space-health"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img
+                  src={spaceLogo}
+                  alt="Space Concordia Space Health logo"
+                  className="w-[17em]"
+                />
+              </div>
+            </a>
           </div>
         </div>
 
@@ -159,13 +175,19 @@ const CVSection = () => (
             </ul>
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
-            <div>
-              <img
-                src={taylorMadeLogo}
-                alt="TaylorMade logo"
-                className="w-[16em] rounded-[25%]"
-              />
-            </div>
+            <a
+              href="https://www.taylormadegolf.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img
+                  src={taylorMadeLogo}
+                  alt="TaylorMade logo"
+                  className="w-[16em] rounded-[25%]"
+                />
+              </div>
+            </a>
           </div>
         </div>
 
@@ -191,13 +213,19 @@ const CVSection = () => (
             </ul>
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
-            <div>
-              <img
-                src={nanoStrideLogo}
-                alt="Nano Stride logo"
-                className="w-[16em] rounded-[25%]"
-              />
-            </div>
+            <a
+              href="https://www.linkedin.com/company/nanostride/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img
+                  src={nanoStrideLogo}
+                  alt="Nano Stride logo"
+                  className="w-[16em] rounded-[25%]"
+                />
+              </div>
+            </a>
           </div>
         </div>
 
@@ -221,13 +249,19 @@ const CVSection = () => (
             </ul>
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
-            <div>
-              <img
-                src={appliedAiConcordiaLogo}
-                alt="Applied AI Concordia logo"
-                className="w-[16em] rounded-[25%]"
-              />
-            </div>
+            <a
+              href="https://www.concordia.ca/research/applied-ai-institute.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img
+                  src={appliedAiConcordiaLogo}
+                  alt="Applied AI Concordia logo"
+                  className="w-[16em] rounded-[25%]"
+                />
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -271,7 +305,7 @@ const CVSection = () => (
           ].map((col) => (
             <div key={col.title} className="w-1/2 md:w-1/4">
               <h4 className="text-p underline">{col.title}</h4>
-              <ul className="mt-2 space-y-1">
+              <ul>
                 {col.items.map((skill) => (
                   <li key={skill} className="flex items-start">
                     <span className="mr-2 text-p">&#10022;</span>
@@ -312,12 +346,9 @@ const CVSection = () => (
           {/* Traveling */}
           <div>
             <h4 className="text-h3">Traveling</h4>
-            <div className="mt-4">
-              <img
-                src={mapSrc}
-                alt="World map of places visited"
-                className="w-full rounded-lg shadow-sm"
-              />
+            <div className="mt-4 border rounded-lg overflow-hidden">
+              <TravelMap />
+              {/* Dynamic interactive map of the world with all the countries I've been to filled in with their respective flags, and their border bolded. All the other countries I did not list (hardcoded here) will be not filled in. It should be done in a way that is easy and intuitive to use and see which countries I've been to. If the user hovers over any country, it will have a little thing that shows the name of the country, show the flag in a cute nice way, and whether ive been there or not. */}
             </div>
           </div>
         </div>

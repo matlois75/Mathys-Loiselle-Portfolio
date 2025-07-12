@@ -4,7 +4,7 @@ const AboutSection = () => (
   <section id="about">
     <div className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
       <div className="md:w-[100%] space-y-8">
-        <h2 className="text-h1 uppercase tracking-wide">1 About</h2>
+        <h2 className="text-h1 uppercase tracking-wide">1. About</h2>
         <p className="text-p leading-relaxed text-gray-800">
           I am Mathys Loiselle, a Computer Science Honours student at Concordia
           University in Montreal with a minor in Mathematics &amp; Statistics.
