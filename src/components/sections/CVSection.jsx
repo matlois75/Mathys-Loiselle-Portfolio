@@ -4,7 +4,7 @@ import spaceLogo from "../../assets/experience/space_health_logo.png";
 import taylorMadeLogo from "../../assets/experience/taylormade_logo.png";
 import nanoStrideLogo from "../../assets/experience/nano_stride_logo.jpeg";
 import appliedAiConcordiaLogo from "../../assets/experience/concordia_applied_ai_institute_logo.jpeg";
-import TravelMap from "./TravelMap";
+import TravelPlaces from "./TravelPlaces";
 
 const CVSection = () => (
   <section id="cv" className="py-20">
@@ -346,9 +346,8 @@ const CVSection = () => (
           {/* Traveling */}
           <div>
             <h4 className="text-h3">Traveling</h4>
-            <div className="mt-4 border rounded-lg overflow-hidden">
-              <TravelMap />
-              {/* Dynamic interactive map of the world with all the countries I've been to filled in with their respective flags, and their border bolded. All the other countries I did not list (hardcoded here) will be not filled in. It should be done in a way that is easy and intuitive to use and see which countries I've been to. If the user hovers over any country, it will have a little thing that shows the name of the country, show the flag in a cute nice way, and whether ive been there or not. */}
+            <div className="mt-4">
+              <TravelPlaces />
             </div>
           </div>
         </div>
