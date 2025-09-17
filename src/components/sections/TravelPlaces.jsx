@@ -16,7 +16,7 @@ const TravelPlaces = () => {
     {
       region: "North America",
       countries: [
-        { name: "Canada", iso: "ca", years: "2004-2013, 2022-present" },
+        { name: "Canada", iso: "ca", years: "2004-2013,\u00A02022-present", nowrap: true },
         { name: "United States", iso: "us", years: "2013-2022" },
         { name: "Mexico", iso: "mx", years: "2019" },
         { name: "Costa Rica", iso: "cr", years: "2007, 2011" },
@@ -78,7 +78,7 @@ const TravelPlaces = () => {
               {region.countries.map((country, countryIndex) => (
                 <li key={countryIndex} className="text-p flex items-center">
                   <Flag iso={country.iso} alt={`${country.name} flag`} />
-                  <span>
+                  <span className={country.nowrap ? "whitespace-nowrap" : undefined}>
                     {country.name} {renderYears(country.years)}
                   </span>
                 </li>
