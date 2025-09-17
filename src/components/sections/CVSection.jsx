@@ -1,3 +1,19 @@
+// Helper to calculate duration between two dates (returns e.g. "4 months", "1 year 2 months")
+function calculateDuration(start, end = new Date()) {
+  const startDate = new Date(start);
+  const endDate = new Date(end);
+  let years = endDate.getFullYear() - startDate.getFullYear();
+  let months = endDate.getMonth() - startDate.getMonth();
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+  let result = [];
+  if (years > 0) result.push(`${years} year${years > 1 ? "s" : ""}`);
+  if (months > 0) result.push(`${months} month${months > 1 ? "s" : ""}`);
+  if (result.length === 0) return "Less than 1 month";
+  return result.join(" ");
+}
 import { FiExternalLink } from "react-icons/fi";
 import concordiaLogo from "../../assets/concordia_university_logo.png";
 import milaLogo from "../../assets/experience/mila_logo.png";
@@ -78,7 +94,9 @@ const CVSection = () => (
             <p className="italic text-p">
               Mila (Quebec AI Institute) - Montreal, QC
             </p>
-            <p className="text-h4">Mar 2025 - Present (4 months)</p>
+            <p className="text-h4">
+              Mar 2025 - Present ({calculateDuration("2025-03-01")})
+            </p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
             <ul className="mt-4 space-y-2 text-p">
               <li className="flex items-start">
@@ -120,7 +138,9 @@ const CVSection = () => (
               Lead Machine Learning Engineer - Space Health
             </h4>
             <p className="italic text-p">Space Concordia - Montreal, QC</p>
-            <p className="text-h4">Feb 2025 - Present (5 months)</p>
+            <p className="text-h4">
+              Feb 2025 - Present ({calculateDuration("2025-02-01")})
+            </p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
             <ul className="mt-4 space-y-2 text-p">
               <li className="flex items-start">
