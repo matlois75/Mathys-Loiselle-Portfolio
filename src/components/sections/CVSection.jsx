@@ -23,25 +23,39 @@ import nanoStrideLogo from "../../assets/experience/nano_stride_logo.jpeg";
 import appliedAiConcordiaLogo from "../../assets/experience/concordia_applied_ai_institute_logo.jpeg";
 
 const CVSection = () => (
-  <section id="cv" className="py-20">
-    <div className="container mx-auto space-y-20">
+  <section id="cv" className="px-2 sm:px-4 py-8 sm:py-12 md:py-20">
+    <div className="container mx-auto space-y-8 sm:space-y-12 md:space-y-20">
       {/* SECTION HEADING */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
         <h2 className="text-h1 uppercase tracking-wide">2. CV</h2>
         <a
           href="/src/assets/Mathys-Loiselle-Resume-EN.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-4 py-2 border border-black rounded-full text-base font-medium hover:bg-black/5 transition select-none flex items-center gap-2"
+          className="inline-block px-3 sm:px-4 py-2 border border-black rounded-full text-sm sm:text-base font-medium hover:bg-black/5 transition select-none flex items-center justify-center gap-2 w-fit"
         >
           Open PDF <FiExternalLink className="inline-block align-text-bottom" />
         </a>
       </div>
 
       {/* 2.1 EDUCATION */}
-      <div className="flex flex-col-reverse md:flex-row items-center">
-        <div className="md:w-3/4 space-y-4">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-3 sm:gap-4">
+        <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
           <h3 className="text-h2 uppercase tracking-wide">2.1 Education</h3>
+          <div className="flex justify-center md:hidden">
+            <a
+              href="https://www.concordia.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={concordiaLogo}
+                alt="Concordia University logo"
+                className="w-40 sm:w-48 md:w-56"
+                draggable={false}
+              />
+            </a>
+          </div>
           <h4 className="text-h3">BCompSci Computer Science, Honours</h4>
           <p className="text-p italic">Concordia University - Montreal, QC</p>
           <p className="text-h4">2022 - 2026</p>
@@ -67,7 +81,7 @@ const CVSection = () => (
             </li>
           </ul>
         </div>
-        <div className="md:w-1/3 flex justify-center md:justify-end">
+        <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
           <a
             href="https://www.concordia.ca/"
             target="_blank"
@@ -76,7 +90,7 @@ const CVSection = () => (
             <img
               src={concordiaLogo}
               alt="Concordia University logo"
-              className="w-[30em]"
+              className="w-40 md:w-[30em]"
               draggable={false}
             />
           </a>
@@ -84,12 +98,26 @@ const CVSection = () => (
       </div>
 
       {/* 2.2 EXPERIENCE */}
-      <div className="space-y-20">
+      <div className="space-y-8 sm:space-y-12 md:space-y-20">
         {/* Entry 1 */}
-        <div className="flex flex-col-reverse md:flex-row items-center">
-          <div className="md:w-3/4 space-y-4">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
             {/* Only show the “2.2” on the first entry */}
             <h3 className="text-h2 uppercase tracking-wide">2.2 Experience</h3>
+            <div className="flex justify-center md:hidden mb-2">
+              <a
+                href="https://mila.quebec/en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={milaLogo}
+                  alt="Mila logo"
+                  className="w-56 md:w-[25em]"
+                  draggable={false}
+                />
+              </a>
+            </div>
             <h4 className="text-h3">Undergraduate Student Researcher</h4>
             <p className="italic text-p">
               Mila (Quebec AI Institute) - Montreal, QC
@@ -114,26 +142,38 @@ const CVSection = () => (
               </li>
             </ul>
           </div>
-          <div className="md:w-1/3 flex justify-center md:justify-end">
+          <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
               href="https://mila.quebec/en"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <img
-                  src={milaLogo}
-                  alt="Mila logo"
-                  className="w-[25em]"
-                  draggable={false}
-                />
-              </div>
+              <img
+                src={milaLogo}
+                alt="Mila logo"
+                className="w-56 md:w-[25em]"
+                draggable={false}
+              />
             </a>
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row items-center">
-          <div className="md:w-3/4 space-y-4">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+            <div className="flex justify-center md:hidden mb-2">
+              <a
+                href="https://spaceconcordia.ca/space-health"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={spaceLogo}
+                  alt="Space Concordia Space Health logo"
+                  className="w-44 md:w-[17em]"
+                  draggable={false}
+                />
+              </a>
+            </div>
             <h4 className="text-h3">
               Lead Machine Learning Engineer - Space Health
             </h4>
@@ -165,26 +205,38 @@ const CVSection = () => (
               </li>
             </ul>
           </div>
-          <div className="md:w-1/3 flex justify-center md:justify-end">
+          <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
               href="https://spaceconcordia.ca/space-health"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <img
-                  src={spaceLogo}
-                  alt="Space Concordia Space Health logo"
-                  className="w-[17em]"
-                  draggable={false}
-                />
-              </div>
+              <img
+                src={spaceLogo}
+                alt="Space Concordia Space Health logo"
+                className="w-44 md:w-[17em]"
+                draggable={false}
+              />
             </a>
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row items-center">
-          <div className="md:w-3/4 space-y-4">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+            <div className="flex justify-center md:hidden mb-2">
+              <a
+                href="https://www.taylormadegolf.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={taylorMadeLogo}
+                  alt="TaylorMade logo"
+                  className="w-40 md:w-[16em] rounded-[25%]"
+                  draggable={false}
+                />
+              </a>
+            </div>
             <h4 className="text-h3">AI Software Developer - Internship</h4>
             <p className="italic text-p">
               TaylorMade Golf - Carlsbad, California
@@ -211,26 +263,38 @@ const CVSection = () => (
               </li>
             </ul>
           </div>
-          <div className="md:w-1/3 flex justify-center md:justify-end">
+          <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
               href="https://www.taylormadegolf.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <img
-                  src={taylorMadeLogo}
-                  alt="TaylorMade logo"
-                  className="w-[16em] rounded-[25%]"
-                  draggable={false}
-                />
-              </div>
+              <img
+                src={taylorMadeLogo}
+                alt="TaylorMade logo"
+                className="w-40 md:w-[16em] rounded-[25%]"
+                draggable={false}
+              />
             </a>
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row items-center">
-          <div className="md:w-3/4 space-y-4">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+            <div className="flex justify-center md:hidden mb-2">
+              <a
+                href="https://www.linkedin.com/company/nanostride/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={nanoStrideLogo}
+                  alt="Nano Stride logo"
+                  className="w-40 md:w-[16em] rounded-[25%]"
+                  draggable={false}
+                />
+              </a>
+            </div>
             <h4 className="text-h3">Computer Vision Engineer</h4>
             <p className="italic text-p">Nano Stride - Montreal, QC</p>
             <p className="text-h4">October 2023 - January 2024 (4 months)</p>
@@ -250,26 +314,38 @@ const CVSection = () => (
               </li>
             </ul>
           </div>
-          <div className="md:w-1/3 flex justify-center md:justify-end">
+          <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
               href="https://www.linkedin.com/company/nanostride/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <img
-                  src={nanoStrideLogo}
-                  alt="Nano Stride logo"
-                  className="w-[16em] rounded-[25%]"
-                  draggable={false}
-                />
-              </div>
+              <img
+                src={nanoStrideLogo}
+                alt="Nano Stride logo"
+                className="w-40 md:w-[16em] rounded-[25%]"
+                draggable={false}
+              />
             </a>
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-row items-center">
-          <div className="md:w-3/4 space-y-4">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+            <div className="flex justify-center md:hidden mb-2">
+              <a
+                href="https://www.concordia.ca/research/applied-ai-institute.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={appliedAiConcordiaLogo}
+                  alt="Applied AI Concordia logo"
+                  className="w-40 md:w-[16em] rounded-[25%]"
+                  draggable={false}
+                />
+              </a>
+            </div>
             <h4 className="text-h3">Dataset Annotator</h4>
             <p className="italic text-p">
               Concordia Applied AI Institute - Montreal, QC
@@ -287,20 +363,18 @@ const CVSection = () => (
               </li>
             </ul>
           </div>
-          <div className="md:w-1/3 flex justify-center md:justify-end">
+          <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
               href="https://www.concordia.ca/research/applied-ai-institute.html"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div>
-                <img
-                  src={appliedAiConcordiaLogo}
-                  alt="Applied AI Concordia logo"
-                  className="w-[16em] rounded-[25%]"
-                  draggable={false}
-                />
-              </div>
+              <img
+                src={appliedAiConcordiaLogo}
+                alt="Applied AI Concordia logo"
+                className="w-40 md:w-[16em] rounded-[25%]"
+                draggable={false}
+              />
             </a>
           </div>
         </div>

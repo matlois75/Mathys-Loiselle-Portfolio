@@ -1,11 +1,11 @@
 import profilePic from "../../assets/LinkedIn-Profile-Pic.png";
 
 const AboutSection = () => (
-  <section id="about">
+  <section id="about" className="px-4">
     <div className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
       <div className="md:w-[100%] space-y-8">
         <h2 className="text-h1 uppercase tracking-wide">1. About</h2>
-        <p className="text-p leading-relaxed text-gray-800">
+        <p className="text-p leading-relaxed text-gray-800 text-justify">
           I am Mathys Loiselle, a Computer Science Honours student at Concordia
           University with a minor in Mathematics & Statistics. My research lies
           at the intersection of machine learning and neuroscience. I am
@@ -38,7 +38,7 @@ const AboutSection = () => (
         <img
           src={profilePic}
           alt="Mathys Loiselle"
-          className="w-[30rem] h-[30rem] object-cover rounded-[2vw]"
+          className="w-64 h-64 md:w-[30rem] md:h-[30rem] object-cover rounded-[2vw]"
           draggable={false}
         />
       </div>

@@ -106,7 +106,7 @@ function parseBoldMarkdown(text) {
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="px-4 py-20">
       <div className="container mx-auto px-4 space-y-12">
         {/* Section heading */}
         <h2 className="text-h1 uppercase tracking-wide">3. Projects</h2>
@@ -130,17 +130,13 @@ const ProjectsSection = () => {
                     <img
                       src={imgSrc}
                       alt={alt}
-                      className="w-full h-96 object-cover select-none"
+                      className="w-full h-64 md:h-96 object-cover select-none"
                       draggable={false}
                     />
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <div
-                    className={`space-y-2 text-center ${
-                      isReversed ? "md:text-right" : "md:text-left"
-                    }`}
-                  >
+                  <div className={`space-y-2 text-justify`}>
                     <p className="text-p">{title}</p>
                     <p className="text-h4">{duration}</p>
                     <div className="mt-4">
