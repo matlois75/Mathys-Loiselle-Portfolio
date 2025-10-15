@@ -38,7 +38,7 @@ const AboutSection = () => (
         <img
           src={profilePic}
           alt="Mathys Loiselle"
-          className="w-64 h-64 md:w-[30rem] md:h-[30rem] object-cover rounded-[2vw]"
+          className="w-64 h-64 sm:w-[20rem] sm:h-[20rem] md:w-[30rem] md:h-[30rem] object-cover rounded-[8vw] sm:rounded-[2vw]"
           draggable={false}
         />
       </div>

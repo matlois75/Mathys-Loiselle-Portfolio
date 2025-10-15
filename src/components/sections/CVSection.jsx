@@ -60,7 +60,7 @@ const CVSection = () => (
           <p className="text-p italic">Concordia University - Montreal, QC</p>
           <p className="text-h4">2022 - 2026</p>
           <span className="inline-block w-8 border-b-2 border-black"></span>
-          <ul className="mt-4 space-y-2 text-p">
+          <ul className="mt-4 space-y-2 text-p text-justify">
             <li className="flex items-start">
               <span className="mr-2 text-p">&#10022;</span>
               Dean's List: Fall 2023 - Winter 2025
@@ -126,7 +126,7 @@ const CVSection = () => (
               Mar 2025 - Present ({calculateDuration("2025-03-01")})
             </p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p">
+            <ul className="mt-4 space-y-2 text-p text-justify">
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
                 Supervised by Dr. Guillaume Lajoie and Dr. Matthew Perich
@@ -182,7 +182,7 @@ const CVSection = () => (
               Feb 2025 - Present ({calculateDuration("2025-02-01")})
             </p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p">
+            <ul className="mt-4 space-y-2 text-p text-justify">
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
                 Lead team of ~10 ML engineers developing models for
@@ -243,7 +243,7 @@ const CVSection = () => (
             </p>
             <p className="text-h4">September - December 2024 (4 months)</p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p">
+            <ul className="mt-4 space-y-2 text-p text-justify">
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
                 Implemented complete voice features for TaylorMade chatbot
@@ -299,7 +299,7 @@ const CVSection = () => (
             <p className="italic text-p">Nano Stride - Montreal, QC</p>
             <p className="text-h4">October 2023 - January 2024 (4 months)</p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p">
+            <ul className="mt-4 space-y-2 text-p text-justify">
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
                 Implemented real-time robotics head motion control algorithms
@@ -352,7 +352,7 @@ const CVSection = () => (
             </p>
             <p className="text-h4">November 2023 (1 month)</p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p">
+            <ul className="mt-4 space-y-2 text-p text-justify">
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
                 Dataset annotation for ML model training/testing

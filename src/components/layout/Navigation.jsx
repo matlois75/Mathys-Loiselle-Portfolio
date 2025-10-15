@@ -31,12 +31,16 @@ const Navigation = () => {
       <div className="md:hidden fixed top-3 right-3 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-3 bg-white border-2 border-black rounded-lg shadow-lg hover:bg-gray-50 transition-colors"
+          className="p-3 border-2 border-black rounded-lg shadow-lg transition-colors"
+          style={{ backgroundColor: "#f1ebe2" }}
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
         {isOpen && (
-          <div className="absolute top-14 right-0 bg-white border-2 border-black rounded-lg shadow-xl p-4 space-y-3 min-w-[140px]">
+          <div
+            className="absolute top-14 right-0 border-2 border-black rounded-lg shadow-xl p-4 space-y-3 min-w-[140px]"
+            style={{ backgroundColor: "#f1ebe2" }}
+          >
             {navItems.map(({ id, label }) => (
               <a
                 key={id}
