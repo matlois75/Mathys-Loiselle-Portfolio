@@ -1,135 +1,81 @@
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { navigationItems } from "../../data/navigationItems";
-import PropTypes from "prop-types";
-import { translations } from "../../data/translations";
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-const Navigation = ({ isDarkMode, setIsDarkMode, language, setLanguage }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
-  const t = translations[language];
+const navItems = [
+  { id: "about", label: "About" },
+  { id: "cv", label: "CV" },
+  { id: "projects", label: "Projects" },
+  { id: "misc", label: "Misc" },
+  { id: "contact", label: "Contact" },
+];
 
-  // Get current page from URL
-  const currentPage =
-    location.pathname === "/"
-      ? "home"
-      : location.pathname.split("/")[1] || "home";
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = (e, id) => {
+    e.preventDefault();
+    setIsOpen(false); // Close mobile menu on click
+    if (id === "about") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm z-[100]">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link
-              to="/"
-              className="hover:opacity-80 transition-opacity duration-200"
-            >
-              <img
-                src={isDarkMode ? "/favicon-dark.svg" : "/favicon-light.svg"}
-                alt="ML Logo"
-                className="h-8 w-8 transition-opacity duration-200"
-              />
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.id}
-                to={item.id === "home" ? "/" : `/${item.id}`}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-colors
-                  ${
-                    currentPage === item.id
-                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/50"
-                      : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50"
-                  }`}
+    <>
+      {/* Mobile Hamburger Menu */}
+      <div className="md:hidden fixed top-3 right-3 z-50">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="p-3 border-2 border-black rounded-lg shadow-lg transition-colors"
+          style={{ backgroundColor: "#f1ebe2" }}
+        >
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+        {isOpen && (
+          <div
+            className="absolute top-14 right-0 border-2 border-black rounded-lg shadow-xl p-4 space-y-3 min-w-[140px]"
+            style={{ backgroundColor: "#f1ebe2" }}
+          >
+            {navItems.map(({ id, label }) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                onClick={(e) => handleClick(e, id)}
+                className="block text-gray-900 hover:text-gray-600 text-center py-2 px-3 rounded border-l-2 border-transparent hover:border-l-black transition-all"
               >
-                <item.icon className="w-4 h-4" />
-                <span>{t.navigation[item.id]}</span>
-              </Link>
+                {label}
+              </a>
             ))}
           </div>
-
-          {/* Theme and Language Toggles */}
-          <div className="flex items-center space-x-4 mr-4">
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-blue-600 
-              dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors"
-              aria-label={
-                isDarkMode ? "Switch to light mode" : "Switch to dark mode"
-              }
-            >
-              {isDarkMode ? (
-                <Sun className="w-5 h-5" />
-              ) : (
-                <Moon className="w-5 h-5" />
-              )}
-            </button>
-
-            <button
-              onClick={() => setLanguage(language === "en" ? "fr" : "en")}
-              className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-blue-600 
-              dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50 transition-colors"
-              aria-label={t.navigation.language}
-            >
-              <span className="w-5 h-5 inline-flex items-center justify-center font-medium">
-                {language === "en" ? "FR" : "EN"}
-              </span>
-            </button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            >
-              {isMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
-        </div>
+        )}
       </div>
 
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.id}
-                to={item.id === "home" ? "/" : `/${item.id}`}
-                onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center space-x-2 w-full px-3 py-2 rounded-md transition-colors
-                  ${
-                    currentPage === item.id
-                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/50"
-                      : "text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/50"
-                  }`}
-              >
-                <item.icon className="w-4 h-4" />
-                <span>{t.navigation[item.id]}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
+      {/* Desktop Fixed Nav */}
+      <nav className="hidden md:flex fixed right-4 top-1/2 transform -translate-y-1/2 flex-col items-center space-y-8 z-50">
+        {navItems.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            onClick={(e) => handleClick(e, id)}
+            className="border-l-2 border-black pl-3 text-gray-900 hover:text-gray-600 text-[1.2em]"
+            style={{
+              writingMode: "vertical-rl",
+              textOrientation: "mixed",
+              cursor: "pointer",
+              userSelect: "none",
+            }}
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+    </>
   );
-};
-
-Navigation.propTypes = {
-  isDarkMode: PropTypes.bool.isRequired,
-  setIsDarkMode: PropTypes.func.isRequired,
-  language: PropTypes.oneOf(["en", "fr"]).isRequired,
-  setLanguage: PropTypes.func.isRequired,
 };
 
 export default Navigation;
