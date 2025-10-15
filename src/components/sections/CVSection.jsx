@@ -429,44 +429,30 @@ const CVSection = () => (
         <h3 className="text-h2 uppercase tracking-wide">
           2.4 Research Interests
         </h3>
-        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
+        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8">
           {[
             {
               title: "Artificial Intelligence & Machine Learning",
-              desc: "Designing systems that learn from data, adapt to new information, and make reliable decisions.",
             },
             {
               title: "Neuro-AI",
-              desc: "Studying how neuroscience and AI can inform one another to uncover principles of intelligence.",
             },
             {
               title: "Neural Decoding",
-              desc: "Modeling and interpreting brain activity to predict meaningful information and enable actions.",
             },
             {
               title: "Mathematics",
-              desc: "Exploring the beauty of pure mathematics while applying its rigor to problems in AI and machine learning.",
             },
             {
               title: "Reinforcement Learning",
-              desc: "Developing agents that learn by interaction, balancing exploration and exploitation like biological systems.",
             },
             {
               title: "Natural Language Processing",
-              desc: "Building models that capture, generate, and reason with human language.",
             },
           ].map((interest) => (
-            <li
-              key={interest.title}
-              className="flex flex-col items-start min-h-[5.5rem]"
-            >
-              <div className="flex items-center mb-1">
-                <span className="mr-1 text-p">&#10022;</span>
-                <span className="font-medium text-p">{interest.title}</span>
-              </div>
-              <span className="ml-6 text-base md:text-lg opacity-80 leading-snug">
-                {interest.desc}
-              </span>
+            <li key={interest.title} className="flex items-center min-h-[3rem]">
+              <span className="mr-2 text-p">&#10022;</span>
+              <span className="font-medium text-p">{interest.title}</span>
             </li>
           ))}
         </ul>
