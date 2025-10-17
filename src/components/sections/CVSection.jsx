@@ -29,7 +29,7 @@ const CVSection = () => (
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
         <h2 className="text-h1 uppercase tracking-wide">2. CV</h2>
         <a
-          href="/src/assets/Mathys-Loiselle-Resume-EN.pdf"
+          href="/Mathys-Loiselle-Resume-EN.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-3 sm:px-4 py-2 border border-black rounded-full text-sm sm:text-base font-medium hover:bg-black/5 transition select-none flex items-center justify-center gap-2 w-fit"
