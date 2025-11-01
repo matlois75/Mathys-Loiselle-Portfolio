@@ -16,7 +16,7 @@ const ResearchSection = () => (
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
         <h2 className="text-h1 uppercase tracking-wide">4. Research</h2>
         <a
-          href="https://scholar.google.com/citations?user=Osvxfa8AAAAJ&hl=en&oi=ao"
+          href="https://scholar.google.com/citations?user=Osvxfa8AAAAJ"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-3 sm:px-4 py-2 border border-black rounded-full text-sm sm:text-base font-medium hover:bg-black/5 transition select-none flex items-center justify-center gap-2 w-fit"
