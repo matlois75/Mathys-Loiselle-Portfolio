@@ -1,8 +1,8 @@
 import TravelPlaces from "./TravelPlaces";
 
 const LifeSection = () => (
-  <section id="life" className="py-20">
-    <div className="container mx-auto px-4 space-y-12">
+  <section id="life" className="px-4 py-20">
+    <div className="container mx-auto space-y-12">
       <h2 className="text-h1 uppercase tracking-wide">5. Life</h2>
       <div className="space-y-12">
         {/* Personal Interests */}

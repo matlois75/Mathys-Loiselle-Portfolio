@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef, useMemo } from "react";
 import { FiGithub, FiGlobe, FiYoutube } from "react-icons/fi";
 
 const LinkButton = ({ href, children, label }) => (
@@ -107,7 +106,7 @@ function parseBoldMarkdown(text) {
 const ProjectsSection = () => {
   return (
     <section id="projects" className="px-4 py-20">
-      <div className="container mx-auto px-4 space-y-12">
+      <div className="container mx-auto space-y-12">
         {/* Section heading */}
         <h2 className="text-h1 uppercase tracking-wide">3. Projects</h2>
 
