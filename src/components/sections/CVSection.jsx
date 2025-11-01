@@ -133,12 +133,13 @@ const CVSection = () => (
               </li>
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Conducting research focused on improving neural decoding in BCIs
+                Conduct research on multimodal neural decoding for
+                brain-computer interfaces (BCIs)
               </li>
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Developing multimodal transformer architectures to enhance BCI
-                performance
+                Develop transformer-based architectures to enhance BCI
+                performance (PyTorch)
               </li>
             </ul>
           </div>
@@ -185,23 +186,17 @@ const CVSection = () => (
             <ul className="mt-4 space-y-2 text-p text-justify">
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Lead team of ~10 ML engineers developing models for
-                space-induced neurological changes
+                Lead a team of 10 ML engineer students
               </li>
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Conduct research at the intersection of deep learning and
-                neuroscience
+                Develop a transformer-based model and compare with baselines
+                (PyTorch)
               </li>
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Drive development of research publication on ML in space
-                neuroscience
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Create weekly tasks and lead sync-up meetings for progress
-                review
+                Conduct research on brain structure prediction during
+                long-duration spaceflight
               </li>
             </ul>
           </div>
@@ -246,20 +241,17 @@ const CVSection = () => (
             <ul className="mt-4 space-y-2 text-p text-justify">
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Implemented complete voice features for TaylorMade chatbot
-                including STT, TTS, hands-free conversation mode, and real-time
-                waveform visualization (Angular/C#/Azure)
+                Implemented voice assistant features for TaylorMade chatbot
+                (Angular/C#/Azure)
               </li>
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Developed automatic color adjustment algorithm (Python/React)
+                Developed an automatic color adjustment algorithm (Python/React)
               </li>
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Researched and implemented order processing anomaly detection
-                using Mahalanobis distance, achieving reliable outlier
-                identification through multivariate statistical analysis
-                (Python)
+                Introduced order processing anomaly detection system using
+                Mahalanobis distance (Python)
               </li>
             </ul>
           </div>
@@ -302,15 +294,13 @@ const CVSection = () => (
             <ul className="mt-4 space-y-2 text-p text-justify">
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Implemented real-time robotics head motion control algorithms
+                Built real-time robotics head motion control algorithms (OpenCV,
+                Dlib)
               </li>
               <li className="flex items-start">
                 <span className="mr-2 text-p">&#10022;</span>
-                Built computer vision pipeline using OpenCV/Dlib
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Collaborated with cross-functional engineering team
+                Collaborated with multidisciplinary engineers on robotics
+                control systems
               </li>
             </ul>
           </div>
@@ -432,19 +422,16 @@ const CVSection = () => (
         <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8">
           {[
             {
-              title: "Artificial Intelligence & Machine Learning",
+              title: "Machine Learning",
             },
             {
-              title: "Neuro-AI",
+              title: "Computational Neuroscience",
             },
             {
               title: "Neural Decoding",
             },
             {
               title: "Mathematics",
-            },
-            {
-              title: "Reinforcement Learning",
             },
             {
               title: "Natural Language Processing",
