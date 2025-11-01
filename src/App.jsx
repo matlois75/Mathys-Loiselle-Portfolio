@@ -3,7 +3,8 @@ import AboutSection from "./components/sections/AboutSection";
 import CVSection from "./components/sections/CVSection";
 import ProjectsSection from "./components/sections/ProjectsSection";
 import ContactSection from "./components/sections/ContactSection";
-import MiscSection from "./components/sections/MiscSection";
+import LifeSection from "./components/sections/LifeSection";
+import ResearchSection from "./components/sections/ResearchSection";
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       <AboutSection />
       <CVSection />
       <ProjectsSection />
-      <MiscSection />
+      <ResearchSection />
+      <LifeSection />
       <ContactSection />
     </Layout>
   );
