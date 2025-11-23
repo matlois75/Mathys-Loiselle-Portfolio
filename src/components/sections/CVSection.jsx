@@ -434,6 +434,9 @@ const CVSection = () => (
               title: "Mathematics",
             },
             {
+              title: "Robotics",
+            },
+            {
               title: "Natural Language Processing",
             },
           ].map((interest) => (

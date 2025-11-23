@@ -1,6 +1,6 @@
 const Footer = () => {
   // Manually set the last updated date
-  const lastUpdated = new Date("November 1, 2025"); // YYYY-MM-DDTHH:MM:SSd
+  const lastUpdated = new Date("November 23, 2025"); // YYYY-MM-DDTHH:MM:SSd
 
   return (
     <footer className="backdrop-blur-sm border-t border-gray-900">
