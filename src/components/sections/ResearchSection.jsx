@@ -5,8 +5,8 @@ const researchWorks = [
     authors: "N. Krishna, M. Loiselle, A. Ryoo, M. Perich, G. Lajoie",
     title:
       "Towards a generalizable, unified framework for multimodal neural decoding",
-    venue: "NeurIPS Workshop: BrainBodyFM (Accepted)",
-    date: "2025",
+    venue:
+      "NeurIPS 2025 Workshop: Foundation Models for the Brain and Body (BrainBodyFM).",
   },
 ];
 
