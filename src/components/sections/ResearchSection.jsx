@@ -6,7 +6,7 @@ const researchWorks = [
     title:
       "Towards a generalizable, unified framework for multimodal neural decoding",
     venue:
-      "NeurIPS 2025 Workshop: Foundation Models for the Brain and Body (BrainBodyFM).",
+      "NeurIPS 2025 Workshop: Foundation Models for the Brain and Body (BrainBodyFM)",
   },
 ];
 
@@ -38,9 +38,7 @@ const ResearchSection = () => (
                 ),
               }}
             />
-            <div className="text-h4 italic text-gray-500">
-              {work.venue}, {work.date}
-            </div>
+            <div className="text-h4 italic text-gray-500">{work.venue}</div>
           </div>
         ))}
       </div>
