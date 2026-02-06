@@ -5,6 +5,7 @@ import ProjectsSection from "./components/sections/ProjectsSection";
 import ContactSection from "./components/sections/ContactSection";
 import LifeSection from "./components/sections/LifeSection";
 import ResearchSection from "./components/sections/ResearchSection";
+import VolunteeringSection from "./components/sections/VolunteeringSection";
 
 const App = () => {
   return (
@@ -13,8 +14,9 @@ const App = () => {
       <CVSection sectionNumber={2} />
       <ResearchSection sectionNumber={3} />
       <ProjectsSection sectionNumber={4} />
-      <LifeSection sectionNumber={5} />
-      <ContactSection sectionNumber={6} />
+      <VolunteeringSection sectionNumber={5} />
+      <LifeSection sectionNumber={6} />
+      <ContactSection sectionNumber={7} />
     </Layout>
   );
 };

@@ -6,6 +6,7 @@ const navItems = [
   { id: "cv", label: "CV" },
   { id: "research", label: "Research" },
   { id: "projects", label: "Projects" },
+  { id: "volunteering", label: "Volunteering" },
   { id: "life", label: "Life" },
   { id: "contact", label: "Contact" },
 ];
@@ -98,7 +99,7 @@ const Navigation = () => {
       </div>
 
       {/* Desktop Fixed Nav */}
-      <nav className="hidden md:flex fixed right-4 top-1/2 transform -translate-y-1/2 flex-col items-center space-y-8 z-50">
+      <nav className="hidden md:flex fixed right-4 top-1/2 transform -translate-y-1/2 flex-col items-center space-y-4 z-50">
         {navItems.map(({ id, label }) => {
           const progress = sectionProgress[id] || 0;
           const isActive = progress > 0 && progress < 1;
@@ -108,7 +109,7 @@ const Navigation = () => {
               key={id}
               href={`#${id}`}
               onClick={(e) => handleClick(e, id)}
-              className={`relative pl-3 hover:text-gray-600 text-[1.2em] transition-colors ${
+              className={`relative pl-3 hover:text-gray-600 text-[1em] transition-colors ${
                 isActive ? "text-gray-900" : "text-gray-400"
               }`}
               style={{

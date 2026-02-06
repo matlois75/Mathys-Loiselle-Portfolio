@@ -48,7 +48,7 @@ const projects = [
     description:
       "At ConUHacks X, our team built a React/TypeScript & MySQL web app that uses the Gemini API to extract and visualize any university's degree requirements. The platform generates optimal prerequisite path visualizations and provides career alignment tracking, helping students map out their academic journey with AI-powered course planning.",
     links: {
-      github: "https://github.com/matlois75/ConUHacks-X",
+      github: "https://github.com/matlois75/ConUHacks_X",
       website: "https://conuhacksx-thefrogs.netlify.app/",
       demo: "https://youtu.be/Zqe7ZSF1_hA",
     },
