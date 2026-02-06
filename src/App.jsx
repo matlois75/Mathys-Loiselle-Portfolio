@@ -9,12 +9,12 @@ import ResearchSection from "./components/sections/ResearchSection";
 const App = () => {
   return (
     <Layout>
-      <AboutSection />
-      <CVSection />
-      <ProjectsSection />
-      <ResearchSection />
-      <LifeSection />
-      <ContactSection />
+      <AboutSection sectionNumber={1} />
+      <CVSection sectionNumber={2} />
+      <ResearchSection sectionNumber={3} />
+      <ProjectsSection sectionNumber={4} />
+      <LifeSection sectionNumber={5} />
+      <ContactSection sectionNumber={6} />
     </Layout>
   );
 };

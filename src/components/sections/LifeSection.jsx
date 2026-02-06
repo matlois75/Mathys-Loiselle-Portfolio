@@ -1,14 +1,16 @@
 import TravelPlaces from "./TravelPlaces";
 
-const LifeSection = () => (
+const LifeSection = ({ sectionNumber }) => (
   <section id="life" className="px-4 py-20">
     <div className="container mx-auto space-y-12">
-      <h2 className="text-h1 uppercase tracking-wide">5. Life</h2>
+      <h2 className="text-h1 uppercase tracking-wide">{sectionNumber}. Life</h2>
       <div className="space-y-12">
         {/* Personal Interests */}
         <div>
           {/* Sports */}
-          <h3 className="text-h2 uppercase tracking-wide">5.1 Hobbies</h3>
+          <h3 className="text-h2 uppercase tracking-wide">
+            {sectionNumber}.1 Hobbies
+          </h3>
           <ul className="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2 text-p">
             {[
               { name: "Ice Hockey", emoji: "🏒" },
@@ -30,7 +32,9 @@ const LifeSection = () => (
         </div>
         {/* Traveling */}
         <div>
-          <h3 className="text-h2 uppercase tracking-wide">5.2 Travel</h3>
+          <h3 className="text-h2 uppercase tracking-wide">
+            {sectionNumber}.2 Travel
+          </h3>
           <div className="mt-4">
             <TravelPlaces />
           </div>

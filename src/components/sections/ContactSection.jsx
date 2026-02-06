@@ -1,7 +1,7 @@
 import { FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 import { useState } from "react";
 
-const ContactSection = () => {
+const ContactSection = ({ sectionNumber }) => {
   const [emailTooltip, setEmailTooltip] = useState("Copy Email");
 
   const handleEmailClick = (e) => {
@@ -18,7 +18,9 @@ const ContactSection = () => {
   return (
     <section id="contact" className="px-4 py-20">
       <div className="container mx-auto">
-        <h2 className="text-h1 uppercase tracking-wide mb-8">6. Contact</h2>
+        <h2 className="text-h1 uppercase tracking-wide mb-8">
+          {sectionNumber}. Contact
+        </h2>
 
         <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 space-y-4 md:space-y-0">
           <div

@@ -22,12 +22,12 @@ import taylorMadeLogo from "../../assets/experience/taylormade_logo.png";
 import nanoStrideLogo from "../../assets/experience/nano_stride_logo.jpeg";
 import appliedAiConcordiaLogo from "../../assets/experience/concordia_applied_ai_institute_logo.jpeg";
 
-const CVSection = () => (
+const CVSection = ({ sectionNumber }) => (
   <section id="cv" className="px-2 sm:px-4 py-8 sm:py-12 md:py-20">
     <div className="container mx-auto space-y-8 sm:space-y-12 md:space-y-20">
       {/* SECTION HEADING */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-        <h2 className="text-h1 uppercase tracking-wide">2. CV</h2>
+        <h2 className="text-h1 uppercase tracking-wide">{sectionNumber}. CV</h2>
         <a
           href="/Mathys-Loiselle-Resume.pdf"
           target="_blank"
@@ -41,7 +41,9 @@ const CVSection = () => (
       {/* 2.1 EDUCATION */}
       <div className="flex flex-col-reverse md:flex-row items-center gap-3 sm:gap-4">
         <div className="text-center md:text-justify md:w-3/4 md:pr-8 space-y-3 sm:space-y-4">
-          <h3 className="text-h2 uppercase tracking-wide">2.1 Education</h3>
+          <h3 className="text-h2 uppercase tracking-wide">
+            {sectionNumber}.1 Education
+          </h3>
           <div className="flex justify-center md:hidden">
             <a
               href="https://www.concordia.ca/"
@@ -94,7 +96,9 @@ const CVSection = () => (
         <div className="flex flex-col md:flex-row items-center">
           <div className="text-center md:text-justify md:w-3/4 md:pr-8 space-y-3 sm:space-y-4">
             {/* Only show the “2.2” on the first entry */}
-            <h3 className="text-h2 uppercase tracking-wide">2.2 Experience</h3>
+            <h3 className="text-h2 uppercase tracking-wide">
+              {sectionNumber}.2 Experience
+            </h3>
             <div className="flex justify-center md:hidden mb-2">
               <a
                 href="https://mila.quebec/en"
@@ -336,7 +340,7 @@ const CVSection = () => (
       {/* 2.3 TECHNICAL SKILLS */}
       <div>
         <h3 className="text-h2 uppercase tracking-wide">
-          2.3 Technical Skills
+          {sectionNumber}.3 Technical Skills
         </h3>
         <div className="mt-6 flex flex-wrap justify-between text-p">
           {[
@@ -382,7 +386,7 @@ const CVSection = () => (
       {/* 2.4 RESEARCH INTERESTS */}
       <div>
         <h3 className="text-h2 uppercase tracking-wide">
-          2.4 Research Interests
+          {sectionNumber}.4 Research Interests
         </h3>
         <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8">
           {[

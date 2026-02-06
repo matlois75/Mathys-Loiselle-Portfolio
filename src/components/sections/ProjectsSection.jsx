@@ -97,13 +97,14 @@ const projects = [
   },
 ];
 
-
-const ProjectsSection = () => {
+const ProjectsSection = ({ sectionNumber }) => {
   return (
     <section id="projects" className="px-4 py-20">
       <div className="container mx-auto space-y-12">
         {/* Section heading */}
-        <h2 className="text-h1 uppercase tracking-wide">3. Projects</h2>
+        <h2 className="text-h1 uppercase tracking-wide">
+          {sectionNumber}. Projects
+        </h2>
 
         {/* Projects list */}
         <div className="space-y-24">
@@ -134,9 +135,7 @@ const ProjectsSection = () => {
                     <p className="text-p font-bold">{title}</p>
                     <p className="text-h4">{duration}</p>
                     <div className="mt-4">
-                      <p className="text-p text-justify">
-                        {currentText}
-                      </p>
+                      <p className="text-p text-justify">{currentText}</p>
                       <ButtonsRow links={links} />
                     </div>
                   </div>

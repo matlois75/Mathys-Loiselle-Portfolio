@@ -10,11 +10,13 @@ const researchWorks = [
   },
 ];
 
-const ResearchSection = () => (
+const ResearchSection = ({ sectionNumber }) => (
   <section id="research">
     <div className="container mx-auto">
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-        <h2 className="text-h1 uppercase tracking-wide">4. Research</h2>
+        <h2 className="text-h1 uppercase tracking-wide">
+          {sectionNumber}. Research
+        </h2>
         <a
           href="https://scholar.google.com/citations?user=Osvxfa8AAAAJ"
           target="_blank"
@@ -34,7 +36,7 @@ const ResearchSection = () => (
               dangerouslySetInnerHTML={{
                 __html: work.authors.replace(
                   "M. Loiselle",
-                  `<strong class="font-semibold">M. Loiselle</strong>`
+                  `<strong class="font-semibold">M. Loiselle</strong>`,
                 ),
               }}
             />
