@@ -2,7 +2,7 @@ const volunteerExperiences = [
   {
     title: "HackDécouverte",
     date: "November 2025",
-    organization: "Concordia University – Montréal, QC",
+    organization: "Concordia University - Montréal, Québec",
     responsibilities: [
       "Ensured smooth event logistics and positive participant experience for CEGEP and high school hackers",
       "Provided bilingual support for technical project questions and hackathon logistics",
@@ -11,7 +11,7 @@ const volunteerExperiences = [
   {
     title: "Gina Cody School Open House",
     date: "October 2025",
-    organization: "Concordia University – Montréal, QC",
+    organization: "Concordia University - Montréal, Québec",
     responsibilities: [
       "Ensured smooth presentation setup, assisted speakers with tech needs, and maintained session schedules",
     ],
@@ -19,7 +19,7 @@ const volunteerExperiences = [
   {
     title: "Space Concordia Space Day",
     date: "September 2025",
-    organization: "Concordia University – Montréal, QC",
+    organization: "Concordia University - Montréal, Québec",
     responsibilities: [
       "Represented Space Concordia's Space Health division, engaged visitors, and answered questions about the division & club",
     ],

@@ -68,7 +68,7 @@ const projects = [
   },
   {
     title: "Reinforcement Learning Rocket League Agent",
-    duration: "November - December 2024",
+    duration: "December 2024",
     imgSrc: "/images/projects/rocket-league-cover-1.jpg",
     alt: "Rocket League Agent Demo",
     description:
@@ -76,7 +76,7 @@ const projects = [
   },
   {
     title: "Smart Marshmallow RC Tank",
-    duration: "June - August 2024",
+    duration: "June - August 2024 (3 months)",
     imgSrc: "/images/projects/turret-rc-car-1.jpg",
     alt: "Smart Marshmallow RC Tank",
     description:
@@ -89,7 +89,7 @@ const projects = [
   },
   {
     title: "Cody AI Service Robot",
-    duration: "October 2023 - January 2024",
+    duration: "October 2023 - January 2024 (4 months)",
     imgSrc: "/images/projects/cody-robot-cover.png",
     alt: "Cody AI Service Robot",
     description:

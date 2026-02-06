@@ -131,7 +131,7 @@ const CVSection = ({ sectionNumber }) => (
               large-scale multi-GPU experiments on Mila's SLURM cluster with
               WandB tracking, and presented a poster at the NeurIPS 2025
               Workshop on Foundation Models for the Brain and Body (BrainBodyFM)
-              and at the Montreal AI & Neuroscience (MAIN 2025) conference.
+              and at the Montréal AI & Neuroscience (MAIN 2025) conference.
             </p>
           </div>
           <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
