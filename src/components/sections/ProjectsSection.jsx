@@ -41,8 +41,21 @@ const ButtonsRow = ({ links }) => {
 
 const projects = [
   {
+    title: "ConUHacks X - Degree Requirement Visualizer",
+    duration: "January 2026",
+    imgSrc: "/images/projects/conuhacks-x-cover.png",
+    alt: "Degree Requirement Visualizer",
+    description:
+      "At ConUHacks X, our team built a **React/TypeScript & MySQL** web app that uses the **Gemini API** to extract and visualize any university's degree requirements. The platform generates optimal prerequisite path visualizations and provides career alignment tracking, helping students map out their academic journey with **AI-powered course planning**.",
+    links: {
+      github: "https://github.com/matlois75/ConUHacks-X",
+      website: "https://conuhacksx-thefrogs.netlify.app/",
+      demo: "https://youtu.be/Zqe7ZSF1_hA",
+    },
+  },
+  {
     title: "ConUHacks IX - Concordia Virtual Tour++",
-    duration: "February 2025 (1 month)",
+    duration: "February 2025",
     imgSrc: "/images/projects/concordia-virtual-tour-cover.png",
     alt: "Concordia Virtual Tour++",
     description:
@@ -55,7 +68,7 @@ const projects = [
   },
   {
     title: "Reinforcement Learning Rocket League Agent",
-    duration: "November - December 2024 (2 months)",
+    duration: "November - December 2024",
     imgSrc: "/images/projects/rocket-league-cover-1.jpg",
     alt: "Rocket League Agent Demo",
     description:
@@ -63,7 +76,7 @@ const projects = [
   },
   {
     title: "Smart Marshmallow RC Tank",
-    duration: "June - August 2024 (3 months)",
+    duration: "June - August 2024",
     imgSrc: "/images/projects/turret-rc-car-1.jpg",
     alt: "Smart Marshmallow RC Tank",
     description:
@@ -76,7 +89,7 @@ const projects = [
   },
   {
     title: "Cody AI Service Robot",
-    duration: "October 2023 - January 2024 (4 months)",
+    duration: "October 2023 - January 2024",
     imgSrc: "/images/projects/cody-robot-cover.png",
     alt: "Cody AI Service Robot",
     description:
