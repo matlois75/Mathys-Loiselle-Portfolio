@@ -40,7 +40,7 @@ const CVSection = () => (
 
       {/* 2.1 EDUCATION */}
       <div className="flex flex-col-reverse md:flex-row items-center gap-3 sm:gap-4">
-        <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+        <div className="text-center md:text-justify md:w-3/4 md:pr-8 space-y-3 sm:space-y-4">
           <h3 className="text-h2 uppercase tracking-wide">2.1 Education</h3>
           <div className="flex justify-center md:hidden">
             <a
@@ -56,30 +56,21 @@ const CVSection = () => (
               />
             </a>
           </div>
-          <h4 className="text-h3">BCompSci Computer Science, Honours</h4>
-          <p className="text-p italic">Concordia University - Montreal, QC</p>
-          <p className="text-h4">2022 - 2026</p>
+          <h4 className="text-h3 font-bold">
+            Bachelor of Computer Science, Honours
+          </h4>
+          <p className="text-p italic">
+            Concordia University - Montréal, Québec
+          </p>
+          <p className="text-h4">September 2022 - December 2026 (Expected)</p>
           <span className="inline-block w-8 border-b-2 border-black"></span>
-          <ul className="mt-4 space-y-2 text-p text-justify">
-            <li className="flex items-start">
-              <span className="mr-2 text-p">&#10022;</span>
-              Dean's List: Fall 2023 - Winter 2025
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2 text-p">&#10022;</span>
-              Minor in Mathematics &amp; Statistics
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2 text-p">&#10022;</span>
-              Data Structures &amp; Algorithms (A+), Theoretical CS (A+),
-              Computer Graphics (A)
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2 text-p">&#10022;</span>
-              Multivariable Calculus I &amp; II (A+), Linear Algebra (A),
-              Probability &amp; Statistics (A)
-            </li>
-          </ul>
+          <p className="mt-4 text-p text-justify">
+            Pursuing a Minor in Mathematics &amp; Statistics alongside my
+            Honours degree. Recognized on the Dean's List from Summer 2023
+            through Fall 2025, and awarded the Québec Perspective Scholarship
+            ($5000, 2023-2024). Coursework includes Machine Learning, Computer
+            Vision, Linear Algebra, and Multivariable Calculus I &amp; II.
+          </p>
         </div>
         <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
           <a
@@ -101,7 +92,7 @@ const CVSection = () => (
       <div className="space-y-8 sm:space-y-12 md:space-y-20">
         {/* Entry 1 */}
         <div className="flex flex-col md:flex-row items-center">
-          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+          <div className="text-center md:text-justify md:w-3/4 md:pr-8 space-y-3 sm:space-y-4">
             {/* Only show the “2.2” on the first entry */}
             <h3 className="text-h2 uppercase tracking-wide">2.2 Experience</h3>
             <div className="flex justify-center md:hidden mb-2">
@@ -118,30 +109,26 @@ const CVSection = () => (
                 />
               </a>
             </div>
-            <h4 className="text-h3">Undergraduate Student Researcher</h4>
+            <h4 className="text-h3 font-bold">
+              Undergraduate Student Researcher
+            </h4>
             <p className="italic text-p">
-              Mila (Quebec AI Institute) - Montreal, QC
+              Mila (Quebec AI Institute) - Montréal, Québec
             </p>
             <p className="text-h4">
-              Mar 2025 - Present ({calculateDuration("2025-03-01")})
+              March 2025 - Present ({calculateDuration("2025-03-01")})
             </p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p text-justify">
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Supervised by Dr. Guillaume Lajoie and Dr. Matthew Perich
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Conduct research on multimodal neural decoding for
-                brain-computer interfaces (BCIs)
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Develop transformer-based architectures to enhance BCI
-                performance (PyTorch)
-              </li>
-            </ul>
+            <p className="mt-4 text-p text-justify">
+              Extended the POYO neural decoding framework for multimodal neural
+              decoding under Dr. Guillaume Lajoie and Dr. Matthew
+              Perich,training models with multiple masking strategies for
+              multi-session pretraining and single-session fine-tuning. Ran
+              large-scale multi-GPU experiments on Mila's SLURM cluster with
+              WandB tracking, and presented a poster at the NeurIPS 2025
+              Workshop on Foundation Models for the Brain and Body (BrainBodyFM)
+              and at the Montreal AI & Neuroscience (MAIN 2025) conference.
+            </p>
           </div>
           <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
@@ -160,7 +147,7 @@ const CVSection = () => (
         </div>
 
         <div className="flex flex-col md:flex-row items-center">
-          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+          <div className="text-center md:text-justify md:w-3/4 md:pr-8 space-y-3 sm:space-y-4">
             <div className="flex justify-center md:hidden mb-2">
               <a
                 href="https://spaceconcordia.ca/space-health"
@@ -175,30 +162,21 @@ const CVSection = () => (
                 />
               </a>
             </div>
-            <h4 className="text-h3">
+            <h4 className="text-h3 font-bold">
               Lead Machine Learning Engineer - Space Health
             </h4>
-            <p className="italic text-p">Space Concordia - Montreal, QC</p>
+            <p className="italic text-p">Space Concordia - Montréal, Québec</p>
             <p className="text-h4">
-              Feb 2025 - Present ({calculateDuration("2025-02-01")})
+              February 2025 - Present ({calculateDuration("2025-02-01")})
             </p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p text-justify">
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Lead a team of 10 ML engineer students
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Develop a transformer-based model and compare with baselines
-                (PyTorch)
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Conduct research on brain structure prediction during
-                long-duration spaceflight
-              </li>
-            </ul>
+            <p className="mt-4 text-p text-justify">
+              Leading a team of 10 Bachelor's and Master's students on brain
+              health research for long-duration spaceflight. Designed a
+              transformer-CNN architecture for predicting structural brain
+              changes from longitudinal MRI scans, and built the preprocessing
+              and training infrastructure for multi-timepoint neuroimaging data.
+            </p>
           </div>
           <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
@@ -217,7 +195,7 @@ const CVSection = () => (
         </div>
 
         <div className="flex flex-col md:flex-row items-center">
-          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+          <div className="text-center md:text-justify md:w-3/4 md:pr-8 space-y-3 sm:space-y-4">
             <div className="flex justify-center md:hidden mb-2">
               <a
                 href="https://www.taylormadegolf.com/"
@@ -232,28 +210,22 @@ const CVSection = () => (
                 />
               </a>
             </div>
-            <h4 className="text-h3">AI Software Developer - Internship</h4>
+            <h4 className="text-h3 font-bold">
+              AI Software Developer - Internship
+            </h4>
             <p className="italic text-p">
               TaylorMade Golf - Carlsbad, California
             </p>
             <p className="text-h4">September - December 2024 (4 months)</p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p text-justify">
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Implemented voice assistant features for TaylorMade chatbot
-                (Angular/C#/Azure)
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Developed an automatic color adjustment algorithm (Python/React)
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Introduced order processing anomaly detection system using
-                Mahalanobis distance (Python)
-              </li>
-            </ul>
+            <p className="mt-4 text-p text-justify">
+              Built a full-stack chatbot with both text-to-speech and
+              speech-to-text voice interface using Azure Speech Services
+              (Angular/C#), and developed a color profile matching system to
+              align RGB display output with CMYK printing (Python/React). Also
+              built anomaly detection using Mahalanobis distance to flag invalid
+              product configurations before manufacturing.
+            </p>
           </div>
           <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
@@ -272,7 +244,7 @@ const CVSection = () => (
         </div>
 
         <div className="flex flex-col md:flex-row items-center">
-          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+          <div className="text-center md:text-justify md:w-3/4 md:pr-8 space-y-3 sm:space-y-4">
             <div className="flex justify-center md:hidden mb-2">
               <a
                 href="https://www.linkedin.com/company/nanostride/"
@@ -287,22 +259,18 @@ const CVSection = () => (
                 />
               </a>
             </div>
-            <h4 className="text-h3">Computer Vision Engineer</h4>
-            <p className="italic text-p">Nano Stride - Montreal, QC</p>
+            <h4 className="text-h3 font-bold">Computer Vision Engineer</h4>
+            <p className="italic text-p">Nano Stride - Montréal, Québec</p>
             <p className="text-h4">October 2023 - January 2024 (4 months)</p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p text-justify">
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Built real-time robotics head motion control algorithms (OpenCV,
-                Dlib)
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Collaborated with multidisciplinary engineers on robotics
-                control systems
-              </li>
-            </ul>
+            <p className="mt-4 text-p text-justify">
+              Led computer vision development for Cody, a 5'8" robot answering
+              campus questions via natural interaction. Designed speaker
+              identification combining timing delay of arrival (TDOA), natural
+              language context, and pose estimation for multi-speaker scenarios,
+              and built real-time head motion control using OpenCV and tiny-YOLO
+              to direct robot gaze toward active speakers.
+            </p>
           </div>
           <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
@@ -321,7 +289,7 @@ const CVSection = () => (
         </div>
 
         <div className="flex flex-col md:flex-row items-center">
-          <div className="text-center md:text-justify md:w-3/4 space-y-3 sm:space-y-4">
+          <div className="text-center md:text-justify md:w-3/4 md:pr-8 space-y-3 sm:space-y-4">
             <div className="flex justify-center md:hidden mb-2">
               <a
                 href="https://www.concordia.ca/research/applied-ai-institute.html"
@@ -336,22 +304,17 @@ const CVSection = () => (
                 />
               </a>
             </div>
-            <h4 className="text-h3">Dataset Annotator</h4>
+            <h4 className="text-h3 font-bold">Dataset Annotator</h4>
             <p className="italic text-p">
-              Concordia Applied AI Institute - Montreal, QC
+              Concordia Applied AI Institute - Montréal, Québec
             </p>
-            <p className="text-h4">November 2023 (1 month)</p>
+            <p className="text-h4">November 2023</p>
             <span className="inline-block w-8 border-b-2 border-black"></span>
-            <ul className="mt-4 space-y-2 text-p text-justify">
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Dataset annotation for ML model training/testing
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-p">&#10022;</span>
-                Collaborative team input for data optimization
-              </li>
-            </ul>
+            <p className="mt-4 text-p text-justify">
+              Performed dataset annotation for ML model training and testing,
+              collaborating with a team to optimize data quality and
+              consistency.
+            </p>
           </div>
           <div className="hidden md:flex md:w-1/3 justify-center md:justify-end">
             <a
@@ -378,25 +341,27 @@ const CVSection = () => (
         <div className="mt-6 flex flex-wrap justify-between text-p">
           {[
             {
-              title: "Programming",
-              items: ["Python", "JavaScript", "Java", "C/C++/C#", "TypeScript"],
+              title: "Languages",
+              items: ["Python", "JavaScript", "TypeScript", "Java", "C#/C++/C"],
             },
             {
               title: "AI/ML",
-              items: ["PyTorch", "TensorFlow", "Keras", "OpenCV", "Dlib"],
+              items: ["PyTorch", "NumPy", "Scikit-learn", "TensorFlow"],
             },
             {
               title: "Web & Cloud",
-              items: ["React", "Angular", "Azure", "Firebase", "HTML/CSS"],
+              items: [
+                "React",
+                "Angular",
+                "Node.js",
+                "HTML/CSS",
+                "Azure",
+                "Firebase",
+              ],
             },
             {
-              title: "Other Tools",
-              items: [
-                "VSCode",
-                "Git",
-                "JetBrains Products",
-                "Jupyter Notebook",
-              ],
+              title: "Tools",
+              items: ["Git", "VSCode", "Jupyter", "SLURM", "WandB"],
             },
           ].map((col) => (
             <div key={col.title} className="w-1/2 md:w-1/4">
