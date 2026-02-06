@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -12,17 +12,58 @@ const navItems = [
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [sectionProgress, setSectionProgress] = useState({});
+
+  const updateProgress = useCallback(() => {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const progress = {};
+
+    for (let i = 0; i < navItems.length; i++) {
+      const { id } = navItems[i];
+      const el = document.getElementById(id);
+      if (!el) {
+        progress[id] = 0;
+        continue;
+      }
+
+      const rect = el.getBoundingClientRect();
+      const sectionTop = rect.top + scrollY;
+      const sectionHeight = el.offsetHeight;
+
+      // How far the user has scrolled through this section
+      // Section starts being "entered" when its top reaches the viewport top
+      // Section is "complete" when its bottom leaves the viewport top
+      const scrolledPast = scrollY - sectionTop + viewportHeight * 0.5;
+      const ratio = Math.min(1, Math.max(0, scrolledPast / sectionHeight));
+
+      progress[id] = ratio;
+    }
+
+    setSectionProgress(progress);
+  }, []);
+
+  useEffect(() => {
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
+    };
+  }, [updateProgress]);
 
   const handleClick = (e, id) => {
     e.preventDefault();
-    setIsOpen(false); // Close mobile menu on click
-    if (id === "about") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const target = document.getElementById(id);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
+    setIsOpen(false);
+    const target = document.getElementById(id);
+    if (target) {
+      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+      const offset = window.innerHeight * 0.05;
+      window.scrollTo({
+        top: Math.max(0, targetTop - offset),
+        behavior: "smooth",
+      });
     }
   };
 
@@ -58,22 +99,36 @@ const Navigation = () => {
 
       {/* Desktop Fixed Nav */}
       <nav className="hidden md:flex fixed right-4 top-1/2 transform -translate-y-1/2 flex-col items-center space-y-8 z-50">
-        {navItems.map(({ id, label }) => (
-          <a
-            key={id}
-            href={`#${id}`}
-            onClick={(e) => handleClick(e, id)}
-            className="border-l-2 border-black pl-3 text-gray-900 hover:text-gray-600 text-[1.2em]"
-            style={{
-              writingMode: "vertical-rl",
-              textOrientation: "mixed",
-              cursor: "pointer",
-              userSelect: "none",
-            }}
-          >
-            {label}
-          </a>
-        ))}
+        {navItems.map(({ id, label }) => {
+          const progress = sectionProgress[id] || 0;
+          const isActive = progress > 0 && progress < 1;
+
+          return (
+            <a
+              key={id}
+              href={`#${id}`}
+              onClick={(e) => handleClick(e, id)}
+              className={`relative pl-3 hover:text-gray-600 text-[1.2em] transition-colors ${
+                isActive ? "text-gray-900" : "text-gray-400"
+              }`}
+              style={{
+                writingMode: "vertical-rl",
+                textOrientation: "mixed",
+                cursor: "pointer",
+                userSelect: "none",
+              }}
+            >
+              {/* Background track */}
+              <span className="absolute left-0 top-0 w-[2px] h-full bg-gray-300" />
+              {/* Progress fill */}
+              <span
+                className="absolute left-0 top-0 w-[2px] bg-black transition-[height] duration-100 ease-out"
+                style={{ height: `${progress * 100}%` }}
+              />
+              {label}
+            </a>
+          );
+        })}
       </nav>
     </>
   );
