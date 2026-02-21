@@ -13,7 +13,7 @@ const Footer = () => {
             year: "numeric",
           })}
           <div className="mt-1 sm:mt-2">
-            {"© 2025 Mathys Loiselle. All Rights Reserved."}
+            {`© ${new Date().getFullYear()} Mathys Loiselle. All Rights Reserved.`}
           </div>
         </div>
       </div>

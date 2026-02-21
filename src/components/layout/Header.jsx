@@ -8,7 +8,7 @@ const Header = () => (
       </h1>
       <img
         src={logo}
-        alt="Logo"
+        alt="Mathys Loiselle site logo"
         className="h-12 sm:h-14 md:h-16 md:absolute md:right-1/2 md:-translate-x-[200%] md:top-1/2 md:-translate-y-1/2"
         draggable={false}
       />

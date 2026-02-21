@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -14,6 +14,8 @@ const navItems = [
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sectionProgress, setSectionProgress] = useState({});
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
 
   const updateProgress = useCallback(() => {
     const scrollY = window.scrollY;
@@ -44,15 +46,55 @@ const Navigation = () => {
     setSectionProgress(progress);
   }, []);
 
+  // ME-4: Throttle scroll listener with requestAnimationFrame
   useEffect(() => {
     updateProgress();
-    window.addEventListener("scroll", updateProgress, { passive: true });
-    window.addEventListener("resize", updateProgress, { passive: true });
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          updateProgress();
+          ticking = false;
+        });
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
     return () => {
-      window.removeEventListener("scroll", updateProgress);
-      window.removeEventListener("resize", updateProgress);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
     };
   }, [updateProgress]);
+
+  // ME-1: Close mobile menu on Escape key and outside click
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleEscape = (e) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+
+    const handleClickOutside = (e) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleClick = (e, id) => {
     e.preventDefault();
@@ -73,7 +115,10 @@ const Navigation = () => {
       {/* Mobile Hamburger Menu */}
       <div className="md:hidden fixed top-3 right-3 z-50">
         <button
+          ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
           className="p-3 border-2 border-black rounded-lg shadow-lg transition-colors"
           style={{ backgroundColor: "#f1ebe2" }}
         >
@@ -81,19 +126,28 @@ const Navigation = () => {
         </button>
         {isOpen && (
           <div
+            ref={menuRef}
             className="absolute top-14 right-0 border-2 border-black rounded-lg shadow-xl p-4 space-y-3 min-w-[140px]"
             style={{ backgroundColor: "#f1ebe2" }}
           >
-            {navItems.map(({ id, label }) => (
-              <a
-                key={id}
-                href={`#${id}`}
-                onClick={(e) => handleClick(e, id)}
-                className="block text-gray-900 hover:text-gray-600 text-center py-2 px-3 rounded border-l-2 border-transparent hover:border-l-black transition-all"
-              >
-                {label}
-              </a>
-            ))}
+            {navItems.map(({ id, label }) => {
+              const progress = sectionProgress[id] || 0;
+              const isActive = progress > 0 && progress < 1;
+              return (
+                <a
+                  key={id}
+                  href={`#${id}`}
+                  onClick={(e) => handleClick(e, id)}
+                  className={`block text-center py-2 px-3 rounded transition-all ${
+                    isActive
+                      ? "text-gray-900 font-semibold border-l-2 border-black"
+                      : "text-gray-500 border-l-2 border-transparent hover:border-l-black hover:text-gray-600"
+                  }`}
+                >
+                  {label}
+                </a>
+              );
+            })}
           </div>
         )}
       </div>

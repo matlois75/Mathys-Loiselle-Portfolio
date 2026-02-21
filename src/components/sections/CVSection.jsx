@@ -1,3 +1,11 @@
+import { FiExternalLink } from "react-icons/fi";
+import concordiaLogo from "../../assets/concordia_university_logo.png";
+import milaLogo from "../../assets/experience/mila_logo.png";
+import spaceLogo from "../../assets/experience/space_health_logo.png";
+import taylorMadeLogo from "../../assets/experience/taylormade_logo.png";
+import nanoStrideLogo from "../../assets/experience/nano_stride_logo.jpeg";
+import appliedAiConcordiaLogo from "../../assets/experience/concordia_applied_ai_institute_logo.jpeg";
+
 // Helper to calculate duration between two dates (returns e.g. "4 months", "1 year 2 months")
 function calculateDuration(start, end = new Date()) {
   const startDate = new Date(start);
@@ -14,13 +22,6 @@ function calculateDuration(start, end = new Date()) {
   if (result.length === 0) return "Less than 1 month";
   return result.join(" ");
 }
-import { FiExternalLink } from "react-icons/fi";
-import concordiaLogo from "../../assets/concordia_university_logo.png";
-import milaLogo from "../../assets/experience/mila_logo.png";
-import spaceLogo from "../../assets/experience/space_health_logo.png";
-import taylorMadeLogo from "../../assets/experience/taylormade_logo.png";
-import nanoStrideLogo from "../../assets/experience/nano_stride_logo.jpeg";
-import appliedAiConcordiaLogo from "../../assets/experience/concordia_applied_ai_institute_logo.jpeg";
 
 const CVSection = ({ sectionNumber }) => (
   <section id="cv" className="px-2 sm:px-4 py-8 sm:py-12 md:py-20">
@@ -54,6 +55,7 @@ const CVSection = ({ sectionNumber }) => (
                 src={concordiaLogo}
                 alt="Concordia University logo"
                 className="w-40 sm:w-48 md:w-56"
+                loading="lazy"
                 draggable={false}
               />
             </a>
@@ -109,7 +111,8 @@ const CVSection = ({ sectionNumber }) => (
                   src={milaLogo}
                   alt="Mila logo"
                   className="w-56 md:w-[25em]"
-                  draggable={false}
+                  loading="lazy"
+                draggable={false}
                 />
               </a>
             </div>
@@ -144,6 +147,7 @@ const CVSection = ({ sectionNumber }) => (
                 src={milaLogo}
                 alt="Mila logo"
                 className="w-56 md:w-[25em]"
+                loading="lazy"
                 draggable={false}
               />
             </a>
@@ -162,7 +166,8 @@ const CVSection = ({ sectionNumber }) => (
                   src={spaceLogo}
                   alt="Space Concordia Space Health logo"
                   className="w-44 md:w-[17em]"
-                  draggable={false}
+                  loading="lazy"
+                draggable={false}
                 />
               </a>
             </div>
@@ -192,6 +197,7 @@ const CVSection = ({ sectionNumber }) => (
                 src={spaceLogo}
                 alt="Space Concordia Space Health logo"
                 className="w-44 md:w-[17em]"
+                loading="lazy"
                 draggable={false}
               />
             </a>
@@ -210,7 +216,8 @@ const CVSection = ({ sectionNumber }) => (
                   src={taylorMadeLogo}
                   alt="TaylorMade logo"
                   className="w-40 md:w-[16em] rounded-[25%]"
-                  draggable={false}
+                  loading="lazy"
+                draggable={false}
                 />
               </a>
             </div>
@@ -241,6 +248,7 @@ const CVSection = ({ sectionNumber }) => (
                 src={taylorMadeLogo}
                 alt="TaylorMade logo"
                 className="w-40 md:w-[16em] rounded-[25%]"
+                loading="lazy"
                 draggable={false}
               />
             </a>
@@ -259,7 +267,8 @@ const CVSection = ({ sectionNumber }) => (
                   src={nanoStrideLogo}
                   alt="Nano Stride logo"
                   className="w-40 md:w-[16em] rounded-[25%]"
-                  draggable={false}
+                  loading="lazy"
+                draggable={false}
                 />
               </a>
             </div>
@@ -286,6 +295,7 @@ const CVSection = ({ sectionNumber }) => (
                 src={nanoStrideLogo}
                 alt="Nano Stride logo"
                 className="w-40 md:w-[16em] rounded-[25%]"
+                loading="lazy"
                 draggable={false}
               />
             </a>
@@ -304,7 +314,8 @@ const CVSection = ({ sectionNumber }) => (
                   src={appliedAiConcordiaLogo}
                   alt="Applied AI Concordia logo"
                   className="w-40 md:w-[16em] rounded-[25%]"
-                  draggable={false}
+                  loading="lazy"
+                draggable={false}
                 />
               </a>
             </div>
@@ -330,6 +341,7 @@ const CVSection = ({ sectionNumber }) => (
                 src={appliedAiConcordiaLogo}
                 alt="Applied AI Concordia logo"
                 className="w-40 md:w-[16em] rounded-[25%]"
+                loading="lazy"
                 draggable={false}
               />
             </a>

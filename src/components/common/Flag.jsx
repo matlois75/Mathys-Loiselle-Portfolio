@@ -1,4 +1,3 @@
-import React from "react";
 import canada from "../../assets/flags/canada.svg";
 import unitedStates from "../../assets/flags/united-states.svg";
 import mexico from "../../assets/flags/mexico.svg";

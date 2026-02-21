@@ -23,7 +23,7 @@ const ResearchSection = ({ sectionNumber }) => (
           rel="noopener noreferrer"
           className="inline-block px-3 sm:px-4 py-2 border border-black rounded-full text-sm sm:text-base font-medium hover:bg-black/5 transition select-none flex items-center justify-center gap-2 w-fit"
         >
-          Google Scholar{""}
+          Google Scholar
           <FiExternalLink className="inline-block align-text-bottom" />
         </a>
       </div>
@@ -31,15 +31,16 @@ const ResearchSection = ({ sectionNumber }) => (
         {researchWorks.map((work, idx) => (
           <div key={idx} className="p-6 space-y-2">
             <h3 className="text-h3">{work.title}</h3>
-            <div
-              className="text-p text-gray-700"
-              dangerouslySetInnerHTML={{
-                __html: work.authors.replace(
-                  "M. Loiselle",
-                  `<strong class="font-semibold">M. Loiselle</strong>`,
-                ),
-              }}
-            />
+            <p className="text-p text-gray-700">
+              {work.authors.split("M. Loiselle").map((part, i, arr) => (
+                <span key={i}>
+                  {part}
+                  {i < arr.length - 1 && (
+                    <strong className="font-semibold">M. Loiselle</strong>
+                  )}
+                </span>
+              ))}
+            </p>
             <div className="text-h4 italic text-gray-500">{work.venue}</div>
           </div>
         ))}

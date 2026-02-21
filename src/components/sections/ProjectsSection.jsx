@@ -125,6 +125,7 @@ const ProjectsSection = ({ sectionNumber }) => {
                     <img
                       src={imgSrc}
                       alt={alt}
+                      loading={index === 0 ? "eager" : "lazy"}
                       className="w-full h-64 md:h-96 object-cover select-none"
                       draggable={false}
                     />
