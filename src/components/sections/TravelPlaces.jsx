@@ -1,4 +1,3 @@
-import React from "react";
 import Flag from "../common/Flag";
 
 const TravelPlaces = () => {
