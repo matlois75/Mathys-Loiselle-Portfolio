@@ -1,15 +1,15 @@
 import TravelPlaces from "./TravelPlaces";
 
-const MiscSection = () => (
-  <section id="misc" className="py-20">
-    <div className="container mx-auto px-4 space-y-12">
-      <h2 className="text-h1 uppercase tracking-wide">4. Miscellaneous</h2>
+const LifeSection = ({ sectionNumber }) => (
+  <section id="life" className="px-4 py-20">
+    <div className="container mx-auto space-y-12">
+      <h2 className="text-h1 uppercase tracking-wide">{sectionNumber}. Life</h2>
       <div className="space-y-12">
         {/* Personal Interests */}
         <div>
           {/* Sports */}
           <h3 className="text-h2 uppercase tracking-wide">
-            4.1 Sports &amp; Athletics
+            {sectionNumber}.1 Hobbies
           </h3>
           <ul className="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2 text-p">
             {[
@@ -20,7 +20,7 @@ const MiscSection = () => (
               { name: "Bouldering", emoji: "🧗" },
               { name: "Biking", emoji: "🚴" },
               { name: "Soccer", emoji: "⚽" },
-              { name: "Golf", emoji: "⛳" },
+              { name: "Hiking", emoji: "🥾" },
               { name: "Gym", emoji: "🏋️" },
             ].map((sport) => (
               <li key={sport.name} className="flex items-center">
@@ -32,7 +32,9 @@ const MiscSection = () => (
         </div>
         {/* Traveling */}
         <div>
-          <h3 className="text-h2 uppercase tracking-wide">4.2 Travel</h3>
+          <h3 className="text-h2 uppercase tracking-wide">
+            {sectionNumber}.2 Travel
+          </h3>
           <div className="mt-4">
             <TravelPlaces />
           </div>
@@ -42,4 +44,4 @@ const MiscSection = () => (
   </section>
 );
 
-export default MiscSection;
+export default LifeSection;

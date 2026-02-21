@@ -1,10 +1,12 @@
 import profilePic from "../../assets/LinkedIn-Profile-Pic.png";
 
-const AboutSection = () => (
+const AboutSection = ({ sectionNumber }) => (
   <section id="about" className="px-4">
     <div className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
       <div className="md:w-[100%] space-y-8">
-        <h2 className="text-h1 uppercase tracking-wide">1. About</h2>
+        <h2 className="text-h1 uppercase tracking-wide">
+          {sectionNumber}. About
+        </h2>
         <p className="text-p leading-relaxed text-gray-800 text-justify">
           I am Mathys Loiselle, a Computer Science Honours student at Concordia
           University with a minor in Mathematics & Statistics. My research lies
@@ -18,15 +20,15 @@ const AboutSection = () => (
 
         <div>
           <h3 className="text-h2 uppercase tracking-wide mb-4">
-            1.1 Current Affiliations
+            {sectionNumber}.1 Current Affiliations
           </h3>
-          <div className="flex items-center w-full border-2 border-black rounded-full px-6 py-2 text-p text-center justify-evenly">
+          <div className="flex flex-col sm:flex-row items-center w-full border-2 border-black rounded-3xl sm:rounded-full px-4 sm:px-6 py-3 sm:py-2 text-p text-center justify-evenly gap-1 sm:gap-0">
             <span>Concordia University</span>
-            <span className="flex items-center text-p text-lg mx-2">
+            <span className="hidden sm:flex items-center text-p text-lg mx-2">
               &#10022;
             </span>
             <span>Mila - Quebec AI Institute</span>
-            <span className="flex items-center text-p text-lg mx-2">
+            <span className="hidden sm:flex items-center text-p text-lg mx-2">
               &#10022;
             </span>
             <span>Space Concordia</span>

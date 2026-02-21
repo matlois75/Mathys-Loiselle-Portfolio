@@ -1,6 +1,6 @@
 const Footer = () => {
   // Manually set the last updated date
-  const lastUpdated = new Date("October 15, 2025"); // YYYY-MM-DDTHH:MM:SSd
+  const lastUpdated = new Date("February 6, 2026"); // YYYY-MM-DDTHH:MM:SSd
 
   return (
     <footer className="backdrop-blur-sm border-t border-gray-900">
@@ -13,7 +13,7 @@ const Footer = () => {
             year: "numeric",
           })}
           <div className="mt-1 sm:mt-2">
-            {"© 2025 Mathys Loiselle. All Rights Reserved."}
+            {`© ${new Date().getFullYear()} Mathys Loiselle. All Rights Reserved.`}
           </div>
         </div>
       </div>
